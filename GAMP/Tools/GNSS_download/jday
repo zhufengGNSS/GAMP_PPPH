@@ -1,0 +1,33 @@
+#!/bin/csh -f
+#
+# convert day of a year to month_day_year or 
+#
+# by peng fang
+#
+
+set AWK = 'awk'
+if ( $#argv < 1 ) then
+   echo "usage: jday day year (e.g. 213 92) to get mmddyy or"
+   echo "       jday mmddyy (e.g. 092292) to get day of the year"
+   exit
+endif
+
+if ( $#argv < 2 ) then
+   echo $1 | $AWK 'BEGIN {split("31 59 90 120 151 181 212 243 273 304 334 365",mth)} \
+       {m = substr($0,1,2)+0; i=length($0);\
+       d = substr($0,3,2)+0; \
+       y = int(substr($0,5,i-4));\
+       if(y<1900) {if(y>60) {y=y+1900} else{ y=y+2000}}; \
+       day = mth[m-1] + d; \
+       if ((y - 1988) % 4 == 0 && m > 2) day = day + 1; \
+       printf "%3.3d %04d\n",day,y}'
+else
+   echo $1 $2 | $AWK 'BEGIN {split("31 28 31 30 31 30 31 31 30 31 30 31",mth)} \
+       {day = $1 + 0; year = int($2); \
+       if(year<1900) {if(year>60) {year=year+1900} else{ year=year+2000}}; \
+       if ((year - 1988) % 4 == 0 ) mth[2] = mth[2] + 1; \
+       for (m = 1; day > mth[m]; m++) day = day - mth[m]; \
+       if (m < 10) m = "0" m; \
+       if (day < 10) day = "0" day; \
+       print m day year}'
+endif

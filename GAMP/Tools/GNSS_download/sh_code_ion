@@ -1,0 +1,52 @@
+#!/bin/csh
+##
+## Purpose: get daily GPS, GLONASS and mixed RINEX broadcast ephemris files from CDDIS
+##
+## Originally written by Feng Zhou on 03/11/2015 @ GFZ
+##
+## Email: zhouforme@163.com
+##
+## Section 1.1, GPS/Galileo technologies, GFZ German Research Centre for Geosciences
+#
+##===============================BEGIN PROGRAM=====================================##
+if ($#argv < 2) then
+more << EOF
+
+   Usage $0 <yyyy> <doy> [ndays]
+
+   EXAMPLES: $0 2017 001
+             $0 2017 001 10
+
+EOF
+   exit
+endif
+
+@ yyyy  = $1
+@ doy = $2
+@ count = 1
+if ($#argv == 3) then
+   @ count = $3
+endif
+set yy = `echo $yyyy | awk '{printf("%2.2d",$1-int($1/100)*100)}'`
+
+set navdir = /Users/zhoufeng/Documents/GNSS_download/ion
+if (! -d $navdir) /bin/mkdir -p $navdir
+cd $navdir
+
+echo " "
+echo " Downloading CODE GIM files from ftp://ftp.aiub.unibe.ch ..."
+echo " "
+
+while ($count)
+   set cdoy = `echo $doy | awk '{printf("%3.3d\n",$1)}'`
+   echo " Year:" $yyyy " DOY:" $cdoy
+   
+   wget -qr -nH --cut-dirs=2 ftp://ftp.aiub.unibe.ch/CODE/$yyyy/CODG{$cdoy}"0."{$yy}"I.Z"
+
+   sh_uncompress CODG{$cdoy}"0."{$yy}"I.Z"
+
+   @ count --
+   @ doy ++
+end
+#
+##================================END PROGRAM======================================##

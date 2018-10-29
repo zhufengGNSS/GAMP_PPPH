@@ -1,0 +1,126 @@
+#!/bin/csh
+##
+## Purpose: perform GNSS downloading day-by-day
+##
+## Originally written by Feng Zhou on 05/11/2017 @ GFZ
+##
+## Email: zhouforme@163.com
+##
+## Section 1.1, Geodesy, GFZ German Research Centre for Geosciences
+#
+##===============================BEGIN PROGRAM=====================================##
+if ($#argv < 2) then
+more << EOF
+
+  Download the data files for GNSS precise point positioning (PPP) processing
+     from CDDIS, CODE, and IGN archives
+
+  Usage $0 <yyyy> <doy> [ndays] [type] [ac] [site_list]
+
+  OPTIONS:
+   <yyyy>         - 4-digit year [Required]
+   <doy>          - Day of year [Required]
+   [ndays]        - Number of consecutive days of data to retreive [Optional, default "1"]
+   [type]         - Production type, orb/clk/nav/dcb/dcbm/ion/snx/obs/obsm/ztd/ztdc/all [Optional, default "all"]
+   [ac]           - GNSS Analysis Center, it can be igs/cod/esa/gfz/grg/com/gbm/wum [Optional, default "igs"]
+   [site_list]    - Path of site_list, absolute path [if type = 'obs' or 'obsm', you can indicate site_list or not]
+                  -   If you indicate site_list, the observations are downloaded according to the site_list
+                  -   Otherwise, all the observations in the ftp directory will be downloaded
+  
+
+  EXAMPLES: $0 2017 001
+            $0 2017 001 10
+            $0 2017 001 10 orb igs
+            $0 2017 001 10 clk igs
+            $0 2017 001 10 obs
+            $0 2017 001 10 obsm /home/fzhou/work/site_list.txt
+            $0 2017 001 10 all gbm
+            $0 2017 001 10 all wum /home/fzhou/work/site_list.txt 
+
+EOF
+   exit
+endif
+
+@ yyyy  = $1
+@ doy = $2
+@ count = 1
+if ($#argv >= 3) then
+   @ count = $3
+endif
+set type = 'all'
+if ($#argv >= 4) then
+   set type = $4
+endif
+set ac = 'igs'
+set site_list = ''
+if ($#argv >= 5) then
+   if (${type} == 'orb' || ${type} == 'clk' || ${type} == 'all') then
+      set ac = $5
+   else if (${type} == 'obs' || ${type} == 'obsm' || ${type} == 'ztd') then
+      set site_list = $5
+   endif
+endif
+if ($#argv >= 6) then
+   if (${type} !=  all) then
+      echo 'Please set the type to "all"!'
+      exit
+   else
+      set ac = $5
+      set site_list = $6
+   endif
+endif
+
+echo " "
+echo " GNSS downloading ..."
+echo " "
+
+while (${count})
+   set cdoy = `echo ${doy} | awk '{printf("%3.3d\n",$1)}'`
+   #echo " Year:" ${yyyy} " DOY:" ${cdoy}
+   set mmddyy = `jday ${doy} ${yyyy}`
+   set mm = `echo ${mmddyy} | awk '{print substr($1,1,2)}'`
+   
+   if (${type} == 'orb' || ${type} == 'clk') then
+      if (${ac} == 'igs' || ${ac} == 'igr' || ${ac} == 'cod' || ${ac} == 'esa' || ${ac} == 'gfz' || \
+          ${ac} == 'grg' || ${ac} == 'jpl' || ${ac} == 'mit') then
+         sh_igs_prod ${yyyy} ${doy} 1 ${ac}
+      else if (${ac} == 'com' || ${ac} == 'gbm' || ${ac} == 'grm' || ${ac} == 'tum' || ${ac} == 'wum') then
+         sh_mgex_prod ${yyyy} ${doy} 1 ${ac} ign
+      endif
+   else if (${type} == 'nav') then
+      sh_cddis_nav ${yyyy} ${doy} 1
+   else if (${type} == 'dcb') then
+      sh_code_dcb ${yyyy} ${mm} 1
+   else if (${type} == 'dcbm') then
+      sh_mgex_dcb ${yyyy} ${doy} 1
+   else if (${type} == 'ion') then
+      sh_code_ion ${yyyy} ${doy} 1
+   else if (${type} == 'snx') then
+      sh_igs_snx ${yyyy} ${doy} 1
+   else if (${type} == 'ztdc') then
+      sh_code_ztd ${yyyy} ${doy} 1
+   else if (${type} == 'ztd') then
+      sh_igs_ztd ${yyyy} ${doy} 1 ${site_list}
+   else if (${type} == 'obs') then
+      sh_igs_obs ${yyyy} ${doy} 1 ${site_list}
+   else if (${type} == 'obsm') then
+      sh_mgex_obs ${yyyy} ${doy} 1 ${site_list}
+   else if (${type} == 'all') then
+      sh_igs_prod ${yyyy} ${doy} 1 ${ac}
+      sh_mgex_prod ${yyyy} ${doy} 1 ${ac} ign
+      sh_cddis_nav ${yyyy} ${doy} 1
+      sh_code_dcb ${yyyy} ${mm} 1
+      sh_mgex_dcb ${yyyy} ${doy} 1
+      sh_code_ion ${yyyy} ${doy} 1
+      sh_igs_snx ${yyyy} ${doy} 1
+      sh_code_ztd ${yyyy} ${doy} 1
+      sh_igs_ztd ${yyyy} ${doy} 1 ${site_list}
+      sh_igs_obs ${yyyy} ${doy} 1 ${site_list}
+      sh_mgex_obs ${yyyy} ${doy} 1 ${site_list}
+   endif
+
+   @ count --
+   @ doy ++
+end
+#
+##================================END PROGRAM======================================##

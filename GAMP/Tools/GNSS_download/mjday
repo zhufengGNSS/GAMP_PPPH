@@ -1,0 +1,87 @@
+#! /bin/csh -f
+#
+# convert day of year to julian day and vise versa
+#
+# note: this script is set to work for any day from Jan 1, 52 on.
+#       one may change the default parameters 'jd52' and 'styr'
+#       to a Jan 1 of any leap year.
+#       the julian day refers to the short form of modified julian
+#       day as appeared in pole. and ut1. tables of GAMIT, ie.
+#       34012 instead of 2434012
+#
+# by Peng Fang, SIO, UCSD, Aug. 92
+#
+#
+#--------------------------------------------------------------
+# set defaults
+#--------------------------------------------------------------
+#
+set doys = (366 365 365 365)
+set jd52 = 34012
+set styr = 52
+#
+#--------------------------------------------------------------
+# give instruction if no paramter(s)
+#--------------------------------------------------------------
+#
+if ($#argv < 1) then
+	echo ""
+	echo "$0 jjjjjj (from jday to dayofyear and year)"
+	echo "$0 ddd yy (from dayofyear and year to jday)"
+	echo ""
+	exit
+endif
+#
+#--------------------------------------------------------------
+# do conversion from julian day to day of year and year
+#--------------------------------------------------------------
+#
+if ($#argv < 2) then
+
+@ yr = $styr
+@ dd = ( $1 + 1 ) - $jd52
+@ i = 1
+while ( $dd > $doys[$i] )
+	@ dd = $dd - $doys[$i]
+	@ yr = $yr + 1
+	@ i = ( $yr % 4 ) + 1
+end
+if ($dd < 10) set dd = `echo "00"$dd`
+if ($dd > 9 && $dd < 100) set dd = `echo "0"$dd`
+if($yr < 1900) then
+  if($yr > 60) then
+     @ yr = $yr + 1900
+  else
+     @ yr = $yr + 2000
+  endif
+endif
+
+echo $dd $yr
+
+#
+#--------------------------------------------------------------
+# do conversion from day of year and year to julian day
+#--------------------------------------------------------------
+#
+else
+set yr = $2
+if($yr < 1900) then
+  if($yr > 60) then
+     @ yr = $yr + 1900
+  else
+     @ yr = $yr + 2000
+  endif
+endif
+
+@ yr = $yr - 1900
+
+set doy = `echo $1 | awk '{print $1*1}'`
+@ nyr = $yr - $styr
+@ leap = ( $nyr + 3 ) / 4
+@ dd = $nyr * 365
+@ jday = ( $jd52 - 1 ) + $dd + $leap + $doy
+@ leapy = ( $2 % 4 ) + 1
+if ( $dd < 29 && $leapy == 1 && $nyr > 0 ) @ jday = $jday - 1
+echo $jday
+	
+endif

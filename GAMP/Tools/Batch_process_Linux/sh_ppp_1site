@@ -1,0 +1,286 @@
+#!/bin/csh
+# batch PPP processing using GAMP
+if ($#argv < 2) then
+more << EOF
+
+ Usage $0 yyyy doy ndays ac satsys mode freq ion session
+   
+ Example: $0 2017 001 1 com G kin DF Y
+          $0 2017 001 1 grm GR kin SF N NONE
+          $0 2017 001 1 gbm GRCE sta SF N 00
+          $0 2017 001 1 wum GRCE kin DF N 03
+
+EOF
+   exit
+endif
+
+@ yyyy = $1
+set yy = `echo ${yyyy} | awk '{printf("%2.2d",$1-int($1/100)*100)}'`
+@ doy = $2
+@ count = 1
+if ($#argv >= 3) then
+   @ count = $3
+endif
+set ac = 'wum' 
+if ($#argv >= 4) then
+   set ac = $4
+endif
+set satsys = 'G'
+if ($#argv >= 5) then
+   set satsys = $5
+endif
+set mode = 'sta'
+if ($#argv >= 6) then
+   set mode = $6
+endif
+set freq = 'DF'
+if ($#argv >= 7) then
+   set freq = $7
+endif
+set ion = 'N'
+if ($#argv >= 8) then
+   set ion = $8
+endif
+set session = 'NONE'
+if ($#argv >= 9) then
+   set session = $9
+endif
+
+set wrkdir = `pwd`
+
+while (${count})
+   set cdoy = `echo ${doy} | awk '{printf("%3.3d\n",$1)}'`
+
+   @ doy1 = ${doy} - 1
+   @ doy2 = ${doy} + 1
+   set WEEKD  = `mjday ${doy} ${yyyy} | awk '{nwk=int(($1-44244)/7);nwkd=$1-44244-nwk*7;print nwk*10+nwkd}'`
+   set WEEK   = `echo ${WEEKD} | awk '{print substr($1,1,4)}'`
+   set WEEKD1 = `mjday ${doy1} ${yyyy} | awk '{nwk=int(($1-44244)/7);nwkd=$1-44244-nwk*7;print nwk*10+nwkd}'`
+   set WEEKD2 = `mjday ${doy2} ${yyyy} | awk '{nwk=int(($1-44244)/7);nwkd=$1-44244-nwk*7;print nwk*10+nwkd}'`
+   set mmddyy = `jday ${doy} ${yyyy}`
+   set mm     = `echo ${mmddyy} | awk '{print substr($1,1,2)}'`
+
+   set expdir = $wrkdir/${yyyy}${cdoy}
+   if (! -d ${expdir}) /bin/mkdir -p ${expdir}
+   cd ${expdir}
+
+   @ nobs = `ls *.${yy}o | wc -l`
+   if (${nobs} == 0) then
+      set obsdir = /data1/PROJECT/mgex_obs/${yyyy}${cdoy}
+      foreach site (`cat ../site.list`)
+         set site = `echo ${site} | tr "[A-Z]" "[a-z]"`
+         set ofil = ${obsdir}/${site}${cdoy}0.${yy}o
+         /bin/cp ${ofil} .
+      end
+   endif
+
+   set cfgf = gamp.cfg
+   if (! -e ${cfgf}) /bin/cp ${wrkdir}/tables/gamp.cfg .
+   if (! -e ocnload.blq) /bin/cp ${wrkdir}/tables/ocnload.blq .
+   if (! -e site.crd) /bin/cp ${wrkdir}/tables/site.crd .
+   if (${WEEK} >= 1934) then
+      if (-e igs14.atx) /bin/rm -f igs14.atx
+      if (${ac} == 'com') /bin/cp ${wrkdir}/tables/igs14_igs.atx igs14.atx
+      if (${ac} == 'gbm') /bin/cp ${wrkdir}/tables/igs14_gbm.atx igs14.atx
+      if (${ac} == 'grm') /bin/cp ${wrkdir}/tables/igs14_igs.atx igs14.atx
+      if (${ac} == 'wum') /bin/cp ${wrkdir}/tables/igs14_wum.atx igs14.atx
+   else
+      if (-e igs08.atx) /bin/rm -f igs08.atx
+      if (${ac} == 'com') /bin/cp ${wrkdir}/tables/igs08_igs.atx igs08.atx
+      if (${ac} == 'gbm') /bin/cp ${wrkdir}/tables/igs08_gbm.atx igs08.atx
+      if (${ac} == 'grm') /bin/cp ${wrkdir}/tables/igs08_igs.atx igs08.atx
+      if (${ac} == 'wum') /bin/cp ${wrkdir}/tables/igs08_wum.atx igs08.atx
+   endif
+
+   set dcbdir = /data1/PROJECT/dcb
+   set p1p2_dcb = ${dcbdir}/P1P2{$yy}{$mm}.DCB
+   set p1c1_dcb = ${dcbdir}/P1C1{$yy}{$mm}.DCB
+   set p2c2_dcb = ${dcbdir}/P2C2{$yy}{$mm}.DCB
+   if (! -e ${p1p2_dcb} || ! -e ${p1c1_dcb} || ! -e ${p2c2_dcb}) then
+      echo "\n *** ERROR($0): DCB file NOT found: ${p1p2_dcb}, ${p1c1_dcb}, ${p2c2_dcb}"
+      exit
+   else
+      /bin/cp ${p1p2_dcb} .
+      /bin/cp ${p1c1_dcb} .
+      /bin/cp ${p2c2_dcb} .
+   endif
+
+   set navdir = /data1/PROJECT/nav
+   set navfil = ${navdir}/brdm${cdoy}0.${yy}p
+   if (! -e ${navfil}) then
+      echo "\n *** ERROR($0): NAV file NOT found: ${navfil}"
+      exit
+   endif
+   /bin/cp ${navfil} .
+
+   set orbdir = /data1/PROJECT/igs_prod
+   set sp3fil1 = ${orbdir}/${ac}${WEEKD1}.sp3
+   set clkfil1 = ${orbdir}/${ac}${WEEKD1}.clk
+   set sp3fil2 = ${orbdir}/${ac}${WEEKD}.sp3
+   set clkfil2 = ${orbdir}/${ac}${WEEKD}.clk
+   set sp3fil3 = ${orbdir}/${ac}${WEEKD2}.sp3
+   set clkfil3 = ${orbdir}/${ac}${WEEKD2}.clk
+   if (! -e ${sp3fil2} || ! -e ${clkfil2}) then
+      echo "\n *** ERROR($0): ORBCLK file NOT found: ${sp3fil2}, ${clkfil2}"
+      goto NEXT
+   endif
+   /bin/rm -f *.sp3 *.clk
+   /bin/cp ${sp3fil1} ${ac}${WEEKD1}.sp3
+   /bin/cp ${clkfil1} ${ac}${WEEKD1}.clk
+   /bin/cp ${sp3fil2} ${ac}${WEEKD}.sp3
+   /bin/cp ${clkfil2} ${ac}${WEEKD}.clk
+   /bin/cp ${sp3fil3} ${ac}${WEEKD2}.sp3
+   /bin/cp ${clkfil3} ${ac}${WEEKD2}.clk
+
+   set snxfil = /data1/PROJECT/igs_snx/igs${WEEK}.snx
+   if (-e ${snxfil}) then
+      /bin/cp ${snxfil} .
+   endif
+
+   set ssss = "                    = ${wrkdir}/${yyyy}${cdoy}"
+   awk -v sub_text="${ssss}" '{if ($2 == "/home/fzhou/exam") print sub_text; else print $0}' ${cfgf} >! cfg.tmp
+   /bin/mv cfg.tmp ${cfgf}
+
+   if (${satsys} == "G") then
+      set ssss = "navsys              = 1                     %(1:gps  4:glo  5:gps+glo  8:gal  16:qzs  32:bds)"
+      awk -v sub_text="${ssss}" '{if ($1 == "navsys") print sub_text; else print $0}' ${cfgf} >! cfg.tmp
+      /bin/mv cfg.tmp ${cfgf}
+   else if (${satsys} == "R") then
+      set ssss = "navsys              = 4                     %(1:gps  4:glo  5:gps+glo  8:gal  16:qzs  32:bds)"
+      awk -v sub_text="${ssss}" '{if ($1 == "navsys") print sub_text; else print $0}' ${cfgf} >! cfg.tmp
+      /bin/mv cfg.tmp ${cfgf}
+      set ssss = "gloicb              = 0                     %(0:off  1:linear function of frequency number  2:quadratic polynomial function of frequency number"
+      awk -v sub_text="${ssss}" '{if ($1 == "gloicb") print sub_text; else print $0}' ${cfgf} >! cfg.tmp
+      /bin/mv cfg.tmp ${cfgf}
+   else if (${satsys} == "C") then
+      set ssss = "navsys              = 32                    %(1:gps  4:glo  5:gps+glo  8:gal  16:qzs  32:bds)"
+      awk -v sub_text="${ssss}" '{if ($1 == "navsys") print sub_text; else print $0}' ${cfgf} >! cfg.tmp
+      /bin/mv cfg.tmp ${cfgf}
+   else if (${satsys} == "GR") then
+      set ssss = "navsys              = 5                     %(1:gps  4:glo  5:gps+glo  8:gal  16:qzs  32:bds)"
+      awk -v sub_text="${ssss}" '{if ($1 == "navsys") print sub_text; else print $0}' ${cfgf} >! cfg.tmp
+      /bin/mv cfg.tmp ${cfgf}
+      set ssss = "gloicb              = 0                     %(0:off  1:linear function of frequency number  2:quadratic polynomial function of frequency number"
+      awk -v sub_text="${ssss}" '{if ($1 == "gloicb") print sub_text; else print $0}' ${cfgf} >! cfg.tmp
+      /bin/mv cfg.tmp ${cfgf}
+   else if (${satsys} == "GC") then
+      set ssss = "navsys              = 33                    %(1:gps  4:glo  5:gps+glo  8:gal  16:qzs  32:bds)"
+      awk -v sub_text="${ssss}" '{if ($1 == "navsys") print sub_text; else print $0}' ${cfgf} >! cfg.tmp
+      /bin/mv cfg.tmp ${cfgf}
+   else if (${satsys} == "GE") then
+      set ssss = "navsys              = 9                     %(1:gps  4:glo  5:gps+glo  8:gal  16:qzs  32:bds)"
+      awk -v sub_text="${ssss}" '{if ($1 == "navsys") print sub_text; else print $0}' ${cfgf} >! cfg.tmp
+      /bin/mv cfg.tmp ${cfgf}
+   else if (${satsys} == "GJ") then
+      set ssss = "navsys              = 17                     %(1:gps  4:glo  5:gps+glo  8:gal  16:qzs  32:bds)"
+      awk -v sub_text="${ssss}" '{if ($1 == "navsys") print sub_text; else print $0}' ${cfgf} >! cfg.tmp
+      /bin/mv cfg.tmp ${cfgf}
+   else if (${satsys} == "GRC") then
+      set ssss = "navsys              = 37                    %(1:gps  4:glo  5:gps+glo  8:gal  16:qzs  32:bds)"
+      awk -v sub_text="${ssss}" '{if ($1 == "navsys") print sub_text; else print $0}' ${cfgf} >! cfg.tmp
+      /bin/mv cfg.tmp ${cfgf}
+      set ssss = "gloicb              = 0                     %(0:off  1:linear function of frequency number  2:quadratic polynomial function of frequency number"
+      awk -v sub_text="${ssss}" '{if ($1 == "gloicb") print sub_text; else print $0}' ${cfgf} >! cfg.tmp
+      /bin/mv cfg.tmp ${cfgf}
+   else if (${satsys} == "GRCE") then
+      set ssss = "navsys              = 45                    %(1:gps  4:glo  5:gps+glo  8:gal  16:qzs  32:bds)"
+      awk -v sub_text="${ssss}" '{if ($1 == "navsys") print sub_text; else print $0}' ${cfgf} >! cfg.tmp
+      /bin/mv cfg.tmp ${cfgf}
+      set ssss = "gloicb              = 0                     %(0:off  1:linear function of frequency number  2:quadratic polynomial function of frequency number"
+      awk -v sub_text="${ssss}" '{if ($1 == "gloicb") print sub_text; else print $0}' ${cfgf} >! cfg.tmp
+      /bin/mv cfg.tmp ${cfgf}
+   else if (${satsys} == "GRCEJ") then
+      set ssss = "navsys              = 61                    %(1:gps  4:glo  5:gps+glo  8:gal  16:qzs  32:bds)"
+      awk -v sub_text="${ssss}" '{if ($1 == "navsys") print sub_text; else print $0}' ${cfgf} >! cfg.tmp
+      /bin/mv cfg.tmp ${cfgf}
+      set ssss = "gloicb              = 0                     %(0:off  1:linear function of frequency number  2:quadratic polynomial function of frequency number"
+      awk -v sub_text="${ssss}" '{if ($1 == "gloicb") print sub_text; else print $0}' ${cfgf} >! cfg.tmp
+      /bin/mv cfg.tmp ${cfgf}
+   endif
+
+   if (${mode} == "sta")  then
+      set ssss = "posmode             = 7                     %(0:spp  6:ppp_kinematic  7:ppp_static)"
+      awk -v sub_text="${ssss}" '{if ($1 == "posmode") print sub_text; else print $0}' ${cfgf} >! cfg.tmp
+      /bin/mv cfg.tmp ${cfgf}
+   else if (${mode} == "kin")  then
+      set ssss = "posmode             = 6                     %(0:spp  6:ppp_kinematic  7:ppp_static)"
+      awk -v sub_text="${ssss}" '{if ($1 == "posmode") print sub_text; else print $0}' ${cfgf} >! cfg.tmp
+      /bin/mv cfg.tmp ${cfgf}
+   endif
+
+   if (${freq} == "DF")  then
+      set ssss = "inpfrq              = 2"
+      awk -v sub_text="${ssss}" '{if ($1 == "inpfrq") print sub_text; else print $0}' ${cfgf} >! cfg.tmp
+      /bin/mv cfg.tmp ${cfgf}
+      set ssss = "ionoopt             = 4                     %(0:off  1:brdc  2:IF12  3:UC1  4:UC12  5:ion-tec)"
+      awk -v sub_text="${ssss}" '{if ($1 == "ionoopt") print sub_text; else print $0}' ${cfgf} >! cfg.tmp
+      /bin/mv cfg.tmp ${cfgf}
+      set ssss = "prcNoise(ION)       = 4.0e-02               %(m)"
+      awk -v sub_text="${ssss}" '{if ($1 == "prcNoise(ION)") print sub_text; else print $0}' ${cfgf} >! cfg.tmp
+      /bin/mv cfg.tmp ${cfgf}
+   else if (${freq} == "SF")  then
+      set ssss = "inpfrq              = 1"
+      awk -v sub_text="${ssss}" '{if ($1 == "inpfrq") print sub_text; else print $0}' ${cfgf} >! cfg.tmp
+      /bin/mv cfg.tmp ${cfgf}
+      set ssss = "ionoopt             = 3                     %(0:off  1:brdc  2:IF12  3:UC1  4:UC12  5:ion-tec)"
+      awk -v sub_text="${ssss}" '{if ($1 == "ionoopt") print sub_text; else print $0}' ${cfgf} >! cfg.tmp
+      /bin/mv cfg.tmp ${cfgf}
+      set ssss = "prcNoise(ION)       = 4.0e-02               %(m)"
+      awk -v sub_text="${ssss}" '{if ($1 == "prcNoise(ION)") print sub_text; else print $0}' ${cfgf} >! cfg.tmp
+      /bin/mv cfg.tmp ${cfgf}
+   endif
+
+   if (${ion} == "Y")  then
+      set ssss = "ionconstraint       = 1                     %(0:off  1:on)"
+      awk -v sub_text="${ssss}" '{if ($1 == "ionconstraint") print sub_text; else print $0}' ${cfgf} >! cfg.tmp
+      /bin/mv cfg.tmp ${cfgf}
+   else if (${ion} == "N")  then
+      set ssss = "ionconstraint       = 0                     %(0:off  1:on)"
+      awk -v sub_text="${ssss}" '{if ($1 == "ionconstraint") print sub_text; else print $0}' ${cfgf} >! cfg.tmp
+      /bin/mv cfg.tmp ${cfgf}
+   endif
+
+   if (${session} == "NONE") then
+      set ssss = "start_time          = 0    2017/01/01  00:00:00.0       %(0:from obs  1:from inp)"
+      awk -v sub_text="${ssss}" '{if ($1 == "start_time") print sub_text; else print $0}' ${cfgf} >! cfg.tmp
+      /bin/mv cfg.tmp ${cfgf}
+      set ssss = "end_time            = 0    2017/01/01  23:59:30.0       %(0:from obs  1:from inp)"
+      awk -v sub_text="${ssss}" '{if ($1 == "end_time") print sub_text; else print $0}' ${cfgf} >! cfg.tmp
+      /bin/mv cfg.tmp ${cfgf}
+
+      # processing
+      gamp ${cfgf}
+
+      if (${ion} == "Y")  then
+         /bin/mv ${wrkdir}/${yyyy}${cdoy}/result ${wrkdir}/${yyyy}${cdoy}/result_${satsys}_${mode}_${freq}_GIM_${ac}
+      else if (${ion} == "N")  then
+         /bin/mv ${wrkdir}/${yyyy}${cdoy}/result ${wrkdir}/${yyyy}${cdoy}/result_${satsys}_${mode}_${freq}_noGIM_${ac}
+      endif
+   else
+      set mmddyy = `jday ${doy} ${yyyy}`
+      set mm = `echo ${mmddyy} | awk '{print substr($1,1,2)}'`
+      set dd = `echo ${mmddyy} | awk '{print substr($1,3,2)}'`
+      set sess = `echo ${session} | awk '{printf("%02d\n",$1)}'`
+      @ hr = ${session}
+      @ hr1 = ${hr} + 2
+      @ hr2 = ${hr} + 3
+      set strhr1 = `echo ${hr1} | awk '{printf("%02d\n",$1)}'`
+      set strhr2 = `echo ${hr2} | awk '{printf("%02d\n",$1)}'`
+      set ssss = "start_time          = 1    ${yyyy}/${mm}/${dd}  ${sess}:00:00.0       %(0:from obs  1:from inp)"
+      awk -v sub_text="${ssss}" '{if ($1 == "start_time") print sub_text; else print $0}' ${cfgf} >! cfg.tmp
+      /bin/mv cfg.tmp ${cfgf}
+      set ssss = "end_time            = 1    ${yyyy}/${mm}/${dd}  ${strhr1}:59:30.0       %(0:from obs  1:from inp)"
+      awk -v sub_text="${ssss}" '{if ($1 == "end_time") print sub_text; else print $0}' ${cfgf} >! cfg.tmp
+      /bin/mv cfg.tmp ${cfgf}
+
+      # processing
+      gamp ${cfgf}
+
+      /bin/mv ${wrkdir}/${yyyy}${cdoy}/result ${wrkdir}/${yyyy}${cdoy}/result_${mode}_${sess}_${strhr2}
+   endif
+
+NEXT:
+   @ count --
+   @ doy ++
+end
+

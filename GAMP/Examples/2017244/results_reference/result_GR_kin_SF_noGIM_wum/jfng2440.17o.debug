@@ -1,0 +1,110 @@
+R09 ATTENTION! PRELIMINARY PHASE CENTER CORRECTIONS!
+R26 ATTENTION! PRELIMINARY PHASE CENTER CORRECTIONS!
+01:26:00.0  *** WARNING: G22 ecliType=2
+01:26:30.0  *** WARNING: G22 ecliType=2
+01:27:00.0  *** WARNING: G22 ecliType=2
+01:27:30.0  *** WARNING: G22 ecliType=2
+01:28:00.0  *** WARNING: G22 ecliType=2
+02:06:00.0  *** WARNING: G03 ecliType=2
+02:06:30.0  *** WARNING: G03 ecliType=2
+02:07:00.0  *** WARNING: G03 ecliType=2
+02:07:30.0  *** WARNING: G03 ecliType=2
+02:08:00.0  *** WARNING: G03 ecliType=2
+02:08:30.0  *** WARNING: G03 ecliType=2
+02:09:00.0  *** WARNING: G03 ecliType=2
+02:09:30.0  *** WARNING: G03 ecliType=2
+02:10:00.0  *** WARNING: G03 ecliType=2
+02:10:30.0  *** WARNING: G03 ecliType=2
+02:11:00.0  *** WARNING: G03 ecliType=2
+02:11:30.0  *** WARNING: G03 ecliType=2
+02:12:00.0  *** WARNING: G03 ecliType=2
+02:12:30.0  *** WARNING: G03 ecliType=2
+02:13:00.0  *** WARNING: G03 ecliType=2
+02:13:30.0  *** WARNING: G03 ecliType=2
+02:14:00.0  *** WARNING: G03 ecliType=2
+03:45:30.0  *** WARNING: G28 ecliType=2
+03:46:00.0  *** WARNING: G28 ecliType=2
+03:46:30.0  *** WARNING: G28 ecliType=2
+03:47:00.0  *** WARNING: G28 ecliType=2
+03:47:30.0  *** WARNING: G28 ecliType=2
+03:48:00.0  *** WARNING: G28 ecliType=2
+03:48:30.0  *** WARNING: G28 ecliType=2
+03:49:00.0  *** WARNING: G28 ecliType=2
+03:49:30.0  *** WARNING: G28 ecliType=2
+03:50:00.0  *** WARNING: G28 ecliType=2
+03:57:00.0  R24 GF CS gf_new=      -10.968, gf_old=       -9.756, diff_abs=       -1.212, thres=        0.150, elev=35.3
+06:41:00.0  G23 MW CS mw_new=        7.136, mw_old=       32.943, diff_abs=      -25.807, thres=        6.000, elev= 0.1
+06:41:00.0  G23 GF CS gf_new=        0.211, gf_old=        6.071, diff_abs=       -5.859, thres=        0.230, elev= 7.0
+07:04:00.0  R01 GF CS gf_new=       30.551, gf_old=       31.283, diff_abs=       -0.732, thres=        0.150, elev=18.6
+07:43:30.0  *** WARNING: G20 ecliType=2
+07:44:00.0  *** WARNING: G20 ecliType=2
+07:44:30.0  *** WARNING: G20 ecliType=2
+07:45:00.0  *** WARNING: G20 ecliType=2
+07:45:00.0  R04 GF CS gf_new=       -2.818, gf_old=       -3.439, diff_abs=        0.621, thres=        0.204, elev= 9.6
+07:45:30.0  *** WARNING: G20 ecliType=2
+07:46:00.0  *** WARNING: G20 ecliType=2
+07:46:30.0  *** WARNING: G20 ecliType=2
+07:47:00.0  *** WARNING: G20 ecliType=2
+07:47:30.0  *** WARNING: G20 ecliType=2
+07:48:00.0  *** WARNING: G20 ecliType=2
+07:48:30.0  *** WARNING: G20 ecliType=2
+07:49:00.0  *** WARNING: G20 ecliType=2
+07:49:30.0  *** WARNING: G20 ecliType=2
+07:50:00.0  *** WARNING: G20 ecliType=2
+07:50:30.0  *** WARNING: G20 ecliType=2
+07:51:00.0  *** WARNING: G20 ecliType=2
+07:51:30.0  *** WARNING: G20 ecliType=2
+07:52:00.0  *** WARNING: G20 ecliType=2
+10:10:30.0  R17 GF CS gf_new=       15.583, gf_old=       15.356, diff_abs=        0.226, thres=        0.224, elev= 7.6
+10:11:00.0  R17 GF CS gf_new=       15.810, gf_old=       15.583, diff_abs=        0.228, thres=        0.227, elev= 7.3
+10:11:30.0  R17 GF CS gf_new=       16.075, gf_old=       15.810, diff_abs=        0.265, thres=        0.229, elev= 7.1
+10:12:00.0  R17 GF CS gf_new=       16.328, gf_old=       16.075, diff_abs=        0.253, thres=        0.230, elev= 6.8
+10:12:30.0  R17 GF CS gf_new=      -34.357, gf_old=       16.328, diff_abs=      -50.685, thres=        0.230, elev= 6.6
+10:13:00.0  R17 GF CS gf_new=      -34.082, gf_old=      -34.357, diff_abs=        0.274, thres=        0.230, elev= 6.4
+11:29:30.0  R18 GF CS gf_new=        0.648, gf_old=        0.417, diff_abs=        0.231, thres=        0.204, elev= 9.6
+11:30:00.0  R18 GF CS gf_new=        0.867, gf_old=        0.648, diff_abs=        0.219, thres=        0.206, elev= 9.4
+11:30:30.0  R18 GF CS gf_new=        1.134, gf_old=        0.867, diff_abs=        0.268, thres=        0.209, elev= 9.1
+11:31:00.0  R18 GF CS gf_new=        1.410, gf_old=        1.134, diff_abs=        0.275, thres=        0.211, elev= 8.9
+11:31:30.0  R18 GF CS gf_new=        1.702, gf_old=        1.410, diff_abs=        0.292, thres=        0.213, elev= 8.7
+11:32:00.0  R18 GF CS gf_new=        2.008, gf_old=        1.702, diff_abs=        0.305, thres=        0.216, elev= 8.4
+11:32:30.0  R18 GF CS gf_new=        2.353, gf_old=        2.008, diff_abs=        0.345, thres=        0.218, elev= 8.2
+11:36:00.0  R18 GF CS gf_new=      -44.768, gf_old=        5.584, diff_abs=      -50.352, thres=        0.230, elev= 6.6
+11:36:30.0  R18 GF CS gf_new=      -44.324, gf_old=      -44.768, diff_abs=        0.444, thres=        0.230, elev= 6.4
+13:02:00.0  R06 GF CS gf_new=      -14.596, gf_old=      -15.050, diff_abs=        0.455, thres=        0.165, elev=13.5
+13:10:00.0  *** WARNING: outlier (0) rejected 2017/09/01 13:10:00.00 sat=G25 L1 res= -33.3650 el=10.9
+17:57:30.0  R11 GF CS gf_new=       -1.573, gf_old=       -1.117, diff_abs=       -0.455, thres=        0.192, elev=10.8
+19:15:00.0  G29 MW CS mw_new=        5.075, mw_old=      -15.660, diff_abs=       20.736, thres=        6.000, elev= 0.2
+19:15:00.0  G29 GF CS gf_new=        0.508, gf_old=       -4.138, diff_abs=        4.646, thres=        0.196, elev=10.4
+19:15:30.0  G29 MW CS mw_new=        4.052, mw_old=       -5.292, diff_abs=        9.344, thres=        6.000, elev= 0.2
+19:25:30.0  *** WARNING: G22 ecliType=1
+19:26:00.0  *** WARNING: G22 ecliType=1
+19:26:30.0  *** WARNING: G22 ecliType=1
+19:27:00.0  *** WARNING: G22 ecliType=1
+19:27:30.0  *** WARNING: G22 ecliType=1
+19:28:00.0  *** WARNING: G22 ecliType=1
+19:28:30.0  *** WARNING: G22 ecliType=1
+19:29:00.0  *** WARNING: G22 ecliType=1
+20:35:00.0  R08 GF CS gf_new=       -1.391, gf_old=       -1.145, diff_abs=       -0.246, thres=        0.156, elev=14.4
+22:18:00.0  R23 GF CS gf_new=        3.535, gf_old=        3.310, diff_abs=        0.226, thres=        0.150, elev=18.1
+23:44:30.0  *** WARNING: G16 ecliType=2
+23:45:00.0  *** WARNING: G16 ecliType=2
+23:45:30.0  *** WARNING: G16 ecliType=2
+23:46:00.0  *** WARNING: G16 ecliType=2
+23:46:30.0  *** WARNING: G16 ecliType=2
+23:47:00.0  *** WARNING: G16 ecliType=2
+23:47:30.0  *** WARNING: G16 ecliType=2
+23:48:00.0  *** WARNING: G16 ecliType=2
+23:48:30.0  *** WARNING: G16 ecliType=2
+23:49:00.0  *** WARNING: G16 ecliType=2
+23:49:30.0  *** WARNING: G16 ecliType=2
+23:50:00.0  *** WARNING: G16 ecliType=2
+23:50:30.0  *** WARNING: G16 ecliType=2
+23:51:00.0  *** WARNING: G16 ecliType=2
+23:51:30.0  *** WARNING: G16 ecliType=2
+23:52:00.0  *** WARNING: G16 ecliType=2
+23:52:30.0  *** WARNING: G16 ecliType=2
+23:53:00.0  *** WARNING: G16 ecliType=2
+23:53:30.0  *** WARNING: G16 ecliType=2
+23:54:00.0  *** WARNING: G16 ecliType=2
+23:54:30.0  *** WARNING: G16 ecliType=2
+ * The program runs for 12.880 seconds

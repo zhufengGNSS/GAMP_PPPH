@@ -1,0 +1,414 @@
+00:00:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:00:00.00 sat=G01 L2 res= -33.4325 el=57.3
+00:00:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:00:00.00 sat=G08 L2 res= -30.8645 el=44.7
+00:00:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:00:00.00 sat=G27 L2 res= -33.8773 el=13.2
+00:00:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:00:00.00 sat=G30 L2 res= -30.1201 el=45.3
+00:00:00.0  *** WARNING: outlier (1) rejected 2017/09/01 00:00:00.00 sat=G11 P2 res=   4.7333 el=83.1
+00:00:00.0  *** WARNING: outlier (2) rejected 2017/09/01 00:00:00.00 sat=G28 P2 res=   4.1550 el=24.4
+00:00:00.0  *** WARNING: outlier (3) rejected 2017/09/01 00:00:00.00 sat=G07 P2 res=   4.1496 el=70.9
+00:00:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:00:30.00 sat=G01 L2 res= -33.0085 el=57.5
+00:00:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:00:30.00 sat=G08 L2 res= -31.3307 el=44.5
+00:00:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:00:30.00 sat=G27 L2 res= -34.1448 el=13.1
+00:01:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:01:00.00 sat=G01 L2 res= -34.0121 el=57.8
+00:01:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:01:00.00 sat=G08 L2 res= -31.9402 el=44.4
+00:01:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:01:00.00 sat=G27 L2 res= -34.3223 el=12.9
+00:01:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:01:30.00 sat=G01 L2 res= -34.9792 el=58.0
+00:01:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:01:30.00 sat=G27 L2 res= -30.3180 el=12.8
+00:02:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:02:00.00 sat=G01 L2 res= -35.5147 el=58.3
+00:02:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:02:30.00 sat=G01 L2 res= -33.4399 el=58.5
+00:03:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:03:00.00 sat=G01 L2 res= -32.6061 el=58.8
+00:03:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:03:30.00 sat=G01 L2 res= -34.1581 el=59.0
+00:04:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:04:00.00 sat=G01 L2 res= -35.2411 el=59.3
+00:04:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:04:30.00 sat=G01 L2 res= -35.0413 el=59.5
+00:05:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:05:00.00 sat=G01 L2 res= -30.9042 el=59.7
+00:05:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:05:00.00 sat=G17 L2 res= -34.6407 el=12.2
+00:05:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:05:30.00 sat=G01 L2 res= -32.8184 el=60.0
+00:06:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:06:00.00 sat=G01 L2 res= -33.8307 el=60.2
+00:06:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:06:30.00 sat=G01 L2 res= -34.0668 el=60.5
+00:07:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:07:00.00 sat=G01 L2 res= -35.9507 el=60.7
+00:07:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:07:30.00 sat=G01 L2 res= -34.0415 el=61.0
+00:08:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:08:00.00 sat=G01 L2 res= -35.8058 el=61.2
+00:08:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:08:30.00 sat=G01 L2 res= -34.6059 el=61.5
+00:09:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:09:00.00 sat=G01 L2 res= -36.7323 el=61.7
+00:09:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:09:30.00 sat=G01 L2 res= -33.5688 el=61.9
+00:10:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:10:00.00 sat=G01 L2 res= -32.5715 el=62.2
+00:10:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:10:30.00 sat=G01 L2 res= -32.7636 el=62.4
+00:11:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:11:00.00 sat=G01 L2 res= -35.7618 el=62.7
+00:11:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:11:30.00 sat=G01 L2 res= -34.0171 el=62.9
+00:12:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:12:00.00 sat=G01 L2 res= -33.6466 el=63.1
+00:12:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:12:30.00 sat=G01 L2 res= -34.2449 el=63.4
+00:13:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:13:00.00 sat=G01 L2 res= -34.8588 el=63.6
+00:13:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:13:30.00 sat=G01 L2 res= -34.1927 el=63.9
+00:14:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:14:00.00 sat=G01 L2 res= -32.7365 el=64.1
+00:14:00.0  *** WARNING: outlier (1) rejected 2017/09/01 00:14:00.00 sat=G22 P2 res=   6.4956 el=12.5
+00:14:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:14:30.00 sat=G01 L2 res= -33.2773 el=64.3
+00:15:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:15:00.00 sat=G01 L2 res= -34.7855 el=64.6
+00:15:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:15:30.00 sat=G01 L2 res= -34.6094 el=64.8
+00:16:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:16:00.00 sat=G01 L2 res= -32.9869 el=65.0
+00:16:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:16:30.00 sat=G01 L2 res= -32.0074 el=65.3
+00:17:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:17:00.00 sat=G01 L2 res= -33.4744 el=65.5
+00:17:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:17:30.00 sat=G01 L2 res= -34.6209 el=65.7
+00:18:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:18:00.00 sat=G01 L2 res= -34.8128 el=66.0
+00:18:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:18:30.00 sat=G01 L2 res= -32.4203 el=66.2
+00:19:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:19:00.00 sat=G01 L2 res= -34.0608 el=66.4
+00:19:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:19:30.00 sat=G01 L2 res= -34.1344 el=66.7
+00:20:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:20:00.00 sat=G01 L2 res= -33.5802 el=66.9
+00:20:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:20:30.00 sat=G01 L2 res= -30.4887 el=67.1
+00:21:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:21:00.00 sat=G01 L2 res= -33.8442 el=67.3
+00:21:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:21:30.00 sat=G01 L2 res= -34.5462 el=67.6
+00:22:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:22:00.00 sat=G01 L2 res= -33.7617 el=67.8
+00:22:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:22:30.00 sat=G01 L2 res= -34.1236 el=68.0
+00:23:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:23:00.00 sat=G01 L2 res= -34.8080 el=68.2
+00:23:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:23:30.00 sat=G01 L2 res= -33.8421 el=68.5
+00:24:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:24:00.00 sat=G01 L2 res= -33.6165 el=68.7
+00:24:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:24:30.00 sat=G01 L2 res= -34.2727 el=68.9
+00:25:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:25:00.00 sat=G01 L2 res= -33.4546 el=69.1
+00:25:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:25:30.00 sat=G01 L2 res= -33.7133 el=69.3
+00:26:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:26:00.00 sat=G01 L2 res= -32.1077 el=69.5
+00:26:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:26:30.00 sat=G01 L2 res= -32.7908 el=69.8
+00:27:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:27:00.00 sat=G01 L2 res= -33.1105 el=70.0
+00:27:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:27:30.00 sat=G01 L2 res= -34.0475 el=70.2
+00:28:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:28:00.00 sat=G01 L2 res= -34.2771 el=70.4
+00:28:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:28:30.00 sat=G01 L2 res= -33.3651 el=70.6
+00:29:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:29:00.00 sat=G01 L2 res= -33.9576 el=70.8
+00:29:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:29:30.00 sat=G01 L2 res= -34.7659 el=71.0
+00:30:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:30:00.00 sat=G01 L2 res= -36.1759 el=71.2
+00:30:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:30:30.00 sat=G01 L2 res= -32.6510 el=71.4
+00:31:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:31:00.00 sat=G01 L2 res= -32.4714 el=71.6
+00:31:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:31:30.00 sat=G01 L2 res= -33.5874 el=71.8
+00:32:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:32:00.00 sat=G01 L2 res= -34.2624 el=72.0
+00:32:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:32:30.00 sat=G01 L2 res= -32.3849 el=72.2
+00:33:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:33:00.00 sat=G01 L2 res= -33.1148 el=72.4
+00:33:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:33:30.00 sat=G01 L2 res= -34.6822 el=72.5
+00:34:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:34:00.00 sat=G01 L2 res= -34.9641 el=72.7
+00:34:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:34:30.00 sat=G01 L2 res= -34.4421 el=72.9
+00:35:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:35:00.00 sat=G01 L2 res= -35.4168 el=73.1
+00:35:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:35:30.00 sat=G01 L2 res= -33.7209 el=73.3
+00:36:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:36:00.00 sat=G01 L2 res= -32.0991 el=73.4
+00:36:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:36:30.00 sat=G01 L2 res= -33.7680 el=73.6
+00:37:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:37:00.00 sat=G01 L2 res= -31.7784 el=73.8
+00:37:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:37:30.00 sat=G01 L2 res= -34.8621 el=73.9
+00:38:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:38:00.00 sat=G01 L2 res= -35.4405 el=74.1
+00:38:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:38:30.00 sat=G01 L2 res= -33.6090 el=74.3
+00:39:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:39:00.00 sat=G01 L2 res= -34.5252 el=74.4
+00:39:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:39:30.00 sat=G01 L2 res= -33.3135 el=74.6
+00:40:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:40:00.00 sat=G01 L2 res= -34.8932 el=74.7
+00:40:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:40:30.00 sat=G01 L2 res= -33.5894 el=74.9
+00:41:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:41:00.00 sat=G01 L2 res= -34.9698 el=75.0
+00:41:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:41:30.00 sat=G01 L2 res= -35.3910 el=75.1
+00:42:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:42:00.00 sat=G01 L2 res= -34.6950 el=75.3
+00:42:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:42:30.00 sat=G01 L2 res= -34.6713 el=75.4
+00:43:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:43:00.00 sat=G01 L2 res= -33.7493 el=75.5
+00:43:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:43:30.00 sat=G01 L2 res= -34.1377 el=75.6
+00:44:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:44:00.00 sat=G01 L2 res= -34.0847 el=75.7
+00:44:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:44:30.00 sat=G01 L2 res= -34.5262 el=75.8
+00:45:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:45:00.00 sat=G01 L2 res= -36.6042 el=76.0
+00:45:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:45:30.00 sat=G01 L2 res= -33.0691 el=76.1
+00:46:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:46:00.00 sat=G01 L2 res= -35.3221 el=76.1
+00:46:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:46:30.00 sat=G01 L2 res= -34.8040 el=76.2
+00:47:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:47:00.00 sat=G01 L2 res= -34.4584 el=76.3
+00:47:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:47:30.00 sat=G01 L2 res= -33.9487 el=76.4
+00:48:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:48:00.00 sat=G01 L2 res= -35.4255 el=76.5
+00:48:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:48:30.00 sat=G01 L2 res= -35.4346 el=76.5
+00:49:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:49:00.00 sat=G01 L2 res= -33.9575 el=76.6
+00:49:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:49:30.00 sat=G01 L2 res= -34.7862 el=76.7
+00:50:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:50:00.00 sat=G01 L2 res= -33.9217 el=76.7
+00:50:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:50:30.00 sat=G01 L2 res= -34.2599 el=76.8
+00:51:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:51:00.00 sat=G01 L2 res= -33.9706 el=76.8
+00:51:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:51:30.00 sat=G01 L2 res= -35.3798 el=76.8
+00:52:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:52:00.00 sat=G01 L2 res= -35.3696 el=76.9
+00:52:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:52:30.00 sat=G01 L2 res= -32.0475 el=76.9
+00:53:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:53:00.00 sat=G01 L2 res= -34.2943 el=76.9
+00:53:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:53:30.00 sat=G01 L2 res= -33.7503 el=76.9
+00:54:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:54:00.00 sat=G01 L2 res= -33.9274 el=76.9
+00:54:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:54:30.00 sat=G01 L2 res= -35.2280 el=76.9
+00:55:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:55:00.00 sat=G01 L2 res= -35.5828 el=76.9
+00:55:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:55:30.00 sat=G01 L2 res= -33.7842 el=76.9
+00:56:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:56:00.00 sat=G01 L2 res= -34.9246 el=76.9
+00:56:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:56:30.00 sat=G01 L2 res= -34.9543 el=76.9
+00:57:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:57:00.00 sat=G01 L2 res= -35.1369 el=76.9
+00:57:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:57:30.00 sat=G01 L2 res= -35.0327 el=76.8
+00:58:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:58:00.00 sat=G01 L2 res= -34.4342 el=76.8
+00:58:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:58:30.00 sat=G01 L2 res= -35.0586 el=76.7
+00:59:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:59:00.00 sat=G01 L2 res= -35.4688 el=76.7
+00:59:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:59:30.00 sat=G01 L2 res= -34.7905 el=76.6
+01:00:00.0  *** WARNING: outlier (0) rejected 2017/09/01 01:00:00.00 sat=G01 L2 res= -34.1037 el=76.6
+01:00:30.0  *** WARNING: outlier (0) rejected 2017/09/01 01:00:30.00 sat=G01 L2 res= -34.8309 el=76.5
+01:01:00.0  *** WARNING: outlier (0) rejected 2017/09/01 01:01:00.00 sat=G01 L2 res= -32.8495 el=76.4
+01:01:30.0  *** WARNING: outlier (0) rejected 2017/09/01 01:01:30.00 sat=G01 L2 res= -35.3681 el=76.3
+01:02:00.0  *** WARNING: outlier (0) rejected 2017/09/01 01:02:00.00 sat=G01 L2 res= -35.0265 el=76.3
+01:02:30.0  *** WARNING: outlier (0) rejected 2017/09/01 01:02:30.00 sat=G01 L2 res= -34.2884 el=76.2
+01:03:00.0  *** WARNING: outlier (0) rejected 2017/09/01 01:03:00.00 sat=G01 L2 res= -34.7822 el=76.1
+01:03:30.0  *** WARNING: outlier (0) rejected 2017/09/01 01:03:30.00 sat=G01 L2 res= -35.0212 el=76.0
+01:04:00.0  *** WARNING: outlier (0) rejected 2017/09/01 01:04:00.00 sat=G01 L2 res= -32.3560 el=75.9
+01:04:30.0  *** WARNING: outlier (0) rejected 2017/09/01 01:04:30.00 sat=G01 L2 res= -32.2513 el=75.8
+01:05:00.0  *** WARNING: outlier (0) rejected 2017/09/01 01:05:00.00 sat=G01 L2 res= -35.6054 el=75.7
+01:05:30.0  *** WARNING: outlier (0) rejected 2017/09/01 01:05:30.00 sat=G01 L2 res= -34.1524 el=75.5
+01:06:00.0  *** WARNING: outlier (0) rejected 2017/09/01 01:06:00.00 sat=G01 L2 res= -33.2295 el=75.4
+01:06:30.0  *** WARNING: outlier (0) rejected 2017/09/01 01:06:30.00 sat=G01 L2 res= -33.6134 el=75.3
+01:07:00.0  *** WARNING: outlier (0) rejected 2017/09/01 01:07:00.00 sat=G01 L2 res= -33.6482 el=75.2
+01:07:30.0  *** WARNING: outlier (0) rejected 2017/09/01 01:07:30.00 sat=G01 L2 res= -34.0943 el=75.0
+01:08:00.0  *** WARNING: outlier (0) rejected 2017/09/01 01:08:00.00 sat=G01 L2 res= -32.7220 el=74.9
+01:08:30.0  *** WARNING: outlier (0) rejected 2017/09/01 01:08:30.00 sat=G01 L2 res= -35.4061 el=74.8
+01:09:00.0  *** WARNING: outlier (0) rejected 2017/09/01 01:09:00.00 sat=G01 L2 res= -34.4013 el=74.6
+01:09:30.0  *** WARNING: outlier (0) rejected 2017/09/01 01:09:30.00 sat=G01 L2 res= -33.6787 el=74.5
+01:10:00.0  *** WARNING: outlier (0) rejected 2017/09/01 01:10:00.00 sat=G01 L2 res= -34.7304 el=74.3
+01:10:30.0  *** WARNING: outlier (0) rejected 2017/09/01 01:10:30.00 sat=G01 L2 res= -34.3236 el=74.2
+01:11:00.0  *** WARNING: outlier (0) rejected 2017/09/01 01:11:00.00 sat=G01 L2 res= -35.5068 el=74.0
+01:11:30.0  *** WARNING: outlier (0) rejected 2017/09/01 01:11:30.00 sat=G01 L2 res= -34.1056 el=73.9
+01:12:00.0  *** WARNING: outlier (0) rejected 2017/09/01 01:12:00.00 sat=G01 L2 res= -33.1953 el=73.7
+01:12:30.0  *** WARNING: outlier (0) rejected 2017/09/01 01:12:30.00 sat=G01 L2 res= -32.8676 el=73.5
+01:13:00.0  *** WARNING: outlier (0) rejected 2017/09/01 01:13:00.00 sat=G01 L2 res= -30.9032 el=73.4
+01:13:30.0  *** WARNING: outlier (0) rejected 2017/09/01 01:13:30.00 sat=G01 L2 res= -33.2922 el=73.2
+01:14:00.0  *** WARNING: outlier (0) rejected 2017/09/01 01:14:00.00 sat=G01 L2 res= -33.1081 el=73.0
+01:14:30.0  *** WARNING: outlier (0) rejected 2017/09/01 01:14:30.00 sat=G01 L2 res= -32.6336 el=72.8
+01:15:00.0  *** WARNING: outlier (0) rejected 2017/09/01 01:15:00.00 sat=G01 L2 res= -31.8321 el=72.7
+01:15:30.0  *** WARNING: outlier (0) rejected 2017/09/01 01:15:30.00 sat=G01 L2 res= -34.5108 el=72.5
+01:16:00.0  *** WARNING: outlier (0) rejected 2017/09/01 01:16:00.00 sat=G01 L2 res= -34.2354 el=72.3
+01:16:30.0  *** WARNING: outlier (0) rejected 2017/09/01 01:16:30.00 sat=G01 L2 res= -34.3495 el=72.1
+01:17:00.0  *** WARNING: outlier (0) rejected 2017/09/01 01:17:00.00 sat=G01 L2 res= -34.9455 el=71.9
+01:17:30.0  *** WARNING: outlier (0) rejected 2017/09/01 01:17:30.00 sat=G01 L2 res= -32.9989 el=71.8
+01:18:00.0  *** WARNING: outlier (0) rejected 2017/09/01 01:18:00.00 sat=G01 L2 res= -32.2312 el=71.6
+01:18:30.0  *** WARNING: outlier (0) rejected 2017/09/01 01:18:30.00 sat=G01 L2 res= -32.9201 el=71.4
+01:19:00.0  *** WARNING: outlier (0) rejected 2017/09/01 01:19:00.00 sat=G01 L2 res= -33.3761 el=71.2
+01:19:30.0  *** WARNING: outlier (0) rejected 2017/09/01 01:19:30.00 sat=G01 L2 res= -34.9627 el=71.0
+01:20:00.0  *** WARNING: outlier (0) rejected 2017/09/01 01:20:00.00 sat=G01 L2 res= -33.7801 el=70.8
+01:20:30.0  *** WARNING: outlier (0) rejected 2017/09/01 01:20:30.00 sat=G01 L2 res= -34.4888 el=70.6
+01:21:00.0  *** WARNING: outlier (0) rejected 2017/09/01 01:21:00.00 sat=G01 L2 res= -33.7697 el=70.4
+01:21:30.0  *** WARNING: outlier (0) rejected 2017/09/01 01:21:30.00 sat=G01 L2 res= -32.4206 el=70.2
+01:22:00.0  *** WARNING: outlier (0) rejected 2017/09/01 01:22:00.00 sat=G01 L2 res= -33.8858 el=70.0
+01:22:30.0  *** WARNING: outlier (0) rejected 2017/09/01 01:22:30.00 sat=G01 L2 res= -33.2662 el=69.8
+01:23:00.0  *** WARNING: outlier (0) rejected 2017/09/01 01:23:00.00 sat=G01 L2 res= -31.6740 el=69.6
+01:23:30.0  *** WARNING: outlier (0) rejected 2017/09/01 01:23:30.00 sat=G01 L2 res= -35.5576 el=69.4
+01:24:00.0  *** WARNING: outlier (0) rejected 2017/09/01 01:24:00.00 sat=G01 L2 res= -34.3522 el=69.2
+01:24:30.0  *** WARNING: outlier (0) rejected 2017/09/01 01:24:30.00 sat=G01 L2 res= -34.3816 el=68.9
+01:25:00.0  *** WARNING: outlier (0) rejected 2017/09/01 01:25:00.00 sat=G01 L2 res= -32.2263 el=68.7
+01:25:30.0  *** WARNING: outlier (0) rejected 2017/09/01 01:25:30.00 sat=G01 L2 res= -34.9358 el=68.5
+01:26:00.0  *** WARNING: G22 ecliType=2
+01:26:00.0  *** WARNING: outlier (0) rejected 2017/09/01 01:26:00.00 sat=G01 L2 res= -33.3967 el=68.3
+01:26:30.0  *** WARNING: G22 ecliType=2
+01:26:30.0  *** WARNING: outlier (0) rejected 2017/09/01 01:26:30.00 sat=G01 L2 res= -34.9561 el=68.1
+01:27:00.0  *** WARNING: G22 ecliType=2
+01:27:00.0  *** WARNING: outlier (0) rejected 2017/09/01 01:27:00.00 sat=G01 L2 res= -34.6231 el=67.9
+01:27:30.0  *** WARNING: G22 ecliType=2
+01:27:30.0  *** WARNING: outlier (0) rejected 2017/09/01 01:27:30.00 sat=G01 L2 res= -33.3390 el=67.7
+01:28:00.0  *** WARNING: G22 ecliType=2
+01:28:00.0  *** WARNING: outlier (0) rejected 2017/09/01 01:28:00.00 sat=G01 L2 res= -32.5506 el=67.5
+01:28:30.0  *** WARNING: outlier (0) rejected 2017/09/01 01:28:30.00 sat=G01 L2 res= -34.0765 el=67.2
+01:29:00.0  *** WARNING: outlier (0) rejected 2017/09/01 01:29:00.00 sat=G01 L2 res= -34.2619 el=67.0
+01:29:30.0  *** WARNING: outlier (0) rejected 2017/09/01 01:29:30.00 sat=G01 L2 res= -33.2031 el=66.8
+01:30:00.0  *** WARNING: outlier (0) rejected 2017/09/01 01:30:00.00 sat=G01 L2 res= -32.1587 el=66.6
+01:30:30.0  *** WARNING: outlier (0) rejected 2017/09/01 01:30:30.00 sat=G01 L2 res= -32.2179 el=66.4
+01:31:00.0  *** WARNING: outlier (0) rejected 2017/09/01 01:31:00.00 sat=G01 L2 res= -34.0977 el=66.1
+01:31:30.0  *** WARNING: outlier (0) rejected 2017/09/01 01:31:30.00 sat=G01 L2 res= -33.5778 el=65.9
+01:32:00.0  *** WARNING: outlier (0) rejected 2017/09/01 01:32:00.00 sat=G01 L2 res= -33.5373 el=65.7
+01:32:30.0  *** WARNING: outlier (0) rejected 2017/09/01 01:32:30.00 sat=G01 L2 res= -33.7581 el=65.5
+01:33:00.0  *** WARNING: outlier (0) rejected 2017/09/01 01:33:00.00 sat=G01 L2 res= -33.1328 el=65.3
+01:33:30.0  *** WARNING: outlier (0) rejected 2017/09/01 01:33:30.00 sat=G01 L2 res= -32.9344 el=65.0
+01:34:00.0  *** WARNING: outlier (0) rejected 2017/09/01 01:34:00.00 sat=G01 L2 res= -32.3719 el=64.8
+01:34:30.0  *** WARNING: outlier (0) rejected 2017/09/01 01:34:30.00 sat=G01 L2 res= -34.0142 el=64.6
+01:35:00.0  *** WARNING: outlier (0) rejected 2017/09/01 01:35:00.00 sat=G01 L2 res= -32.8548 el=64.4
+01:35:30.0  *** WARNING: outlier (0) rejected 2017/09/01 01:35:30.00 sat=G01 L2 res= -32.9190 el=64.1
+01:36:00.0  *** WARNING: outlier (0) rejected 2017/09/01 01:36:00.00 sat=G01 L2 res= -35.1259 el=63.9
+01:36:30.0  *** WARNING: outlier (0) rejected 2017/09/01 01:36:30.00 sat=G01 L2 res= -34.8702 el=63.7
+01:37:00.0  *** WARNING: outlier (0) rejected 2017/09/01 01:37:00.00 sat=G01 L2 res= -33.2224 el=63.5
+01:37:30.0  *** WARNING: outlier (0) rejected 2017/09/01 01:37:30.00 sat=G01 L2 res= -35.1017 el=63.2
+01:38:00.0  *** WARNING: outlier (0) rejected 2017/09/01 01:38:00.00 sat=G01 L2 res= -33.4348 el=63.0
+01:38:30.0  *** WARNING: outlier (0) rejected 2017/09/01 01:38:30.00 sat=G01 L2 res= -33.9435 el=62.8
+01:39:00.0  *** WARNING: outlier (0) rejected 2017/09/01 01:39:00.00 sat=G01 L2 res= -32.9412 el=62.5
+01:39:30.0  *** WARNING: outlier (0) rejected 2017/09/01 01:39:30.00 sat=G01 L2 res= -31.1138 el=62.3
+01:40:00.0  *** WARNING: outlier (0) rejected 2017/09/01 01:40:00.00 sat=G01 L2 res= -34.8648 el=62.1
+01:40:30.0  *** WARNING: outlier (0) rejected 2017/09/01 01:40:30.00 sat=G01 L2 res= -32.9785 el=61.9
+01:41:00.0  *** WARNING: outlier (0) rejected 2017/09/01 01:41:00.00 sat=G01 L2 res= -32.8676 el=61.6
+01:41:30.0  *** WARNING: outlier (0) rejected 2017/09/01 01:41:30.00 sat=G01 L2 res= -31.0718 el=61.4
+01:42:00.0  *** WARNING: outlier (0) rejected 2017/09/01 01:42:00.00 sat=G01 L2 res= -34.0621 el=61.2
+01:42:30.0  *** WARNING: outlier (0) rejected 2017/09/01 01:42:30.00 sat=G01 L2 res= -32.8865 el=60.9
+01:43:00.0  *** WARNING: outlier (0) rejected 2017/09/01 01:43:00.00 sat=G01 L2 res= -33.3375 el=60.7
+01:43:30.0  *** WARNING: outlier (0) rejected 2017/09/01 01:43:30.00 sat=G01 L2 res= -32.2516 el=60.5
+01:44:00.0  *** WARNING: outlier (0) rejected 2017/09/01 01:44:00.00 sat=G01 L2 res= -34.2316 el=60.3
+01:44:30.0  *** WARNING: outlier (0) rejected 2017/09/01 01:44:30.00 sat=G01 L2 res= -33.1881 el=60.0
+01:45:00.0  *** WARNING: outlier (0) rejected 2017/09/01 01:45:00.00 sat=G01 L2 res= -33.6786 el=59.8
+01:45:30.0  *** WARNING: outlier (0) rejected 2017/09/01 01:45:30.00 sat=G01 L2 res= -34.9052 el=59.6
+01:46:00.0  *** WARNING: outlier (0) rejected 2017/09/01 01:46:00.00 sat=G01 L2 res= -32.5825 el=59.3
+01:46:30.0  *** WARNING: outlier (0) rejected 2017/09/01 01:46:30.00 sat=G01 L2 res= -33.4333 el=59.1
+01:47:00.0  *** WARNING: outlier (0) rejected 2017/09/01 01:47:00.00 sat=G01 L2 res= -33.6136 el=58.9
+01:47:30.0  *** WARNING: outlier (0) rejected 2017/09/01 01:47:30.00 sat=G01 L2 res= -34.1351 el=58.6
+01:48:00.0  *** WARNING: outlier (0) rejected 2017/09/01 01:48:00.00 sat=G01 L2 res= -34.5751 el=58.4
+01:48:30.0  *** WARNING: outlier (0) rejected 2017/09/01 01:48:30.00 sat=G01 L2 res= -35.2005 el=58.2
+01:49:00.0  *** WARNING: outlier (0) rejected 2017/09/01 01:49:00.00 sat=G01 L2 res= -33.9476 el=57.9
+01:49:30.0  *** WARNING: outlier (0) rejected 2017/09/01 01:49:30.00 sat=G01 L2 res= -35.1809 el=57.7
+01:50:00.0  *** WARNING: outlier (0) rejected 2017/09/01 01:50:00.00 sat=G01 L2 res= -34.9447 el=57.5
+01:50:30.0  *** WARNING: outlier (0) rejected 2017/09/01 01:50:30.00 sat=G01 L2 res= -33.0240 el=57.3
+01:51:00.0  *** WARNING: outlier (0) rejected 2017/09/01 01:51:00.00 sat=G01 L2 res= -32.5500 el=57.0
+01:51:30.0  *** WARNING: outlier (0) rejected 2017/09/01 01:51:30.00 sat=G01 L2 res= -33.1352 el=56.8
+01:52:00.0  *** WARNING: outlier (0) rejected 2017/09/01 01:52:00.00 sat=G01 L2 res= -33.9494 el=56.6
+01:52:00.0  *** WARNING: outlier (0) rejected 2017/09/01 01:52:00.00 sat=G06 L2 res= -35.2170 el=11.3
+01:52:30.0  *** WARNING: outlier (0) rejected 2017/09/01 01:52:30.00 sat=G01 L2 res= -33.9389 el=56.3
+01:52:30.0  *** WARNING: outlier (0) rejected 2017/09/01 01:52:30.00 sat=G06 L2 res= -33.5179 el=11.5
+01:53:00.0  *** WARNING: outlier (0) rejected 2017/09/01 01:53:00.00 sat=G01 L2 res= -31.3566 el=56.1
+01:53:00.0  *** WARNING: outlier (0) rejected 2017/09/01 01:53:00.00 sat=G06 L2 res= -32.0254 el=11.7
+01:53:30.0  *** WARNING: outlier (0) rejected 2017/09/01 01:53:30.00 sat=G01 L2 res= -31.9076 el=55.9
+01:53:30.0  *** WARNING: outlier (0) rejected 2017/09/01 01:53:30.00 sat=G06 L2 res= -33.6137 el=11.9
+01:54:00.0  *** WARNING: outlier (0) rejected 2017/09/01 01:54:00.00 sat=G01 L2 res= -31.7816 el=55.6
+01:54:30.0  *** WARNING: outlier (0) rejected 2017/09/01 01:54:30.00 sat=G01 L2 res= -32.1244 el=55.4
+01:55:00.0  *** WARNING: outlier (0) rejected 2017/09/01 01:55:00.00 sat=G01 L2 res= -33.0742 el=55.2
+01:55:30.0  *** WARNING: outlier (0) rejected 2017/09/01 01:55:30.00 sat=G01 L2 res= -31.9430 el=54.9
+01:56:00.0  *** WARNING: outlier (0) rejected 2017/09/01 01:56:00.00 sat=G01 L2 res= -32.4913 el=54.7
+01:56:30.0  *** WARNING: outlier (0) rejected 2017/09/01 01:56:30.00 sat=G01 L2 res= -32.4362 el=54.5
+01:57:00.0  *** WARNING: outlier (0) rejected 2017/09/01 01:57:00.00 sat=G01 L2 res= -32.3697 el=54.3
+01:57:30.0  *** WARNING: outlier (0) rejected 2017/09/01 01:57:30.00 sat=G01 L2 res= -30.0331 el=54.0
+01:58:00.0  *** WARNING: outlier (0) rejected 2017/09/01 01:58:00.00 sat=G01 L2 res= -33.2531 el=53.8
+01:58:30.0  *** WARNING: outlier (0) rejected 2017/09/01 01:58:30.00 sat=G01 L2 res= -30.1134 el=53.6
+01:59:00.0  *** WARNING: outlier (0) rejected 2017/09/01 01:59:00.00 sat=G01 L2 res= -33.0066 el=53.3
+01:59:30.0  *** WARNING: outlier (0) rejected 2017/09/01 01:59:30.00 sat=G01 L2 res= -32.3286 el=53.1
+02:00:00.0  *** WARNING: outlier (0) rejected 2017/09/01 02:00:00.00 sat=G01 L2 res= -32.3812 el=52.9
+02:00:30.0  *** WARNING: outlier (0) rejected 2017/09/01 02:00:30.00 sat=G01 L2 res= -33.6578 el=52.7
+02:01:00.0  *** WARNING: outlier (0) rejected 2017/09/01 02:01:00.00 sat=G01 L2 res= -34.7305 el=52.4
+02:01:30.0  *** WARNING: outlier (0) rejected 2017/09/01 02:01:30.00 sat=G01 L2 res= -31.5197 el=52.2
+02:02:00.0  *** WARNING: outlier (0) rejected 2017/09/01 02:02:00.00 sat=G01 L2 res= -31.0564 el=52.0
+02:02:30.0  *** WARNING: outlier (0) rejected 2017/09/01 02:02:30.00 sat=G01 L2 res= -31.4751 el=51.7
+02:03:00.0  *** WARNING: outlier (0) rejected 2017/09/01 02:03:00.00 sat=G01 L2 res= -30.9020 el=51.5
+02:03:30.0  *** WARNING: outlier (0) rejected 2017/09/01 02:03:30.00 sat=G01 L2 res= -32.7443 el=51.3
+02:04:00.0  *** WARNING: outlier (0) rejected 2017/09/01 02:04:00.00 sat=G01 L2 res= -32.9227 el=51.1
+02:04:30.0  *** WARNING: outlier (0) rejected 2017/09/01 02:04:30.00 sat=G01 L2 res= -32.3347 el=50.8
+02:05:00.0  *** WARNING: outlier (0) rejected 2017/09/01 02:05:00.00 sat=G01 L2 res= -33.6941 el=50.6
+02:05:30.0  *** WARNING: outlier (0) rejected 2017/09/01 02:05:30.00 sat=G01 L2 res= -32.1654 el=50.4
+02:06:00.0  *** WARNING: G03 ecliType=2
+02:06:00.0  *** WARNING: outlier (0) rejected 2017/09/01 02:06:00.00 sat=G01 L2 res= -30.5676 el=50.1
+02:06:30.0  *** WARNING: G03 ecliType=2
+02:06:30.0  *** WARNING: outlier (0) rejected 2017/09/01 02:06:30.00 sat=G01 L2 res= -32.2497 el=49.9
+02:07:00.0  *** WARNING: G03 ecliType=2
+02:07:00.0  *** WARNING: outlier (0) rejected 2017/09/01 02:07:00.00 sat=G01 L2 res= -33.0633 el=49.7
+02:07:30.0  *** WARNING: G03 ecliType=2
+02:07:30.0  *** WARNING: outlier (0) rejected 2017/09/01 02:07:30.00 sat=G01 L2 res= -31.8747 el=49.5
+02:08:00.0  *** WARNING: G03 ecliType=2
+02:08:00.0  *** WARNING: outlier (0) rejected 2017/09/01 02:08:00.00 sat=G01 L2 res= -31.4109 el=49.2
+02:08:30.0  *** WARNING: G03 ecliType=2
+02:08:30.0  *** WARNING: outlier (0) rejected 2017/09/01 02:08:30.00 sat=G01 L2 res= -33.8705 el=49.0
+02:09:00.0  *** WARNING: G03 ecliType=2
+02:09:00.0  *** WARNING: outlier (0) rejected 2017/09/01 02:09:00.00 sat=G01 L2 res= -32.8012 el=48.8
+02:09:30.0  *** WARNING: G03 ecliType=2
+02:09:30.0  *** WARNING: outlier (0) rejected 2017/09/01 02:09:30.00 sat=G01 L2 res= -31.3830 el=48.6
+02:10:00.0  *** WARNING: G03 ecliType=2
+02:10:00.0  *** WARNING: outlier (0) rejected 2017/09/01 02:10:00.00 sat=G01 L2 res= -33.6400 el=48.3
+02:10:30.0  *** WARNING: G03 ecliType=2
+02:10:30.0  *** WARNING: outlier (0) rejected 2017/09/01 02:10:30.00 sat=G01 L2 res= -32.3790 el=48.1
+02:11:00.0  *** WARNING: G03 ecliType=2
+02:11:00.0  *** WARNING: outlier (0) rejected 2017/09/01 02:11:00.00 sat=G01 L2 res= -33.5397 el=47.9
+02:11:30.0  *** WARNING: G03 ecliType=2
+02:11:30.0  *** WARNING: outlier (0) rejected 2017/09/01 02:11:30.00 sat=G01 L2 res= -30.2925 el=47.7
+02:12:00.0  *** WARNING: G03 ecliType=2
+02:12:30.0  *** WARNING: G03 ecliType=2
+02:13:00.0  *** WARNING: G03 ecliType=2
+02:13:30.0  *** WARNING: G03 ecliType=2
+02:14:00.0  *** WARNING: G03 ecliType=2
+02:29:30.0  *** WARNING: outlier (1) rejected 2017/09/01 02:29:30.00 sat=G07 P2 res=  52.8736 el=10.1
+03:45:30.0  *** WARNING: G28 ecliType=2
+03:46:00.0  *** WARNING: G28 ecliType=2
+03:46:30.0  *** WARNING: G28 ecliType=2
+03:47:00.0  *** WARNING: G28 ecliType=2
+03:47:30.0  *** WARNING: G28 ecliType=2
+03:48:00.0  *** WARNING: G28 ecliType=2
+03:48:30.0  *** WARNING: G28 ecliType=2
+03:49:00.0  *** WARNING: G28 ecliType=2
+03:49:30.0  *** WARNING: G28 ecliType=2
+03:50:00.0  *** WARNING: G28 ecliType=2
+05:12:30.0  *** WARNING: outlier (1) rejected 2017/09/01 05:12:30.00 sat=G03 P2 res= -16.0560 el= 9.6
+06:41:00.0  G23 MW CS mw_new=        7.136, mw_old=       32.943, diff_abs=      -25.807, thres=        6.000, elev= 0.1
+06:41:00.0  G23 GF CS gf_new=        0.211, gf_old=        6.071, diff_abs=       -5.859, thres=        0.230, elev= 7.0
+07:43:30.0  *** WARNING: G20 ecliType=2
+07:44:00.0  *** WARNING: G20 ecliType=2
+07:44:30.0  *** WARNING: G20 ecliType=2
+07:45:00.0  *** WARNING: G20 ecliType=2
+07:45:30.0  *** WARNING: G20 ecliType=2
+07:46:00.0  *** WARNING: G20 ecliType=2
+07:46:30.0  *** WARNING: G20 ecliType=2
+07:47:00.0  *** WARNING: G20 ecliType=2
+07:47:30.0  *** WARNING: G20 ecliType=2
+07:48:00.0  *** WARNING: G20 ecliType=2
+07:48:30.0  *** WARNING: G20 ecliType=2
+07:49:00.0  *** WARNING: G20 ecliType=2
+07:49:30.0  *** WARNING: G20 ecliType=2
+07:50:00.0  *** WARNING: G20 ecliType=2
+07:50:30.0  *** WARNING: G20 ecliType=2
+07:51:00.0  *** WARNING: G20 ecliType=2
+07:51:30.0  *** WARNING: G20 ecliType=2
+07:52:00.0  *** WARNING: G20 ecliType=2
+08:23:30.0  *** WARNING: outlier (1) rejected 2017/09/01 08:23:30.00 sat=G25 P2 res=  22.2560 el= 9.0
+09:48:30.0  *** WARNING: outlier (0) rejected 2017/09/01 09:48:30.00 sat=G24 L2 res= -32.1719 el= 7.5
+09:49:00.0  *** WARNING: outlier (0) rejected 2017/09/01 09:49:00.00 sat=G24 L2 res= -35.6773 el= 7.7
+09:49:30.0  *** WARNING: outlier (0) rejected 2017/09/01 09:49:30.00 sat=G24 L2 res= -30.8202 el= 7.8
+09:53:00.0  *** WARNING: outlier (1) rejected 2017/09/01 09:53:00.00 sat=G24 L1 res=   0.4190 el= 9.1
+09:53:30.0  *** WARNING: outlier (1) rejected 2017/09/01 09:53:30.00 sat=G24 L1 res=   0.4142 el= 9.2
+09:54:00.0  *** WARNING: outlier (0) rejected 2017/09/01 09:54:00.00 sat=G24 L2 res= -30.3902 el= 9.4
+10:31:00.0  *** WARNING: outlier (0) rejected 2017/09/01 10:31:00.00 sat=G30 L2 res= -31.0789 el= 7.8
+10:31:30.0  *** WARNING: outlier (0) rejected 2017/09/01 10:31:30.00 sat=G30 L2 res= -38.5229 el= 7.6
+11:37:00.0  *** WARNING: outlier (1) rejected 2017/09/01 11:37:00.00 sat=G29 P2 res=  53.2226 el=13.3
+12:33:30.0  *** WARNING: outlier (1) rejected 2017/09/01 12:33:30.00 sat=G13 P2 res= -38.0065 el=12.9
+12:34:00.0  *** WARNING: outlier (1) rejected 2017/09/01 12:34:00.00 sat=G13 P2 res= -38.7755 el=12.7
+13:00:00.0  *** WARNING: outlier (0) rejected 2017/09/01 13:00:00.00 sat=G25 L2 res= -32.3793 el= 7.6
+13:00:30.0  *** WARNING: outlier (0) rejected 2017/09/01 13:00:30.00 sat=G25 L2 res= -32.3805 el= 7.8
+13:01:00.0  *** WARNING: outlier (0) rejected 2017/09/01 13:01:00.00 sat=G25 L2 res= -33.6177 el= 7.9
+13:02:00.0  *** WARNING: outlier (0) rejected 2017/09/01 13:02:00.00 sat=G25 L2 res= -35.0209 el= 8.2
+13:10:00.0  *** WARNING: outlier (0) rejected 2017/09/01 13:10:00.00 sat=G25 L1 res= -32.0459 el=10.9
+13:10:00.0  *** WARNING: outlier (0) rejected 2017/09/01 13:10:00.00 sat=G25 L2 res= -42.4930 el=10.9
+13:10:30.0  *** WARNING: outlier (0) rejected 2017/09/01 13:10:30.00 sat=G25 L2 res= -37.8659 el=11.0
+13:11:00.0  *** WARNING: outlier (0) rejected 2017/09/01 13:11:00.00 sat=G25 L2 res= -30.5280 el=11.2
+14:50:30.0  *** WARNING: outlier (1) rejected 2017/09/01 14:50:30.00 sat=G21 L1 res=  -0.5602 el=10.0
+16:03:30.0  *** WARNING: outlier (0) rejected 2017/09/01 16:03:30.00 sat=G26 L2 res= -36.8901 el=16.2
+16:05:00.0  *** WARNING: outlier (0) rejected 2017/09/01 16:05:00.00 sat=G26 L2 res= -31.6225 el=16.8
+18:17:00.0  *** WARNING: outlier (0) rejected 2017/09/01 18:17:00.00 sat=G27 L2 res= -30.4241 el= 7.2
+18:27:00.0  *** WARNING: outlier (0) rejected 2017/09/01 18:27:00.00 sat=G27 L2 res= -33.1318 el=11.1
+18:27:30.0  *** WARNING: outlier (0) rejected 2017/09/01 18:27:30.00 sat=G27 L2 res= -31.4810 el=11.3
+19:14:30.0  *** WARNING: outlier (1) rejected 2017/09/01 19:14:30.00 sat=G29 L1 res=   0.5996 el=10.5
+19:15:00.0  G29 MW CS mw_new=        5.075, mw_old=      -15.660, diff_abs=       20.736, thres=        6.000, elev= 0.2
+19:15:00.0  G29 GF CS gf_new=        0.508, gf_old=       -4.138, diff_abs=        4.646, thres=        0.196, elev=10.4
+19:15:30.0  G29 MW CS mw_new=        4.052, mw_old=       -5.292, diff_abs=        9.344, thres=        6.000, elev= 0.2
+19:25:30.0  *** WARNING: G22 ecliType=1
+19:26:00.0  *** WARNING: G22 ecliType=1
+19:26:30.0  *** WARNING: G22 ecliType=1
+19:27:00.0  *** WARNING: G22 ecliType=1
+19:27:30.0  *** WARNING: G22 ecliType=1
+19:28:00.0  *** WARNING: G22 ecliType=1
+19:28:30.0  *** WARNING: G22 ecliType=1
+19:29:00.0  *** WARNING: G22 ecliType=1
+19:48:30.0  *** WARNING: outlier (0) rejected 2017/09/01 19:48:30.00 sat=G08 L2 res= -36.8724 el=18.4
+19:49:30.0  *** WARNING: outlier (0) rejected 2017/09/01 19:49:30.00 sat=G08 L2 res= -33.9372 el=18.9
+19:50:00.0  *** WARNING: outlier (0) rejected 2017/09/01 19:50:00.00 sat=G08 L2 res= -32.9684 el=19.1
+21:00:30.0  *** WARNING: outlier (1) rejected 2017/09/01 21:00:30.00 sat=G21 L1 res=   0.5909 el=11.1
+21:01:00.0  *** WARNING: outlier (1) rejected 2017/09/01 21:01:00.00 sat=G21 L1 res=   0.5861 el=11.0
+22:05:00.0  *** WARNING: outlier (0) rejected 2017/09/01 22:05:00.00 sat=G01 L1 res= -30.5380 el= 7.6
+22:05:00.0  *** WARNING: outlier (0) rejected 2017/09/01 22:05:00.00 sat=G01 L2 res= -42.2520 el= 7.6
+22:05:30.0  *** WARNING: outlier (0) rejected 2017/09/01 22:05:30.00 sat=G01 L2 res= -36.2631 el= 7.8
+22:06:00.0  *** WARNING: outlier (0) rejected 2017/09/01 22:06:00.00 sat=G01 L2 res= -30.8790 el= 8.0
+22:06:30.0  *** WARNING: outlier (0) rejected 2017/09/01 22:06:30.00 sat=G01 L2 res= -31.6517 el= 8.1
+22:07:00.0  *** WARNING: outlier (0) rejected 2017/09/01 22:07:00.00 sat=G01 L2 res= -31.5915 el= 8.3
+22:08:00.0  *** WARNING: outlier (0) rejected 2017/09/01 22:08:00.00 sat=G01 L1 res= -30.8528 el= 8.7
+22:08:00.0  *** WARNING: outlier (0) rejected 2017/09/01 22:08:00.00 sat=G01 L2 res= -42.7861 el= 8.7
+22:08:30.0  *** WARNING: outlier (0) rejected 2017/09/01 22:08:30.00 sat=G01 L2 res= -32.8179 el= 8.9
+22:09:00.0  *** WARNING: outlier (0) rejected 2017/09/01 22:09:00.00 sat=G01 L2 res= -30.2428 el= 9.1
+22:09:30.0  *** WARNING: outlier (0) rejected 2017/09/01 22:09:30.00 sat=G01 L2 res= -36.4331 el= 9.3
+22:10:30.0  *** WARNING: outlier (0) rejected 2017/09/01 22:10:30.00 sat=G01 L2 res= -31.9237 el= 9.6
+23:02:00.0  *** WARNING: outlier (1) rejected 2017/09/01 23:02:00.00 sat=G23 P2 res=  13.8065 el=15.4
+23:02:30.0  *** WARNING: outlier (1) rejected 2017/09/01 23:02:30.00 sat=G23 P2 res=  14.2120 el=15.2
+23:44:30.0  *** WARNING: G16 ecliType=2
+23:45:00.0  *** WARNING: G16 ecliType=2
+23:45:30.0  *** WARNING: G16 ecliType=2
+23:46:00.0  *** WARNING: G16 ecliType=2
+23:46:30.0  *** WARNING: G16 ecliType=2
+23:47:00.0  *** WARNING: G16 ecliType=2
+23:47:30.0  *** WARNING: G16 ecliType=2
+23:48:00.0  *** WARNING: G16 ecliType=2
+23:48:30.0  *** WARNING: G16 ecliType=2
+23:49:00.0  *** WARNING: G16 ecliType=2
+23:49:30.0  *** WARNING: G16 ecliType=2
+23:50:00.0  *** WARNING: G16 ecliType=2
+23:50:30.0  *** WARNING: G16 ecliType=2
+23:51:00.0  *** WARNING: G16 ecliType=2
+23:51:30.0  *** WARNING: G16 ecliType=2
+23:52:00.0  *** WARNING: G16 ecliType=2
+23:52:30.0  *** WARNING: G16 ecliType=2
+23:53:00.0  *** WARNING: G16 ecliType=2
+23:53:30.0  *** WARNING: G16 ecliType=2
+23:54:00.0  *** WARNING: G16 ecliType=2
+23:54:30.0  *** WARNING: G16 ecliType=2
+ * The program runs for 25.700 seconds

@@ -1,0 +1,65 @@
+#!/bin/csh
+##
+## Purpose: get daily IGS RINEX observation files from CDDIS
+##
+## Originally written by Feng Zhou on 03/11/2015 @ GFZ
+##
+## zhouforme@163.com
+##
+## Section 1.1, GPS/Galileo technologies, GFZ German Research Centre for Geosciences
+#
+##===============================BEGIN PROGRAM=====================================##
+if ($#argv < 2) then
+more << EOF
+
+ Usage $0 <yyyy> <doy> [ndays] [site_list_path]
+   
+ Example: $0 2017 001 
+          $0 2017 001 10
+          $0 2017 001 10 /home/fzhou/work/site.list
+
+EOF
+   exit
+endif
+
+@ yyyy  = $1
+set yy = `echo ${yyyy} | awk '{printf("%2.2d",$1-int($1/100)*100)}'`
+@ doy   = $2
+@ count = 1
+if ($#argv >= 3) then
+   @ count = $3
+endif
+set site_list = ''
+if ($#argv >= 4) then
+   set site_list = $4
+endif
+
+echo " "
+echo " Downloading IGS OBS files from ftp://cddis.gsfc.nasa.gov ..."
+echo " "
+
+while (${count})
+   set cdoy = `echo ${doy} | awk '{printf("%3.3d\n",$1)}'`
+   echo " Year:" ${yyyy} " DOY:" ${cdoy}
+   
+   set obsdir = /Users/zhoufeng/Documents/GNSS_download/igs_obs/${yyyy}${cdoy}
+   if (! -d ${obsdir}) /bin/mkdir -p ${obsdir}
+   cd ${obsdir}
+   
+   if (${site_list} == '') then
+      wget -qr -nH --cut-dirs=7 ftp://cddis.gsfc.nasa.gov/pub/gps/data/daily/${yyyy}/${cdoy}/${yy}"o"
+      find . -type f ! -name "*.??o.Z" -delete
+   else
+      foreach site (`cat ${site_list}`)
+         set site = `echo ${site} | tr "A-Z" "a-z"`
+         wget -qr -nH --cut-dirs=7 ftp://cddis.gsfc.nasa.gov/pub/gps/data/daily/${yyyy}/${cdoy}/${yy}"o"/${site}${cdoy}0.${yy}o.Z
+      end
+   endif
+
+   sh_uncompress *.Z
+
+   @ count --
+   @ doy ++
+end
+#
+##================================END PROGRAM======================================##

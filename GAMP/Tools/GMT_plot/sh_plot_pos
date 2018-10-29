@@ -1,0 +1,130 @@
+#!/bin/csh
+# plot PDOP and satellite number by GMT
+if ($#argv < 2) then
+more << EOF
+
+ Usage $0 yyyy doy ndays mode
+   
+ Example: $0 2015 001
+          $0 2015 001 10 kin
+          $0 2015 001 10 sta
+
+EOF
+   exit
+endif
+
+@ yyyy = $1
+set yy = `echo $yyyy | awk '{printf("%2.2d",$1-int($1/100)*100)}'`
+@ doy = $2
+@ count = 1
+if ($#argv >= 3) then
+   @ count = $3
+endif
+set mode = "kin"
+if ($#argv >= 4) then
+   set mode = $4
+endif
+
+set wrkdir = `pwd`
+
+set sow = (0 86400 172800 259200 345600 432000 518400 604800)
+
+while ($count)
+   set cdoy = `echo $doy | awk '{printf("%3.3d\n",$1)}'`
+   
+   set outdir = $wrkdir/$yyyy$cdoy/result
+   set pltdir = $wrkdir/plot/$yyyy$cdoy/pos
+   if (! -d $pltdir) /bin/mkdir -p $pltdir
+
+   @ i = 0
+   @ j = 1
+   foreach file (`ls $outdir/*.pos`)
+      @ i ++
+      if ($i == 1) then
+         set tmp = `head -1 $file`
+         @ ts = `echo $tmp[8] | awk '{printf("%d\n",int($1))}'`
+         set tmp = `tail -1 $file`
+         @ te = `echo $tmp[8] | awk '{printf("%d\n",int($1))}'`
+         while ($te >= $sow[$j])
+            @ j ++
+         end
+         @ jj = $j - 1
+         @ ts = $sow[$jj]
+         @ te = $sow[$j]
+      endif
+      awk '{print $8,$12,$13,$14}' $file >! tmp.pos
+      
+      #set tmp = ".{$yy}o.pdop"
+      #set file0 = `echo $file | sed -e "s/.16o.pdop/_pdop/g"`
+      set len = `echo | awk '{print length("'${file}'")}'`
+      @ tmp1 = $len - 15
+      @ tmp2 = $len - 8
+      set tmp = `echo $file | cut -c$tmp1-$tmp2`
+      set outps = $pltdir/$tmp"_pos.ps"
+      
+      @ sec = $ts
+      if (-e tmp.hhmm) /bin/rm -f tmp.hhmm
+      /bin/touch tmp.hhmm
+      @ ih = 0
+      while ($ih < 25)
+         set hh = `echo $ih | awk '{printf("%2.2d\n",$1)}'`
+         set hhmm = $hh":00"
+         echo $sec  $hhmm >> tmp.hhmm
+         @ ih = $ih + 2
+         @ sec = $sec + 7200
+      end
+      @ sec = `echo $te $ts | awk '{printf("%d\n",int(($1+$2)/2))}'`
+
+      if ($mode == "kin") then
+         set d1 = -0.8
+         set d2 = 0.8
+      else if ($mode == "sta") then
+         set d1 = -0.4
+         set d2 = 0.4
+      endif
+
+      gmtset ANNOT_FONT_SIZE_PRIMARY 14p LABEL_FONT_SIZE 20p LABEL_OFFSET 0.15c
+      gmtset GRID_PEN_PRIMARY 0.5p,black,. TICK_LENGTH -0.12c
+
+      if ($d2 == 0.4) then
+         psbasemap -R$ts/$te/$d1/$d2 -JX6.5i/4.0i -Ba7200f1800/a0.1f0.05g0.1:"Position error [m]":Wsen -Y4.0i -P -K >! $outps
+         awk '{print $1,$2}' tmp.pos | psxy -R -J -K -O -W1.5p,0/0/255,solid >> $outps
+         awk '{print $1,$3}' tmp.pos | psxy -R -J -K -O -W1.5p,0/127/0,solid >> $outps
+         awk '{print $1,$4}' tmp.pos | psxy -R -J -K -O -W1.5p,255/0/0,solid >> $outps
+
+         awk '{print $1, 0.15, 14, 0, 0, "CM", $2}' tmp.hhmm | pstext -R -J -N -Y-2.9i -K -O >> $outps 
+         echo "$sec 0.15 20 0 0 CM GPS time [hh\072mm]" | pstext -R -J -N -Y-0.25i -K -O >> $outps
+
+pslegend -Dx4.32i/6.8i/4.0c/0.75c/BL -J -R -F -X0.5i -Y-0.05i -O -Gwhite << EOF >> $outps
+N 3
+S 0.13i - 0.25i - 1.5p,0/0/255 0.3i E
+S 0.13i - 0.25i - 1.5p,0/127/0 0.3i N
+S 0.13i - 0.25i - 1.5p,255/0/0 0.3i U
+EOF
+      else if ($d2 == 0.8) then
+         psbasemap -R$ts/$te/$d1/$d2 -JX6.5i/4.0i -Ba7200f1800/a0.2f0.1g0.2:"Position error [m]":Wsen -Y4.0i -P -K >! $outps
+         awk '{print $1,$2}' tmp.pos | psxy -R -J -K -O -W1.5p,0/0/255,solid >> $outps
+         awk '{print $1,$3}' tmp.pos | psxy -R -J -K -O -W1.5p,0/127/0,solid >> $outps
+         awk '{print $1,$4}' tmp.pos | psxy -R -J -K -O -W1.5p,255/0/0,solid >> $outps
+
+         awk '{print $1, 0.15, 14, 0, 0, "CM", $2}' tmp.hhmm | pstext -R -J -N -Y-2.55i -K -O >> $outps 
+         echo "$sec 0.15 20 0 0 CM GPS time [hh\072mm]" | pstext -R -J -N -Y-0.25i -K -O >> $outps
+
+pslegend -Dx4.32i/6.8i/4.0c/0.75c/BL -J -R -F -X0.5i -Y-0.4i -O -Gwhite << EOF >> $outps
+N 3
+S 0.13i - 0.25i - 1.5p,0/0/255 0.3i E
+S 0.13i - 0.25i - 1.5p,0/127/0 0.3i N
+S 0.13i - 0.25i - 1.5p,255/0/0 0.3i U
+EOF
+      endif
+
+      /bin/rm -f tmp*
+      ps2raster $outps -P -A -Te
+      ps2raster $outps -P -A -Tj
+      ps2raster $outps -P -A -Tg
+   end
+
+   @ count --
+   @ doy ++
+end
+

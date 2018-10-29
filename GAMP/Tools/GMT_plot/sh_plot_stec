@@ -1,0 +1,168 @@
+#!/bin/csh
+# plot code and phase residuals by GMT
+if ($#argv < 2) then
+more << EOF
+
+ Usage $0 yyyy doy ndays
+   
+ Example: $0 2015 001
+          $0 2015 001 10
+
+EOF
+   exit
+endif
+
+@ yyyy = $1
+set yy = `echo $yyyy | awk '{printf("%2.2d",$1-int($1/100)*100)}'`
+@ doy = $2
+@ count = 1
+if ($#argv >= 3) then
+   @ count = $3
+endif
+
+set wrkdir = `pwd`
+
+set sow = (0 86400 172800 259200 345600 432000 518400 604800)
+
+while ($count)
+   set cdoy = `echo $doy | awk '{printf("%3.3d\n",$1)}'`
+   
+   set outdir = $wrkdir/$yyyy$cdoy/result
+   set pltdir = $wrkdir/plot/$yyyy$cdoy/stec
+   if (! -d $pltdir) /bin/mkdir -p $pltdir
+
+   @ i = 0
+   @ j = 1
+   foreach file (`ls $outdir/*.stec`)
+      @ i ++
+      if ($i == 1) then
+         set tmp = `head -1 $file`
+         @ ts = `echo $tmp[8] | awk '{printf("%d\n",int($1))}'`
+         set tmp = `tail -1 $file`
+         @ te = `echo $tmp[8] | awk '{printf("%d\n",int($1))}'`
+         while ($te >= $sow[$j])
+            @ j ++
+         end
+         @ jj = $j - 1
+         @ ts = $sow[$jj]
+         @ te = $sow[$j]
+      endif
+
+      @ isat = 1
+      while ($isat < 33)
+         set gsat = `echo $isat | awk '{printf("%02d\n",$1)}'`
+         @ icol = $isat + 8
+         awk -v t="${icol}" '{print $8,$t}' $file >! tmp.G${gsat}
+
+         @ isat ++
+      end
+      
+      #set tmp = ".{$yy}o.pdop"
+      #set file0 = `echo $file | sed -e "s/.16o.pdop/_pdop/g"`
+      set len = `echo | awk '{print length("'${file}'")}'`
+      @ tmp1 = $len - 16
+      @ tmp2 = $len - 9
+      set tmp = `echo $file | cut -c$tmp1-$tmp2`
+      @ tmp1 = $len - 3
+      set tmpp = `echo $file | cut -c$tmp1-$len`
+      set outps = $pltdir/{$tmp}"_"{$tmpp}".ps"
+      
+      @ sec = $ts
+      if (-e tmp.hhmm) /bin/rm -f tmp.hhmm
+      /bin/touch tmp.hhmm
+      @ ih = 0
+      while ($ih < 25)
+         set hh = `echo $ih | awk '{printf("%2.2d\n",$1)}'`
+         set hhmm = $hh":00"
+         echo $sec  $hhmm >> tmp.hhmm
+         @ ih = $ih + 2
+         @ sec = $sec + 7200
+      end
+      @ sec = `echo $te $ts | awk '{printf("%d\n",int(($1+$2)/2))}'`
+
+      gmtset ANNOT_FONT_SIZE_PRIMARY 14p LABEL_FONT_SIZE 20p LABEL_OFFSET 0.15c
+      gmtset GRID_PEN_PRIMARY 0.5p,black,. TICK_LENGTH -0.12c
+
+      psbasemap -R$ts/$te/35/75 -JX6.5i/4.0i -Ba7200f1800/a5f2.5g5:"sTEC [TECu]":Wsen -Y4.0i -P -K >! $outps
+      awk '{print $1,$2}' tmp.G01 | psxy -R -J -K -O -Sc0.15 -G0/0/0 >> $outps
+      awk '{print $1,$2}' tmp.G02 | psxy -R -J -K -O -Sc0.15 -G255/0/0 >> $outps
+      awk '{print $1,$2}' tmp.G03 | psxy -R -J -K -O -Sc0.15 -G0/255/0 >> $outps
+      awk '{print $1,$2}' tmp.G04 | psxy -R -J -K -O -Sc0.15 -G0/0/255 >> $outps
+      awk '{print $1,$2}' tmp.G05 | psxy -R -J -K -O -Sc0.15 -G0/255/255 >> $outps
+      awk '{print $1,$2}' tmp.G06 | psxy -R -J -K -O -Sc0.15 -G255/0/255 >> $outps
+      awk '{print $1,$2}' tmp.G07 | psxy -R -J -K -O -Sc0.15 -G255/255/0 >> $outps
+      awk '{print $1,$2}' tmp.G08 | psxy -R -J -K -O -Sc0.15 -G193/255/193 >> $outps
+      awk '{print $1,$2}' tmp.G09 | psxy -R -J -K -O -Sc0.15 -G255/165/0 >> $outps
+      awk '{print $1,$2}' tmp.G10 | psxy -R -J -K -O -Sc0.15 -G255/193/193 >> $outps
+      awk '{print $1,$2}' tmp.G11 | psxy -R -J -K -O -Sc0.15 -G0/128/128 >> $outps
+      awk '{print $1,$2}' tmp.G12 | psxy -R -J -K -O -Sc0.15 -G139/137/137 >> $outps
+      awk '{print $1,$2}' tmp.G13 | psxy -R -J -K -O -Sc0.15 -G128/0/128 >> $outps
+      awk '{print $1,$2}' tmp.G14 | psxy -R -J -K -O -Sc0.15 -G171/130/255 >> $outps
+      awk '{print $1,$2}' tmp.G15 | psxy -R -J -K -O -Sc0.15 -G0/191/255 >> $outps
+      awk '{print $1,$2}' tmp.G16 | psxy -R -J -K -O -Sc0.15 -G255/250/205 >> $outps
+      awk '{print $1,$2}' tmp.G17 | psxy -R -J -K -O -Si0.15 -G0/0/0 >> $outps
+      awk '{print $1,$2}' tmp.G18 | psxy -R -J -K -O -Si0.15 -G255/0/0 >> $outps
+      awk '{print $1,$2}' tmp.G19 | psxy -R -J -K -O -Si0.15 -G0/255/0 >> $outps
+      awk '{print $1,$2}' tmp.G20 | psxy -R -J -K -O -Si0.15 -G0/0/255 >> $outps
+      awk '{print $1,$2}' tmp.G21 | psxy -R -J -K -O -Si0.15 -G0/255/255 >> $outps
+      awk '{print $1,$2}' tmp.G22 | psxy -R -J -K -O -Si0.15 -G255/0/255 >> $outps
+      awk '{print $1,$2}' tmp.G23 | psxy -R -J -K -O -Si0.15 -G255/255/0 >> $outps
+      awk '{print $1,$2}' tmp.G24 | psxy -R -J -K -O -Si0.15 -G193/255/193 >> $outps
+      awk '{print $1,$2}' tmp.G25 | psxy -R -J -K -O -Si0.15 -G255/165/0 >> $outps
+      awk '{print $1,$2}' tmp.G26 | psxy -R -J -K -O -Si0.15 -G255/193/193 >> $outps
+      awk '{print $1,$2}' tmp.G27 | psxy -R -J -K -O -Si0.15 -G0/128/128 >> $outps
+      awk '{print $1,$2}' tmp.G28 | psxy -R -J -K -O -Si0.15 -G139/137/137 >> $outps
+      awk '{print $1,$2}' tmp.G29 | psxy -R -J -K -O -Si0.15 -G128/0/128 >> $outps
+      awk '{print $1,$2}' tmp.G30 | psxy -R -J -K -O -Si0.15 -G171/130/255 >> $outps
+      awk '{print $1,$2}' tmp.G31 | psxy -R -J -K -O -Si0.15 -G70/130/180 >> $outps
+      awk '{print $1,$2}' tmp.G32 | psxy -R -J -K -O -Si0.15 -G255/250/205 >> $outps
+
+      awk '{print $1, 0.15, 14, 0, 0, "CM", $2}' tmp.hhmm | pstext -R -J -N -Y3.3i -K -O >> $outps 
+      echo "$sec 0.15 20 0 0 CM GPS time [hh\072mm]" | pstext -R -J -N -Y-0.25i -K -O >> $outps
+
+pslegend -J -R -Dx2.14i/2.23i/12.1c/2.4c/BL -F -O -Gwhite -X-0.4i -Y-1.22i << EOF >> $outps
+N 8
+S 0.05i c 0.15       0/0/0 0.15p 0.15i G01
+S 0.05i c 0.15     255/0/0 0.15p 0.15i G02
+S 0.05i c 0.15     0/255/0 0.15p 0.15i G03
+S 0.05i c 0.15     0/0/255 0.15p 0.15i G04
+S 0.05i c 0.15   0/255/255 0.15p 0.15i G05
+S 0.05i c 0.15   255/0/255 0.15p 0.15i G06
+S 0.05i c 0.15   255/255/0 0.15p 0.15i G07
+S 0.05i c 0.15 193/255/193 0.15p 0.15i G08
+S 0.05i c 0.15   255/165/0 0.15p 0.15i G09
+S 0.05i c 0.15 255/193/193 0.15p 0.15i G10
+S 0.05i c 0.15   0/128/128 0.15p 0.15i G11
+S 0.05i c 0.15 139/137/137 0.15p 0.15i G12
+S 0.05i c 0.15   128/0/128 0.15p 0.15i G13
+S 0.05i c 0.15 171/130/255 0.15p 0.15i G14
+S 0.05i c 0.15   0/191/255 0.15p 0.15i G15
+S 0.05i c 0.15 255/250/205 0.15p 0.15i G16
+S 0.05i i 0.15       0/0/0 0.15p 0.15i G17
+S 0.05i i 0.15     255/0/0 0.15p 0.15i G18
+S 0.05i i 0.15     0/255/0 0.15p 0.15i G19
+S 0.05i i 0.15     0/0/255 0.15p 0.15i G20
+S 0.05i i 0.15   0/255/255 0.15p 0.15i G21
+S 0.05i i 0.15   255/0/255 0.15p 0.15i G22
+S 0.05i i 0.15   255/255/0 0.15p 0.15i G23
+S 0.05i i 0.15 193/255/193 0.15p 0.15i G24
+S 0.05i i 0.15   255/165/0 0.15p 0.15i G25
+S 0.05i i 0.15 255/193/193 0.15p 0.15i G26
+S 0.05i i 0.15   0/128/128 0.15p 0.15i G27
+S 0.05i i 0.15 139/137/137 0.15p 0.15i G28
+S 0.05i i 0.15   128/0/128 0.15p 0.15i G29
+S 0.05i i 0.15 171/130/255 0.15p 0.15i G30
+S 0.05i i 0.15  70/130/180 0.15p 0.15i G31
+S 0.05i i 0.15 255/250/205 0.15p 0.15i G32
+EOF
+
+      /bin/rm -f tmp*
+      ps2raster $outps -P -A -Te
+      ps2raster $outps -P -A -Tj
+      ps2raster $outps -P -A -Tg
+   end
+   
+   @ count --
+   @ doy ++
+end
+

@@ -1,0 +1,71 @@
+#!/bin/csh
+##
+## Purpose: get MGEX precise satellite orbit and clock products from IGN
+##
+## Originally written by Feng Zhou on 17/11/2015 @ GFZ
+##
+## Email: zhouforme@163.com
+##
+## Section 1.1, GPS/Galileo technologies, GFZ German Research Centre for Geosciences
+#
+##===============================BEGIN PROGRAM=====================================##
+if ($#argv < 2) then
+more << EOF
+
+   Usage $0 <yyyy> <doy> [ndays] [ac] [ftp_name]
+
+   EXAMPLES: $0 2017 001
+             $0 2017 001 10 cddis
+             $0 2017 001 10 ign
+
+EOF
+   exit
+endif
+
+@ yyyy  = $1
+@ doy   = $2
+@ count = 1
+if ($#argv >= 3) then
+   @ count = $3
+endif
+set ac = 'gbm'
+if ($#argv >= 4) then
+   set ac = $4
+endif
+set ftp = 'ign'
+if ($#argv >= 5) then
+   set ftp = $5
+endif
+
+set orbdir = /Users/zhoufeng/Documents/GNSS_download/mgex_prod
+if (! -d ${orbdir}) /bin/mkdir -p ${orbdir}
+cd ${orbdir}
+
+echo " "
+echo " Downloading MGEX products from ftp://igs.ign.fr/pub/igs/products/mgex ..."
+echo " "
+
+while (${count})
+   set cdoy = `echo ${doy} | awk '{printf("%3.3d\n",$1)}'`
+   echo " Year:" ${yyyy} " DOY:" ${cdoy}
+   
+   set WEEKD = `mjday ${doy} ${yyyy} | awk '{nwk=int(($1-44244)/7);nwkd=$1-44244-nwk*7;print nwk*10+nwkd}'`
+   set WEEK  = `echo ${WEEKD} | awk '{print substr($1,1,4)}'`
+
+   if (${ftp} == 'ign') then
+      wget -qr -nH --cut-dirs=5 ftp://igs.ign.fr/pub/igs/products/mgex/${WEEK}/${ac}${WEEKD}.sp3.Z
+      wget -qr -nH --cut-dirs=5 ftp://igs.ign.fr/pub/igs/products/mgex/${WEEK}/${ac}${WEEKD}.clk.Z
+      wget -qr -nH --cut-dirs=5 ftp://igs.ign.fr/pub/igs/products/mgex/${WEEK}/${ac}${WEEKD}.erp.Z
+   else if (${ftp} == 'cddis') then
+      wget -qr -nH --cut-dirs=5 ftp://cddis.gsfc.nasa.gov/pub/gps/products/mgex/${WEEK}/${ac}${WEEKD}.sp3.Z
+      wget -qr -nH --cut-dirs=5 ftp://cddis.gsfc.nasa.gov/pub/gps/products/mgex/${WEEK}/${ac}${WEEKD}.clk.Z
+      wget -qr -nH --cut-dirs=5 ftp://cddis.gsfc.nasa.gov/pub/gps/products/mgex/${WEEK}/${ac}${WEEKD}.erp.Z
+   endif
+
+   sh_uncompress *.Z
+
+   @ count --
+   @ doy ++
+end
+#
+##================================END PROGRAM======================================##

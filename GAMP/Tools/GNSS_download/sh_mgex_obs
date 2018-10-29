@@ -1,0 +1,150 @@
+#!/bin/csh
+##
+## Purpose: download the long name MGEX RINEX observation files and change them to short name obs files
+##
+## Originally written by Feng Zhou on 01/07/2016 @ GFZ
+##
+## Email: zhouforme@163.com
+##
+## Section 1.1, Space Geodetic Techniques, GFZ German Research Centre for Geosciences
+#
+##===============================BEGIN PROGRAM=====================================##
+if ($#argv < 2) then
+more << EOF
+
+ Usage $0 <yyyy> <doy> [ndays] [site_list_path]
+   
+ Example: $0 2017 001 
+          $0 2017 001 10
+          $0 2017 001 10 /home/fzhou/work/site.list
+
+EOF
+   exit
+endif
+
+@ yyyy = $1
+set yy = `echo ${yyyy} | awk '{printf("%2.2d",$1-int($1/100)*100)}'`
+@ doy  = $2
+@ count = 1
+if ($#argv >= 3) then
+   @ count = $3
+endif
+set site_list = ''
+if ($#argv >= 4) then
+   set site_list = $4
+endif
+
+echo " "
+echo " Downloading MGEX OBS files from ftp://igs.ign.fr ..."
+echo " "
+
+while (${count})
+   set cdoy = `echo ${doy} | awk '{printf("%3.3d\n",$1)}'`
+   echo " Year:" ${yyyy} " DOY:" ${cdoy}
+
+   set obsdir = /Users/zhoufeng/Documents/GNSS_download/mgex_obs/${yyyy}${cdoy}
+   if (! -d ${obsdir}) /bin/mkdir -p ${obsdir}
+
+   set odir = mgex_obs_tmp
+   if (-d ${odir}) /bin/rm -rf ${odir}
+   /bin/mkdir ${odir}
+   cd ${odir}
+
+   if (${site_list} == '') then
+      set outdir = rxo
+      if (-d rxo) /bin/rm -rf rxo
+      /bin/mkdir rxo
+
+      # download the long name obs files
+      wget -qr -nH -A "*.crx.gz" --cut-dirs=9 ftp://igs.ign.fr/pub/igs/data/campaign/mgex/daily/rinex3/${yyyy}/${cdoy}
+      wget -qr -nH -A "*d.Z" --cut-dirs=9 ftp://igs.ign.fr/pub/igs/data/campaign/mgex/daily/rinex3/${yyyy}/${cdoy}
+      gunzip *.gz *.Z
+
+      # convert the long name compact obs file to short name o file
+      foreach file (`ls *.crx`)
+         set site = `echo ${file} | cut -c1-4 | tr "A-Z" "a-z"`
+         set outf = rxo/${site}${cdoy}"0."${yy}"o"
+         cat ${file} | crx2rnx - >! ${outf}
+         if ($status != 0) then
+            echo " *** WARNING($0): cannot convert d-file to o-file: $file"
+            /bin/rm -f ${outf}
+            continue
+         endif
+      end
+
+      set tmp = "*."${yy}"d"
+      foreach file (`ls ${tmp}`)
+         set site = `echo ${file} | cut -c1-4 | tr "A-Z" "a-z"`
+         set outf = rxo/${site}${cdoy}"0."${yy}"o"
+         if (-e ${outf}) then
+            continue
+         endif
+         cat ${file} | crx2rnx - >! ${outf}
+         if ($status != 0) then
+            echo " *** WARNING($0): cannot convert d-file to o-file: $file"
+            /bin/rm -f ${outf}
+            continue
+         endif
+      end
+   else
+      foreach site (`cat ${site_list}`)
+         set site = `echo ${site} | tr "a-z" "A-Z"`
+         wget -qr -nH -A "${site}*.crx.gz" --cut-dirs=9 ftp://igs.ign.fr/pub/igs/data/campaign/mgex/daily/rinex3/${yyyy}/${cdoy}
+         /bin/rm -rf ${yy}*
+         gunzip ${site}*.crx.gz
+
+         set outdir = rxo
+         if (-d rxo) /bin/rm -rf rxo
+         /bin/mkdir rxo
+
+         set file = `ls ${site}*.crx`
+         @ nfil = $#file
+         if ($nfil > 0) then
+            set file = ${site}*.crx
+            set site = `echo ${file} | cut -c1-4 | tr "A-Z" "a-z"`
+            set outf = rxo/${site}${cdoy}"0."${yy}"o"
+            cat ${file} | crx2rnx - >! ${outf}
+            if ($status != 0) then
+               echo " *** WARNING($0): cannot convert d-file to o-file: $file"
+               /bin/rm -f ${outf}
+               continue
+            endif
+         else
+            set site = `echo ${site} | tr "A-Z" "a-z"`
+            wget -qr -nH -A "${site}*.${yy}d.Z" --cut-dirs=9 ftp://igs.ign.fr/pub/igs/data/campaign/mgex/daily/rinex3/${yyyy}/${cdoy}
+            /bin/rm -rf ${yy}*
+            gunzip ${site}*.${yy}d.Z
+
+            set file = `ls ${site}*.${yy}d`
+            @ nfil = $#file
+            if ($nfil > 0) then
+               set file = ${site}*.${yy}d
+               set site = `echo ${file} | cut -c1-4 | tr "A-Z" "a-z"`
+               set outf = rxo/${site}${cdoy}"0."${yy}"o"
+               cat ${file} | crx2rnx - >! ${outf}
+               if ($status != 0) then
+                  echo " *** WARNING($0): cannot convert d-file to o-file: $file"
+                  /bin/rm -f ${outf}
+                  continue
+               endif
+            else
+               echo "MGEX observations for ${site} NOT found! Go to next site."
+               continue
+            endif
+         endif
+      end
+   endif
+
+   cd rxo 
+   foreach file (`ls *o`)
+      if (! -e ${obsdir}/${file}) /bin/cp ${file} ${obsdir}
+   end 
+
+   cd ../../
+
+   @ count --
+   @ doy ++
+end
+/bin/rm -rf ${odir}
+#
+##================================END PROGRAM======================================##

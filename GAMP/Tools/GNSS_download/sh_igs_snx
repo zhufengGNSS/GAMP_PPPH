@@ -1,0 +1,75 @@
+#!/bin/csh
+##
+## Purpose: get IGS SINEX files from CDDIS
+##
+## Originally written by Feng Zhou on 11/09/2016 @ GFZ
+##
+## Email: zhouforme@163.com
+##
+## Section 1.1, Space Geodetic Techniques, GFZ German Research Centre for Geosciences
+#
+##===============================BEGIN PROGRAM=====================================##
+if ($#argv < 2) then
+more << EOF
+
+   Usage $0 <yyyy> <doy> [ndays]
+
+   EXAMPLES: $0 2017 001
+             $0 2017 001 10
+
+EOF
+   exit
+endif
+
+@ yyyy  = $1
+set yy = `echo $yyyy | awk '{printf("%s",substr($1,3,4))}'`
+@ doy   = $2
+@ count = 1
+if ($#argv == 3) then
+   @ count = $3
+endif
+
+set snxdir = /Users/zhoufeng/Documents/GNSS_download/igs_snx
+if (! -d $snxdir) /bin/mkdir -p $snxdir
+cd $snxdir
+
+echo " "
+echo " Downloading IGS SINEX files from ftp://cddis.gsfc.nasa.gov ..."
+echo " "
+
+while ($count)
+   set cdoy = `echo $doy | awk '{printf("%3.3d\n",$1)}'`
+   echo " Year:" $yyyy " DOY:" $cdoy
+   
+   set WEEKD = `mjday $doy $yyyy | awk '{nwk=int(($1-44244)/7);nwkd=$1-44244-nwk*7;print nwk*10+nwkd}'`
+   set WEEK  = `echo $WEEKD | awk '{print substr($1,1,4)}'`
+
+   set snxfil = igs{$WEEK}.snx
+   set snxfil0 = igs{$yy}P{$WEEK}.snx
+
+   if (! -e $snxfil) then
+      wget -qr -nH --cut-dirs=4 ftp://cddis.gsfc.nasa.gov/pub/gps/products/$WEEK/{$snxfil0}.Z
+      if (-e {$snxfil0}.Z) then
+         sh_uncompress {$snxfil0}.Z
+         /bin/mv $snxfil0 $snxfil
+      else
+         @ ii = 0
+         while ($ii < 7)
+            set snxtmp = igs{$yy}P{$WEEK}{$ii}.snx
+            wget -qr -nH --cut-dirs=4 ftp://cddis.gsfc.nasa.gov/pub/gps/products/$WEEK/{$snxtmp}.Z
+            if (-e {$snxtmp}.Z) then
+               sh_uncompress {$snxtmp}.Z
+               /bin/mv $snxtmp $snxfil
+               break
+            endif
+
+            @ ii ++
+         end
+      endif
+   endif
+
+   @ count --
+   @ doy ++
+end
+#
+##================================END PROGRAM======================================##

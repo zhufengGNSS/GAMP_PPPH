@@ -1,0 +1,557 @@
+R09 ATTENTION! PRELIMINARY PHASE CENTER CORRECTIONS!
+R26 ATTENTION! PRELIMINARY PHASE CENTER CORRECTIONS!
+C01 ATTENTION! PRELIMINARY PHASE CENTER CORRECTIONS!
+C02 ATTENTION! PRELIMINARY PHASE CENTER CORRECTIONS!
+C03 ATTENTION! PRELIMINARY PHASE CENTER CORRECTIONS!
+C04 ATTENTION! PRELIMINARY PHASE CENTER CORRECTIONS!
+C05 ATTENTION! PRELIMINARY PHASE CENTER CORRECTIONS!
+C13 ATTENTION! PRELIMINARY PHASE CENTER CORRECTIONS!
+C31 ATTENTION! PRELIMINARY PHASE CENTER CORRECTIONS!
+C32 ATTENTION! PRELIMINARY PHASE CENTER CORRECTIONS!
+C33 ATTENTION! PRELIMINARY PHASE CENTER CORRECTIONS!
+C34 ATTENTION! PRELIMINARY PHASE CENTER CORRECTIONS!
+C35 ATTENTION! PRELIMINARY PHASE CENTER CORRECTIONS!
+00:00:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:00:00.00 sat=C13 L2 res= -30.9916 el=49.5
+00:00:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:00:00.00 sat=C13 P2 res= -30.9283 el=49.5
+00:00:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:00:30.00 sat=C13 L2 res= -36.9965 el=49.6
+00:01:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:01:00.00 sat=C13 L2 res= -38.9278 el=49.6
+00:01:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:01:30.00 sat=C13 L2 res= -38.1048 el=49.7
+00:02:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:02:00.00 sat=C13 L2 res= -39.8945 el=49.8
+00:02:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:02:30.00 sat=C13 L2 res= -38.1342 el=49.8
+00:03:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:03:00.00 sat=C13 L2 res= -37.0970 el=49.9
+00:03:30.0  C05 GF CS gf_new=       13.044, gf_old=       13.230, diff_abs=       -0.185, thres=        0.150, elev=20.4
+00:03:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:03:30.00 sat=C13 L2 res= -36.7722 el=49.9
+00:04:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:04:00.00 sat=C13 L2 res= -38.4508 el=50.0
+00:04:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:04:30.00 sat=C13 L2 res= -41.8406 el=50.1
+00:05:00.0  C05 GF CS gf_new=       12.875, gf_old=       13.060, diff_abs=       -0.185, thres=        0.150, elev=20.4
+00:05:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:05:00.00 sat=C13 L2 res= -38.8738 el=50.1
+00:05:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:05:30.00 sat=C13 L2 res= -39.3242 el=50.2
+00:06:00.0  C05 GF CS gf_new=       13.467, gf_old=       12.885, diff_abs=        0.583, thres=        0.150, elev=20.4
+00:06:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:06:00.00 sat=C13 L2 res= -39.9788 el=50.2
+00:06:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:06:30.00 sat=C13 L2 res= -38.0158 el=50.3
+00:07:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:07:00.00 sat=C13 L2 res= -39.8110 el=50.4
+00:07:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:07:30.00 sat=C13 L2 res= -35.9482 el=50.4
+00:08:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:08:00.00 sat=C13 L2 res= -37.7262 el=50.5
+00:08:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:08:30.00 sat=C13 L2 res= -37.3533 el=50.5
+00:09:00.0  C05 GF CS gf_new=       13.307, gf_old=       13.492, diff_abs=       -0.185, thres=        0.150, elev=20.4
+00:09:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:09:00.00 sat=C13 L2 res= -36.8912 el=50.6
+00:09:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:09:30.00 sat=C13 L2 res= -36.4843 el=50.6
+00:10:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:10:00.00 sat=C13 L2 res= -35.5506 el=50.7
+00:10:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:10:30.00 sat=C13 L2 res= -39.4540 el=50.8
+00:11:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:11:00.00 sat=C13 L2 res= -37.9132 el=50.8
+00:11:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:11:30.00 sat=C13 L2 res= -41.3964 el=50.9
+00:12:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:12:00.00 sat=C13 L2 res= -39.5447 el=50.9
+00:12:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:12:30.00 sat=C13 L2 res= -38.7485 el=51.0
+00:13:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:13:00.00 sat=C13 L2 res= -39.3238 el=51.0
+00:13:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:13:30.00 sat=C13 L2 res= -37.1816 el=51.1
+00:14:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:14:00.00 sat=C13 L2 res= -37.5403 el=51.1
+00:14:00.0  *** WARNING: outlier (1) rejected 2017/09/01 00:14:00.00 sat=G22 L1 res=  -0.6454 el=12.5
+00:14:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:14:30.00 sat=C13 L2 res= -38.2336 el=51.2
+00:15:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:15:00.00 sat=C13 L2 res= -38.1053 el=51.2
+00:15:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:15:30.00 sat=C13 L2 res= -38.2734 el=51.3
+00:16:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:16:00.00 sat=C13 L2 res= -37.8606 el=51.4
+00:16:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:16:30.00 sat=C13 L2 res= -38.8123 el=51.4
+00:17:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:17:00.00 sat=C13 L2 res= -37.9854 el=51.5
+00:17:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:17:30.00 sat=C13 L2 res= -38.8045 el=51.5
+00:18:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:18:00.00 sat=C13 L2 res= -38.3716 el=51.6
+00:18:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:18:30.00 sat=C13 L2 res= -40.6255 el=51.6
+00:19:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:19:00.00 sat=C13 L2 res= -40.0875 el=51.7
+00:19:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:19:30.00 sat=C13 L2 res= -36.2802 el=51.7
+00:20:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:20:00.00 sat=C13 L2 res= -35.9111 el=51.8
+00:20:30.0  C05 GF CS gf_new=       13.422, gf_old=       13.617, diff_abs=       -0.195, thres=        0.150, elev=20.5
+00:20:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:20:30.00 sat=C13 L2 res= -38.8454 el=51.8
+00:21:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:21:00.00 sat=C13 L2 res= -38.1236 el=51.9
+00:21:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:21:30.00 sat=C13 L2 res= -39.8437 el=51.9
+00:22:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:22:00.00 sat=C13 L2 res= -41.1125 el=52.0
+00:22:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:22:30.00 sat=C13 L2 res= -39.9182 el=52.0
+00:23:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:23:00.00 sat=C13 L2 res= -38.6402 el=52.1
+00:23:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:23:30.00 sat=C13 L2 res= -38.3895 el=52.1
+00:24:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:24:00.00 sat=C13 L2 res= -38.6927 el=52.2
+00:24:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:24:30.00 sat=C13 L2 res= -37.4848 el=52.2
+00:25:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:25:00.00 sat=C13 L2 res= -39.4612 el=52.3
+00:25:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:25:30.00 sat=C13 L2 res= -37.5438 el=52.3
+00:26:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:26:00.00 sat=C13 L2 res= -38.3439 el=52.3
+00:26:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:26:30.00 sat=C13 L2 res= -39.5144 el=52.4
+00:27:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:27:00.00 sat=C13 L2 res= -37.2203 el=52.4
+00:27:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:27:30.00 sat=C13 L2 res= -38.0805 el=52.5
+00:28:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:28:00.00 sat=C13 L2 res= -36.8261 el=52.5
+00:28:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:28:30.00 sat=C13 L2 res= -37.7112 el=52.6
+00:29:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:29:00.00 sat=C13 L2 res= -37.7310 el=52.6
+00:29:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:29:30.00 sat=C13 L2 res= -38.0314 el=52.7
+00:30:00.0  C05 GF CS gf_new=       13.694, gf_old=       13.502, diff_abs=        0.192, thres=        0.150, elev=20.5
+00:30:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:30:00.00 sat=C13 L2 res= -37.5088 el=52.7
+00:30:30.0  C05 MW CS mw_new=       60.340, mw_old=       66.891, diff_abs=       -6.550, thres=        5.000, elev= 0.4
+00:30:30.0  C05 GF CS gf_new=       12.361, gf_old=       13.694, diff_abs=       -1.333, thres=        0.150, elev=20.5
+00:30:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:30:30.00 sat=C13 L2 res= -35.6707 el=52.8
+00:31:00.0  C05 MW CS mw_new=       60.758, mw_old=       66.698, diff_abs=       -5.940, thres=        5.000, elev= 0.4
+00:31:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:31:00.00 sat=C13 L2 res= -35.9841 el=52.8
+00:31:30.0  C05 MW CS mw_new=       60.331, mw_old=       66.528, diff_abs=       -6.198, thres=        5.000, elev= 0.4
+00:31:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:31:30.00 sat=C13 L2 res= -37.6378 el=52.8
+00:32:00.0  C05 MW CS mw_new=       60.634, mw_old=       66.356, diff_abs=       -5.722, thres=        5.000, elev= 0.4
+00:32:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:32:00.00 sat=C13 L2 res= -40.1481 el=52.9
+00:32:30.0  C05 MW CS mw_new=       60.520, mw_old=       66.201, diff_abs=       -5.682, thres=        5.000, elev= 0.4
+00:32:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:32:30.00 sat=C13 L2 res= -39.5645 el=52.9
+00:33:00.0  C05 MW CS mw_new=       60.601, mw_old=       66.052, diff_abs=       -5.451, thres=        5.000, elev= 0.4
+00:33:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:33:00.00 sat=C13 L2 res= -38.1836 el=53.0
+00:33:30.0  C05 MW CS mw_new=       60.105, mw_old=       65.912, diff_abs=       -5.807, thres=        5.000, elev= 0.4
+00:33:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:33:30.00 sat=C13 L2 res= -39.8144 el=53.0
+00:34:00.0  C05 MW CS mw_new=       60.082, mw_old=       65.767, diff_abs=       -5.685, thres=        5.000, elev= 0.4
+00:34:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:34:00.00 sat=C13 L2 res= -37.6433 el=53.0
+00:34:30.0  C05 MW CS mw_new=       60.398, mw_old=       65.628, diff_abs=       -5.230, thres=        5.000, elev= 0.4
+00:34:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:34:30.00 sat=C13 L2 res= -38.2011 el=53.1
+00:35:00.0  C05 MW CS mw_new=       60.450, mw_old=       65.504, diff_abs=       -5.054, thres=        5.000, elev= 0.4
+00:35:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:35:00.00 sat=C13 L2 res= -39.7634 el=53.1
+00:35:30.0  C05 MW CS mw_new=       60.199, mw_old=       65.386, diff_abs=       -5.187, thres=        5.000, elev= 0.4
+00:35:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:35:30.00 sat=C13 L2 res= -37.7552 el=53.2
+00:36:00.0  C05 MW CS mw_new=       60.064, mw_old=       65.268, diff_abs=       -5.205, thres=        5.000, elev= 0.4
+00:36:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:36:00.00 sat=C13 L2 res= -36.6231 el=53.2
+00:36:30.0  C05 MW CS mw_new=       60.036, mw_old=       65.153, diff_abs=       -5.116, thres=        5.000, elev= 0.4
+00:36:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:36:30.00 sat=C13 L2 res= -37.1191 el=53.3
+00:37:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:37:00.00 sat=C13 L2 res= -37.0512 el=53.3
+00:37:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:37:30.00 sat=C13 L2 res= -38.3102 el=53.3
+00:38:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:38:00.00 sat=C13 L2 res= -37.5942 el=53.4
+00:38:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:38:30.00 sat=C13 L2 res= -37.4086 el=53.4
+00:39:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:39:00.00 sat=C13 L2 res= -37.9320 el=53.4
+00:39:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:39:30.00 sat=C13 L2 res= -38.3013 el=53.5
+00:40:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:40:00.00 sat=C13 L2 res= -38.4396 el=53.5
+00:40:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:40:30.00 sat=C13 L2 res= -37.1849 el=53.6
+00:41:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:41:00.00 sat=C13 L2 res= -37.8209 el=53.6
+00:41:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:41:30.00 sat=C13 L2 res= -38.3719 el=53.6
+00:42:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:42:00.00 sat=C13 L2 res= -37.3191 el=53.7
+00:42:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:42:30.00 sat=C13 L2 res= -36.0805 el=53.7
+00:43:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:43:00.00 sat=C13 L2 res= -36.4681 el=53.7
+00:43:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:43:30.00 sat=C13 L2 res= -36.4727 el=53.8
+00:44:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:44:00.00 sat=C13 L2 res= -39.2338 el=53.8
+00:44:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:44:30.00 sat=C13 L2 res= -37.2679 el=53.8
+00:45:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:45:00.00 sat=C13 L2 res= -38.1605 el=53.9
+00:45:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:45:30.00 sat=C13 L2 res= -37.6427 el=53.9
+00:46:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:46:00.00 sat=C13 L2 res= -37.7244 el=53.9
+00:46:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:46:30.00 sat=C13 L2 res= -37.5320 el=54.0
+00:47:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:47:00.00 sat=C13 L2 res= -36.9606 el=54.0
+00:47:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:47:30.00 sat=C13 L2 res= -37.6827 el=54.0
+00:48:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:48:00.00 sat=C13 L2 res= -38.6106 el=54.1
+00:48:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:48:30.00 sat=C13 L2 res= -38.9538 el=54.1
+00:49:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:49:00.00 sat=C13 L2 res= -37.3946 el=54.1
+00:49:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:49:30.00 sat=C13 L2 res= -37.0534 el=54.2
+00:50:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:50:00.00 sat=C13 L2 res= -37.7035 el=54.2
+00:50:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:50:30.00 sat=C13 L2 res= -38.0330 el=54.2
+00:51:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:51:00.00 sat=C13 L2 res= -38.2430 el=54.3
+00:51:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:51:30.00 sat=C13 L2 res= -39.2759 el=54.3
+00:52:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:52:00.00 sat=C13 L2 res= -37.8139 el=54.3
+00:52:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:52:30.00 sat=C13 L2 res= -38.8446 el=54.3
+00:53:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:53:00.00 sat=C13 L2 res= -40.1141 el=54.4
+00:53:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:53:30.00 sat=C13 L2 res= -38.4710 el=54.4
+00:54:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:54:00.00 sat=C13 L2 res= -36.5077 el=54.4
+00:54:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:54:30.00 sat=C13 L2 res= -35.9528 el=54.5
+00:55:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:55:00.00 sat=C13 L2 res= -40.6159 el=54.5
+00:55:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:55:30.00 sat=C13 L2 res= -40.4752 el=54.5
+00:56:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:56:00.00 sat=C13 L2 res= -36.4164 el=54.5
+00:56:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:56:30.00 sat=C13 L2 res= -39.4940 el=54.6
+00:57:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:57:00.00 sat=C13 L2 res= -37.3639 el=54.6
+00:57:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:57:30.00 sat=C13 L2 res= -37.6448 el=54.6
+00:58:00.0  C05 GF CS gf_new=       12.306, gf_old=       12.496, diff_abs=       -0.189, thres=        0.150, elev=20.7
+00:58:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:58:00.00 sat=C13 L2 res= -36.8848 el=54.7
+00:58:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:58:30.00 sat=C13 L2 res= -35.7271 el=54.7
+00:59:00.0  *** WARNING: outlier (0) rejected 2017/09/01 00:59:00.00 sat=C13 L2 res= -36.9216 el=54.7
+00:59:30.0  *** WARNING: outlier (0) rejected 2017/09/01 00:59:30.00 sat=C13 L2 res= -37.5585 el=54.7
+01:00:00.0  *** WARNING: outlier (0) rejected 2017/09/01 01:00:00.00 sat=C13 L2 res= -37.2752 el=54.7
+01:05:30.0  C05 GF CS gf_new=       12.532, gf_old=       12.336, diff_abs=        0.196, thres=        0.150, elev=20.8
+01:09:30.0  C05 GF CS gf_new=       12.362, gf_old=       12.552, diff_abs=       -0.190, thres=        0.150, elev=20.8
+01:13:00.0  C05 GF CS gf_new=       12.574, gf_old=       12.384, diff_abs=        0.190, thres=        0.150, elev=20.8
+01:13:30.0  C05 GF CS gf_new=       12.381, gf_old=       12.574, diff_abs=       -0.193, thres=        0.150, elev=20.8
+01:16:00.0  C05 GF CS gf_new=       12.207, gf_old=       12.394, diff_abs=       -0.187, thres=        0.150, elev=20.8
+01:18:00.0  C05 GF CS gf_new=       12.023, gf_old=       12.210, diff_abs=       -0.186, thres=        0.150, elev=20.8
+01:19:30.0  C05 GF CS gf_new=       12.231, gf_old=       12.028, diff_abs=        0.204, thres=        0.150, elev=20.8
+01:26:00.0  *** WARNING: G22 ecliType=2
+01:26:30.0  *** WARNING: G22 ecliType=2
+01:26:30.0  C05 GF CS gf_new=       11.917, gf_old=       12.103, diff_abs=       -0.187, thres=        0.150, elev=20.9
+01:26:30.0  *** WARNING: outlier (1) rejected 2017/09/01 01:26:30.00 sat=R21 L1 res=  -0.4235 el= 8.3
+01:27:00.0  *** WARNING: G22 ecliType=2
+01:27:30.0  *** WARNING: G22 ecliType=2
+01:28:00.0  *** WARNING: G22 ecliType=2
+01:32:00.0  C05 GF CS gf_new=       12.338, gf_old=       12.147, diff_abs=        0.191, thres=        0.150, elev=20.9
+01:34:30.0  C05 GF CS gf_new=       12.351, gf_old=       12.539, diff_abs=       -0.188, thres=        0.150, elev=20.9
+01:36:30.0  C05 GF CS gf_new=       12.162, gf_old=       12.359, diff_abs=       -0.197, thres=        0.150, elev=20.9
+01:40:00.0  C05 GF CS gf_new=       12.180, gf_old=       11.992, diff_abs=        0.188, thres=        0.150, elev=21.0
+01:40:30.0  C05 GF CS gf_new=       11.994, gf_old=       12.180, diff_abs=       -0.185, thres=        0.150, elev=21.0
+01:42:30.0  C05 GF CS gf_new=       11.813, gf_old=       11.999, diff_abs=       -0.185, thres=        0.150, elev=21.0
+01:47:00.0  C05 GF CS gf_new=       12.043, gf_old=       11.846, diff_abs=        0.197, thres=        0.150, elev=21.0
+01:47:30.0  C05 GF CS gf_new=       11.870, gf_old=       12.043, diff_abs=       -0.173, thres=        0.150, elev=21.0
+01:48:00.0  C05 GF CS gf_new=       12.062, gf_old=       11.870, diff_abs=        0.193, thres=        0.150, elev=21.0
+01:48:30.0  C05 GF CS gf_new=       11.865, gf_old=       12.062, diff_abs=       -0.197, thres=        0.150, elev=21.0
+01:49:30.0  C05 GF CS gf_new=       11.684, gf_old=       11.868, diff_abs=       -0.184, thres=        0.150, elev=21.0
+01:52:30.0  C05 GF CS gf_new=       11.698, gf_old=       11.505, diff_abs=        0.193, thres=        0.150, elev=21.0
+01:53:00.0  C05 GF CS gf_new=       11.886, gf_old=       11.698, diff_abs=        0.188, thres=        0.150, elev=21.0
+01:53:30.0  C05 GF CS gf_new=       11.699, gf_old=       11.886, diff_abs=       -0.187, thres=        0.150, elev=21.0
+01:54:30.0  C05 GF CS gf_new=       11.892, gf_old=       11.701, diff_abs=        0.191, thres=        0.150, elev=21.0
+01:55:30.0  C05 GF CS gf_new=       11.703, gf_old=       11.894, diff_abs=       -0.192, thres=        0.150, elev=21.1
+01:57:00.0  C05 GF CS gf_new=       11.880, gf_old=       11.693, diff_abs=        0.187, thres=        0.150, elev=21.1
+02:00:30.0  C05 GF CS gf_new=       11.702, gf_old=       11.906, diff_abs=       -0.204, thres=        0.150, elev=21.1
+02:03:30.0  C05 GF CS gf_new=       11.331, gf_old=       12.091, diff_abs=       -0.760, thres=        0.150, elev=21.1
+02:04:30.0  C05 GF CS gf_new=       11.145, gf_old=       11.340, diff_abs=       -0.195, thres=        0.150, elev=21.1
+02:05:00.0  C05 GF CS gf_new=       10.951, gf_old=       11.145, diff_abs=       -0.194, thres=        0.150, elev=21.1
+02:06:00.0  *** WARNING: G03 ecliType=2
+02:06:30.0  *** WARNING: G03 ecliType=2
+02:06:30.0  C05 GF CS gf_new=       11.547, gf_old=       11.354, diff_abs=        0.192, thres=        0.150, elev=21.1
+02:07:00.0  *** WARNING: G03 ecliType=2
+02:07:00.0  C05 GF CS gf_new=       11.750, gf_old=       11.547, diff_abs=        0.203, thres=        0.150, elev=21.1
+02:07:30.0  *** WARNING: G03 ecliType=2
+02:08:00.0  *** WARNING: G03 ecliType=2
+02:08:00.0  C05 GF CS gf_new=       11.554, gf_old=       11.745, diff_abs=       -0.191, thres=        0.150, elev=21.1
+02:08:30.0  *** WARNING: G03 ecliType=2
+02:09:00.0  *** WARNING: G03 ecliType=2
+02:09:30.0  *** WARNING: G03 ecliType=2
+02:09:30.0  C05 GF CS gf_new=       11.769, gf_old=       11.560, diff_abs=        0.210, thres=        0.150, elev=21.1
+02:10:00.0  *** WARNING: G03 ecliType=2
+02:10:00.0  C05 MW CS mw_new=       64.310, mw_old=       54.493, diff_abs=        9.817, thres=        5.000, elev= 0.4
+02:10:00.0  C05 GF CS gf_new=       13.490, gf_old=       11.769, diff_abs=        1.720, thres=        0.150, elev=21.1
+02:10:30.0  *** WARNING: G03 ecliType=2
+02:11:00.0  *** WARNING: G03 ecliType=2
+02:11:30.0  *** WARNING: G03 ecliType=2
+02:12:00.0  *** WARNING: G03 ecliType=2
+02:12:30.0  *** WARNING: G03 ecliType=2
+02:13:00.0  *** WARNING: G03 ecliType=2
+02:13:30.0  *** WARNING: G03 ecliType=2
+02:14:00.0  *** WARNING: G03 ecliType=2
+02:14:30.0  C05 GF CS gf_new=       13.138, gf_old=       13.327, diff_abs=       -0.190, thres=        0.150, elev=21.2
+02:17:00.0  C05 GF CS gf_new=       13.345, gf_old=       13.148, diff_abs=        0.198, thres=        0.150, elev=21.2
+02:20:00.0  C05 GF CS gf_new=       13.557, gf_old=       13.358, diff_abs=        0.200, thres=        0.150, elev=21.2
+02:20:30.0  C05 GF CS gf_new=       13.363, gf_old=       13.557, diff_abs=       -0.195, thres=        0.150, elev=21.2
+02:21:30.0  C05 GF CS gf_new=       13.192, gf_old=       13.369, diff_abs=       -0.178, thres=        0.150, elev=21.2
+02:22:00.0  C05 GF CS gf_new=       13.385, gf_old=       13.192, diff_abs=        0.193, thres=        0.150, elev=21.2
+02:24:00.0  C05 GF CS gf_new=       13.202, gf_old=       13.394, diff_abs=       -0.192, thres=        0.150, elev=21.2
+02:29:30.0  *** WARNING: outlier (1) rejected 2017/09/01 02:29:30.00 sat=G07 P2 res=  41.9986 el=10.1
+03:04:00.0  C05 GF CS gf_new=       13.676, gf_old=       13.477, diff_abs=        0.199, thres=        0.150, elev=21.4
+03:27:30.0  C05 GF CS gf_new=       14.138, gf_old=       13.931, diff_abs=        0.207, thres=        0.150, elev=21.6
+03:29:30.0  C05 GF CS gf_new=       13.961, gf_old=       14.143, diff_abs=       -0.182, thres=        0.150, elev=21.6
+03:30:30.0  C05 GF CS gf_new=       14.162, gf_old=       13.966, diff_abs=        0.195, thres=        0.150, elev=21.6
+03:31:30.0  C05 GF CS gf_new=       13.988, gf_old=       14.164, diff_abs=       -0.175, thres=        0.150, elev=21.6
+03:32:00.0  C05 GF CS gf_new=       13.800, gf_old=       13.988, diff_abs=       -0.189, thres=        0.150, elev=21.6
+03:32:30.0  C05 GF CS gf_new=       13.996, gf_old=       13.800, diff_abs=        0.196, thres=        0.150, elev=21.6
+03:35:00.0  C05 GF CS gf_new=       14.216, gf_old=       14.012, diff_abs=        0.204, thres=        0.150, elev=21.6
+03:38:30.0  C05 GF CS gf_new=       14.027, gf_old=       13.832, diff_abs=        0.195, thres=        0.150, elev=21.6
+03:39:30.0  *** WARNING: outlier (1) rejected 2017/09/01 03:39:30.00 sat=R24 L1 res=   0.0964 el=32.1
+03:40:00.0  C05 GF CS gf_new=       14.406, gf_old=       14.020, diff_abs=        0.386, thres=        0.150, elev=21.6
+03:40:00.0  *** WARNING: outlier (1) rejected 2017/09/01 03:40:00.00 sat=R24 L1 res=   0.0985 el=32.2
+03:40:30.0  C05 GF CS gf_new=       14.214, gf_old=       14.406, diff_abs=       -0.192, thres=        0.150, elev=21.6
+03:42:00.0  C05 GF CS gf_new=       14.407, gf_old=       14.224, diff_abs=        0.183, thres=        0.150, elev=21.6
+03:43:30.0  C05 GF CS gf_new=       14.219, gf_old=       14.404, diff_abs=       -0.185, thres=        0.150, elev=21.6
+03:44:30.0  C05 GF CS gf_new=       14.402, gf_old=       14.215, diff_abs=        0.187, thres=        0.150, elev=21.6
+03:45:30.0  *** WARNING: G28 ecliType=2
+03:45:30.0  C05 GF CS gf_new=       14.223, gf_old=       14.410, diff_abs=       -0.187, thres=        0.150, elev=21.7
+03:46:00.0  *** WARNING: G28 ecliType=2
+03:46:30.0  *** WARNING: G28 ecliType=2
+03:47:00.0  *** WARNING: G28 ecliType=2
+03:47:30.0  *** WARNING: G28 ecliType=2
+03:48:00.0  *** WARNING: G28 ecliType=2
+03:48:30.0  *** WARNING: G28 ecliType=2
+03:49:00.0  *** WARNING: G28 ecliType=2
+03:49:30.0  *** WARNING: G28 ecliType=2
+03:50:00.0  *** WARNING: G28 ecliType=2
+03:51:00.0  C05 GF CS gf_new=       14.396, gf_old=       14.212, diff_abs=        0.184, thres=        0.150, elev=21.7
+03:53:00.0  C05 GF CS gf_new=       14.583, gf_old=       14.401, diff_abs=        0.182, thres=        0.150, elev=21.7
+03:53:30.0  C05 GF CS gf_new=       14.396, gf_old=       14.583, diff_abs=       -0.187, thres=        0.150, elev=21.7
+03:54:30.0  C05 GF CS gf_new=       14.576, gf_old=       14.388, diff_abs=        0.187, thres=        0.150, elev=21.7
+03:56:30.0  *** WARNING: outlier (1) rejected 2017/09/01 03:56:30.00 sat=R22 L1 res=  -0.3711 el= 7.9
+03:57:00.0  R24 GF CS gf_new=      -10.968, gf_old=       -9.756, diff_abs=       -1.212, thres=        0.150, elev=35.3
+03:57:00.0  *** WARNING: outlier (1) rejected 2017/09/01 03:57:00.00 sat=R22 L1 res=  -0.3732 el= 7.8
+04:02:00.0  C05 GF CS gf_new=       15.153, gf_old=       14.964, diff_abs=        0.188, thres=        0.150, elev=21.7
+04:02:30.0  C05 GF CS gf_new=       14.960, gf_old=       15.153, diff_abs=       -0.193, thres=        0.150, elev=21.7
+04:07:00.0  C05 GF CS gf_new=       15.154, gf_old=       14.964, diff_abs=        0.190, thres=        0.150, elev=21.7
+04:10:00.0  C05 GF CS gf_new=       14.959, gf_old=       15.154, diff_abs=       -0.195, thres=        0.150, elev=21.8
+04:23:00.0  C05 MW CS mw_new=       61.377, mw_old=       67.830, diff_abs=       -6.453, thres=        5.000, elev= 0.4
+04:23:00.0  C05 GF CS gf_new=       13.742, gf_old=       14.908, diff_abs=       -1.166, thres=        0.150, elev=21.8
+04:23:30.0  C05 MW CS mw_new=       61.423, mw_old=       67.706, diff_abs=       -6.282, thres=        5.000, elev= 0.4
+04:24:00.0  C05 MW CS mw_new=       61.686, mw_old=       67.587, diff_abs=       -5.901, thres=        5.000, elev= 0.4
+04:24:30.0  C05 MW CS mw_new=       60.853, mw_old=       67.478, diff_abs=       -6.624, thres=        5.000, elev= 0.4
+04:25:00.0  C05 MW CS mw_new=       61.603, mw_old=       67.357, diff_abs=       -5.754, thres=        5.000, elev= 0.4
+04:25:30.0  C05 MW CS mw_new=       62.004, mw_old=       67.254, diff_abs=       -5.250, thres=        5.000, elev= 0.4
+04:26:00.0  C05 MW CS mw_new=       61.528, mw_old=       67.162, diff_abs=       -5.634, thres=        5.000, elev= 0.4
+04:26:30.0  C05 MW CS mw_new=       61.886, mw_old=       67.065, diff_abs=       -5.179, thres=        5.000, elev= 0.4
+04:27:00.0  C05 MW CS mw_new=       61.898, mw_old=       66.977, diff_abs=       -5.079, thres=        5.000, elev= 0.4
+04:27:30.0  C05 MW CS mw_new=       61.450, mw_old=       66.893, diff_abs=       -5.443, thres=        5.000, elev= 0.4
+04:28:00.0  C05 MW CS mw_new=       61.095, mw_old=       66.804, diff_abs=       -5.709, thres=        5.000, elev= 0.4
+04:28:30.0  C05 MW CS mw_new=       61.351, mw_old=       66.711, diff_abs=       -5.361, thres=        5.000, elev= 0.4
+04:29:00.0  C05 MW CS mw_new=       61.359, mw_old=       66.626, diff_abs=       -5.267, thres=        5.000, elev= 0.4
+04:29:30.0  C05 MW CS mw_new=       61.320, mw_old=       66.544, diff_abs=       -5.225, thres=        5.000, elev= 0.4
+04:32:30.0  C05 MW CS mw_new=       61.032, mw_old=       66.103, diff_abs=       -5.071, thres=        5.000, elev= 0.4
+04:35:30.0  C05 GF CS gf_new=       13.885, gf_old=       13.702, diff_abs=        0.183, thres=        0.150, elev=21.9
+04:57:30.0  C05 GF CS gf_new=       13.980, gf_old=       13.801, diff_abs=        0.179, thres=        0.150, elev=21.9
+05:05:00.0  C05 GF CS gf_new=       13.773, gf_old=       13.955, diff_abs=       -0.182, thres=        0.150, elev=22.0
+05:12:30.0  *** WARNING: outlier (1) rejected 2017/09/01 05:12:30.00 sat=G03 P2 res= -10.3845 el= 9.6
+05:29:30.0  C05 GF CS gf_new=       13.500, gf_old=       13.687, diff_abs=       -0.187, thres=        0.150, elev=22.0
+05:50:00.0  C05 GF CS gf_new=       13.604, gf_old=       13.411, diff_abs=        0.192, thres=        0.150, elev=22.1
+05:51:30.0  C05 GF CS gf_new=       13.397, gf_old=       13.609, diff_abs=       -0.212, thres=        0.150, elev=22.1
+06:29:30.0  C05 GF CS gf_new=       13.473, gf_old=       13.280, diff_abs=        0.193, thres=        0.150, elev=22.2
+06:40:30.0  C05 GF CS gf_new=       13.263, gf_old=       13.463, diff_abs=       -0.200, thres=        0.150, elev=22.2
+06:41:00.0  G23 MW CS mw_new=        7.136, mw_old=       32.943, diff_abs=      -25.807, thres=        6.000, elev= 0.1
+06:41:00.0  G23 GF CS gf_new=        0.211, gf_old=        6.071, diff_abs=       -5.859, thres=        0.230, elev= 7.0
+06:43:00.0  C05 GF CS gf_new=       13.463, gf_old=       13.269, diff_abs=        0.194, thres=        0.150, elev=22.2
+06:46:30.0  C05 GF CS gf_new=       13.275, gf_old=       13.467, diff_abs=       -0.192, thres=        0.150, elev=22.2
+06:53:30.0  *** WARNING: outlier (1) rejected 2017/09/01 06:53:30.00 sat=R18 L1 res=  -0.2176 el=15.6
+06:54:00.0  *** WARNING: outlier (1) rejected 2017/09/01 06:54:00.00 sat=R18 L1 res=  -0.2239 el=15.8
+07:04:00.0  R01 GF CS gf_new=       30.551, gf_old=       31.283, diff_abs=       -0.732, thres=        0.150, elev=18.6
+07:07:00.0  C05 GF CS gf_new=       13.465, gf_old=       13.269, diff_abs=        0.196, thres=        0.150, elev=22.2
+07:38:30.0  C05 GF CS gf_new=       13.393, gf_old=       13.578, diff_abs=       -0.185, thres=        0.150, elev=22.2
+07:43:30.0  *** WARNING: G20 ecliType=2
+07:43:30.0  C05 GF CS gf_new=       13.622, gf_old=       13.431, diff_abs=        0.192, thres=        0.150, elev=22.2
+07:44:00.0  *** WARNING: G20 ecliType=2
+07:44:30.0  *** WARNING: G20 ecliType=2
+07:44:30.0  *** WARNING: outlier (1) rejected 2017/09/01 07:44:30.00 sat=R04 L1 res=  -0.1314 el= 9.4
+07:45:00.0  *** WARNING: G20 ecliType=2
+07:45:00.0  R04 GF CS gf_new=       -2.818, gf_old=       -3.439, diff_abs=        0.621, thres=        0.204, elev= 9.6
+07:45:30.0  *** WARNING: G20 ecliType=2
+07:46:00.0  *** WARNING: G20 ecliType=2
+07:46:30.0  *** WARNING: G20 ecliType=2
+07:47:00.0  *** WARNING: G20 ecliType=2
+07:47:30.0  *** WARNING: G20 ecliType=2
+07:48:00.0  *** WARNING: G20 ecliType=2
+07:48:30.0  *** WARNING: G20 ecliType=2
+07:49:00.0  *** WARNING: G20 ecliType=2
+07:49:30.0  *** WARNING: G20 ecliType=2
+07:50:00.0  *** WARNING: G20 ecliType=2
+07:50:30.0  *** WARNING: G20 ecliType=2
+07:51:00.0  *** WARNING: G20 ecliType=2
+07:51:30.0  *** WARNING: G20 ecliType=2
+07:52:00.0  *** WARNING: G20 ecliType=2
+07:55:30.0  C05 GF CS gf_new=       13.520, gf_old=       13.712, diff_abs=       -0.192, thres=        0.150, elev=22.2
+08:07:30.0  C05 GF CS gf_new=       13.846, gf_old=       13.643, diff_abs=        0.202, thres=        0.150, elev=22.2
+08:10:00.0  C05 GF CS gf_new=       13.672, gf_old=       13.870, diff_abs=       -0.198, thres=        0.150, elev=22.2
+08:14:30.0  C05 GF CS gf_new=       13.937, gf_old=       13.730, diff_abs=        0.207, thres=        0.150, elev=22.2
+08:23:30.0  *** WARNING: outlier (1) rejected 2017/09/01 08:23:30.00 sat=G25 P2 res=  17.4826 el= 9.0
+08:38:30.0  C05 GF CS gf_new=       14.084, gf_old=       14.263, diff_abs=       -0.180, thres=        0.150, elev=22.1
+08:48:00.0  C05 GF CS gf_new=       14.386, gf_old=       14.189, diff_abs=        0.196, thres=        0.150, elev=22.1
+08:54:30.0  C05 GF CS gf_new=       14.647, gf_old=       14.457, diff_abs=        0.190, thres=        0.150, elev=22.1
+08:56:00.0  C05 GF CS gf_new=       14.849, gf_old=       14.659, diff_abs=        0.190, thres=        0.150, elev=22.1
+09:03:30.0  C05 GF CS gf_new=       15.100, gf_old=       14.908, diff_abs=        0.193, thres=        0.150, elev=22.1
+09:27:00.0  C05 GF CS gf_new=       15.068, gf_old=       15.250, diff_abs=       -0.181, thres=        0.150, elev=22.0
+09:36:00.0  *** WARNING: outlier (1) rejected 2017/09/01 09:36:00.00 sat=R02 L1 res=  -0.5026 el= 7.3
+09:53:00.0  *** WARNING: outlier (1) rejected 2017/09/01 09:53:00.00 sat=G24 L1 res=   0.7103 el= 9.1
+09:53:30.0  *** WARNING: outlier (1) rejected 2017/09/01 09:53:30.00 sat=G24 L1 res=   0.7082 el= 9.2
+10:07:30.0  C05 GF CS gf_new=       14.967, gf_old=       15.159, diff_abs=       -0.192, thres=        0.150, elev=21.9
+10:10:30.0  R17 GF CS gf_new=       15.583, gf_old=       15.356, diff_abs=        0.226, thres=        0.224, elev= 7.6
+10:11:00.0  R17 GF CS gf_new=       15.810, gf_old=       15.583, diff_abs=        0.228, thres=        0.227, elev= 7.3
+10:11:30.0  R17 GF CS gf_new=       16.075, gf_old=       15.810, diff_abs=        0.265, thres=        0.229, elev= 7.1
+10:12:00.0  R17 GF CS gf_new=       16.328, gf_old=       16.075, diff_abs=        0.253, thres=        0.230, elev= 6.8
+10:12:00.0  C05 GF CS gf_new=       15.121, gf_old=       14.936, diff_abs=        0.185, thres=        0.150, elev=21.8
+10:12:30.0  R17 GF CS gf_new=      -34.357, gf_old=       16.328, diff_abs=      -50.685, thres=        0.230, elev= 6.6
+10:13:00.0  R17 GF CS gf_new=      -34.082, gf_old=      -34.357, diff_abs=        0.274, thres=        0.230, elev= 6.4
+10:19:00.0  C05 GF CS gf_new=       14.853, gf_old=       15.042, diff_abs=       -0.189, thres=        0.150, elev=21.8
+10:27:00.0  *** WARNING: outlier (1) rejected 2017/09/01 10:27:00.00 sat=R05 L1 res=   0.7082 el=17.3
+10:28:00.0  C05 GF CS gf_new=       14.982, gf_old=       14.789, diff_abs=        0.193, thres=        0.150, elev=21.8
+10:39:00.0  *** WARNING: outlier (1) rejected 2017/09/01 10:39:00.00 sat=R05 L1 res=  -0.0697 el=20.0
+10:39:30.0  C05 GF CS gf_new=       14.753, gf_old=       14.942, diff_abs=       -0.189, thres=        0.150, elev=21.7
+10:39:30.0  *** WARNING: outlier (1) rejected 2017/09/01 10:39:30.00 sat=R05 L1 res=  -0.0693 el=20.1
+10:40:30.0  C05 GF CS gf_new=       14.939, gf_old=       14.750, diff_abs=        0.190, thres=        0.150, elev=21.7
+10:41:00.0  C05 GF CS gf_new=       14.741, gf_old=       14.939, diff_abs=       -0.199, thres=        0.150, elev=21.7
+10:44:00.0  C05 GF CS gf_new=       14.523, gf_old=       14.742, diff_abs=       -0.219, thres=        0.150, elev=21.7
+10:45:30.0  C05 GF CS gf_new=       14.722, gf_old=       14.531, diff_abs=        0.190, thres=        0.150, elev=21.7
+10:49:00.0  C05 GF CS gf_new=       14.879, gf_old=       14.697, diff_abs=        0.182, thres=        0.150, elev=21.7
+10:51:00.0  C05 MW CS mw_new=       68.315, mw_old=       62.910, diff_abs=        5.406, thres=        5.000, elev= 0.4
+10:51:00.0  C05 GF CS gf_new=       15.432, gf_old=       14.855, diff_abs=        0.577, thres=        0.150, elev=21.7
+10:51:30.0  C05 MW CS mw_new=       68.624, mw_old=       62.918, diff_abs=        5.705, thres=        5.000, elev= 0.4
+10:52:00.0  C05 GF CS gf_new=       15.227, gf_old=       15.418, diff_abs=       -0.191, thres=        0.150, elev=21.6
+10:52:30.0  C05 MW CS mw_new=       68.727, mw_old=       62.934, diff_abs=        5.792, thres=        5.000, elev= 0.4
+10:52:30.0  C05 GF CS gf_new=       15.404, gf_old=       15.227, diff_abs=        0.178, thres=        0.150, elev=21.6
+10:53:00.0  C05 MW CS mw_new=       68.454, mw_old=       62.943, diff_abs=        5.510, thres=        5.000, elev= 0.4
+10:53:30.0  C05 MW CS mw_new=       68.551, mw_old=       62.952, diff_abs=        5.599, thres=        5.000, elev= 0.4
+10:54:00.0  C05 MW CS mw_new=       68.757, mw_old=       62.960, diff_abs=        5.796, thres=        5.000, elev= 0.4
+10:54:30.0  C05 MW CS mw_new=       68.951, mw_old=       62.969, diff_abs=        5.982, thres=        5.000, elev= 0.4
+10:55:00.0  C05 GF CS gf_new=       15.176, gf_old=       15.380, diff_abs=       -0.205, thres=        0.150, elev=21.6
+11:00:00.0  C05 GF CS gf_new=       15.105, gf_old=       14.926, diff_abs=        0.180, thres=        0.150, elev=21.6
+11:01:00.0  C05 GF CS gf_new=       15.298, gf_old=       15.101, diff_abs=        0.197, thres=        0.150, elev=21.6
+11:06:30.0  C05 GF CS gf_new=       15.445, gf_old=       15.262, diff_abs=        0.183, thres=        0.150, elev=21.6
+11:06:30.0  C12 GF CS gf_new=       10.604, gf_old=       10.370, diff_abs=        0.234, thres=        0.219, elev= 8.1
+11:07:00.0  C12 GF CS gf_new=       10.829, gf_old=       10.604, diff_abs=        0.226, thres=        0.221, elev= 7.9
+11:07:30.0  C12 GF CS gf_new=       11.057, gf_old=       10.829, diff_abs=        0.228, thres=        0.223, elev= 7.7
+11:09:00.0  C05 GF CS gf_new=       15.215, gf_old=       15.414, diff_abs=       -0.199, thres=        0.150, elev=21.6
+11:09:00.0  C12 GF CS gf_new=       11.809, gf_old=       11.543, diff_abs=        0.266, thres=        0.228, elev= 7.2
+11:09:30.0  C12 GF CS gf_new=       12.093, gf_old=       11.809, diff_abs=        0.284, thres=        0.229, elev= 7.1
+11:10:00.0  C12 GF CS gf_new=       12.383, gf_old=       12.093, diff_abs=        0.290, thres=        0.230, elev= 6.9
+11:10:30.0  C12 GF CS gf_new=       12.670, gf_old=       12.383, diff_abs=        0.287, thres=        0.230, elev= 6.7
+11:11:00.0  C12 GF CS gf_new=       12.986, gf_old=       12.670, diff_abs=        0.316, thres=        0.230, elev= 6.6
+11:11:30.0  C12 GF CS gf_new=       13.309, gf_old=       12.986, diff_abs=        0.323, thres=        0.230, elev= 6.4
+11:12:00.0  C12 GF CS gf_new=       13.647, gf_old=       13.309, diff_abs=        0.338, thres=        0.230, elev= 6.2
+11:14:00.0  C12 GF CS gf_new=      -41.520, gf_old=       14.563, diff_abs=      -56.083, thres=        0.230, elev= 5.6
+11:29:30.0  R18 GF CS gf_new=        0.648, gf_old=        0.417, diff_abs=        0.231, thres=        0.204, elev= 9.6
+11:30:00.0  R18 GF CS gf_new=        0.867, gf_old=        0.648, diff_abs=        0.219, thres=        0.206, elev= 9.4
+11:30:30.0  R18 GF CS gf_new=        1.134, gf_old=        0.867, diff_abs=        0.268, thres=        0.209, elev= 9.1
+11:31:00.0  R18 GF CS gf_new=        1.410, gf_old=        1.134, diff_abs=        0.275, thres=        0.211, elev= 8.9
+11:31:30.0  R18 GF CS gf_new=        1.702, gf_old=        1.410, diff_abs=        0.292, thres=        0.213, elev= 8.7
+11:32:00.0  R18 GF CS gf_new=        2.008, gf_old=        1.702, diff_abs=        0.305, thres=        0.216, elev= 8.4
+11:32:30.0  R18 GF CS gf_new=        2.353, gf_old=        2.008, diff_abs=        0.345, thres=        0.218, elev= 8.2
+11:36:00.0  R18 GF CS gf_new=      -44.768, gf_old=        5.584, diff_abs=      -50.352, thres=        0.230, elev= 6.6
+11:36:30.0  R18 GF CS gf_new=      -44.324, gf_old=      -44.768, diff_abs=        0.444, thres=        0.230, elev= 6.4
+11:37:00.0  *** WARNING: outlier (1) rejected 2017/09/01 11:37:00.00 sat=G29 P2 res=  21.8964 el=13.3
+12:05:00.0  C05 GF CS gf_new=       14.158, gf_old=       14.364, diff_abs=       -0.206, thres=        0.150, elev=21.2
+12:10:30.0  C05 GF CS gf_new=       13.919, gf_old=       14.116, diff_abs=       -0.197, thres=        0.150, elev=21.2
+12:20:00.0  C05 GF CS gf_new=       13.638, gf_old=       13.828, diff_abs=       -0.190, thres=        0.150, elev=21.1
+12:27:00.0  C05 GF CS gf_new=       13.334, gf_old=       13.136, diff_abs=        0.198, thres=        0.150, elev=21.1
+12:29:00.0  C05 GF CS gf_new=       13.884, gf_old=       13.693, diff_abs=        0.191, thres=        0.150, elev=21.1
+12:30:00.0  C05 GF CS gf_new=       13.668, gf_old=       13.880, diff_abs=       -0.212, thres=        0.150, elev=21.1
+12:33:30.0  *** WARNING: outlier (1) rejected 2017/09/01 12:33:30.00 sat=G13 P2 res= -26.1460 el=12.9
+12:34:00.0  *** WARNING: outlier (1) rejected 2017/09/01 12:34:00.00 sat=G13 P2 res= -26.8282 el=12.7
+12:34:30.0  C05 GF CS gf_new=       13.236, gf_old=       13.428, diff_abs=       -0.192, thres=        0.150, elev=21.1
+12:37:30.0  C05 GF CS gf_new=       13.393, gf_old=       13.202, diff_abs=        0.191, thres=        0.150, elev=21.0
+12:38:00.0  C05 GF CS gf_new=       13.184, gf_old=       13.393, diff_abs=       -0.209, thres=        0.150, elev=21.0
+12:40:30.0  C05 GF CS gf_new=       13.356, gf_old=       13.164, diff_abs=        0.192, thres=        0.150, elev=21.0
+12:45:30.0  C05 GF CS gf_new=       13.834, gf_old=       13.461, diff_abs=        0.373, thres=        0.150, elev=21.0
+12:47:30.0  C05 GF CS gf_new=       13.607, gf_old=       13.811, diff_abs=       -0.204, thres=        0.150, elev=21.0
+12:50:00.0  C05 GF CS gf_new=       13.801, gf_old=       13.595, diff_abs=        0.205, thres=        0.150, elev=21.0
+12:53:30.0  C05 GF CS gf_new=       13.733, gf_old=       13.557, diff_abs=        0.176, thres=        0.150, elev=20.9
+12:57:00.0  C05 GF CS gf_new=       13.499, gf_old=       13.690, diff_abs=       -0.191, thres=        0.150, elev=20.9
+12:57:30.0  C05 GF CS gf_new=       13.303, gf_old=       13.499, diff_abs=       -0.196, thres=        0.150, elev=20.9
+13:02:00.0  R06 GF CS gf_new=      -14.596, gf_old=      -15.050, diff_abs=        0.455, thres=        0.165, elev=13.5
+13:02:00.0  *** WARNING: outlier (1) rejected 2017/09/01 13:02:00.00 sat=G25 L1 res=   0.2871 el= 8.2
+13:02:30.0  *** WARNING: outlier (1) rejected 2017/09/01 13:02:30.00 sat=G25 L1 res=   0.2868 el= 8.4
+13:10:00.0  *** WARNING: outlier (0) rejected 2017/09/01 13:10:00.00 sat=G25 L2 res= -32.8978 el=10.9
+13:58:30.0  C05 GF CS gf_new=       12.651, gf_old=       12.845, diff_abs=       -0.194, thres=        0.150, elev=20.5
+14:17:00.0  C05 GF CS gf_new=       12.746, gf_old=       12.546, diff_abs=        0.200, thres=        0.150, elev=20.4
+14:37:30.0  C05 GF CS gf_new=       12.439, gf_old=       12.641, diff_abs=       -0.202, thres=        0.150, elev=20.3
+14:49:00.0  C05 GF CS gf_new=       12.566, gf_old=       12.373, diff_abs=        0.193, thres=        0.150, elev=20.2
+14:50:30.0  *** WARNING: outlier (1) rejected 2017/09/01 14:50:30.00 sat=G21 L1 res=  -0.7040 el=10.0
+14:56:30.0  C05 GF CS gf_new=       12.339, gf_old=       12.534, diff_abs=       -0.195, thres=        0.150, elev=20.2
+14:59:00.0  C05 GF CS gf_new=       12.528, gf_old=       12.339, diff_abs=        0.189, thres=        0.150, elev=20.2
+15:05:00.0  C05 GF CS gf_new=       12.709, gf_old=       12.513, diff_abs=        0.196, thres=        0.150, elev=20.1
+15:07:30.0  C05 GF CS gf_new=       13.077, gf_old=       12.688, diff_abs=        0.389, thres=        0.150, elev=20.1
+15:09:30.0  C05 GF CS gf_new=       12.894, gf_old=       13.074, diff_abs=       -0.180, thres=        0.150, elev=20.1
+15:14:00.0  C05 GF CS gf_new=       12.893, gf_old=       12.703, diff_abs=        0.189, thres=        0.150, elev=20.1
+15:19:30.0  C05 GF CS gf_new=       13.077, gf_old=       12.890, diff_abs=        0.187, thres=        0.150, elev=20.1
+15:22:30.0  C05 GF CS gf_new=       12.885, gf_old=       13.081, diff_abs=       -0.196, thres=        0.150, elev=20.0
+15:24:30.0  C05 GF CS gf_new=       13.080, gf_old=       12.879, diff_abs=        0.201, thres=        0.150, elev=20.0
+15:30:30.0  C05 GF CS gf_new=       13.064, gf_old=       12.885, diff_abs=        0.179, thres=        0.150, elev=20.0
+15:31:00.0  C05 GF CS gf_new=       12.874, gf_old=       13.064, diff_abs=       -0.190, thres=        0.150, elev=20.0
+15:33:00.0  C05 GF CS gf_new=       12.678, gf_old=       12.866, diff_abs=       -0.188, thres=        0.150, elev=20.0
+15:35:30.0  C05 GF CS gf_new=       12.463, gf_old=       12.671, diff_abs=       -0.207, thres=        0.150, elev=20.0
+16:29:00.0  C05 GF CS gf_new=       12.462, gf_old=       12.277, diff_abs=        0.185, thres=        0.150, elev=19.7
+16:29:30.0  C05 GF CS gf_new=       12.263, gf_old=       12.462, diff_abs=       -0.199, thres=        0.150, elev=19.7
+16:52:00.0  C05 GF CS gf_new=       12.369, gf_old=       12.183, diff_abs=        0.186, thres=        0.150, elev=19.6
+17:11:00.0  C05 GF CS gf_new=       11.913, gf_old=       12.099, diff_abs=       -0.186, thres=        0.150, elev=19.6
+17:34:00.0  C05 GF CS gf_new=       12.031, gf_old=       11.842, diff_abs=        0.188, thres=        0.150, elev=19.5
+17:57:30.0  R11 GF CS gf_new=       -1.573, gf_old=       -1.117, diff_abs=       -0.455, thres=        0.192, elev=10.8
+18:35:30.0  C05 GF CS gf_new=       11.713, gf_old=       11.910, diff_abs=       -0.196, thres=        0.150, elev=19.4
+18:53:30.0  C05 GF CS gf_new=       11.664, gf_old=       11.449, diff_abs=        0.215, thres=        0.150, elev=19.4
+19:05:00.0  C05 GF CS gf_new=       11.794, gf_old=       11.613, diff_abs=        0.182, thres=        0.150, elev=19.4
+19:14:30.0  *** WARNING: outlier (1) rejected 2017/09/01 19:14:30.00 sat=G29 L1 res=   0.9696 el=10.5
+19:15:00.0  G29 MW CS mw_new=        5.075, mw_old=      -15.660, diff_abs=       20.736, thres=        6.000, elev= 0.2
+19:15:00.0  G29 GF CS gf_new=        0.508, gf_old=       -4.138, diff_abs=        4.646, thres=        0.196, elev=10.4
+19:15:30.0  G29 MW CS mw_new=        4.052, mw_old=       -5.292, diff_abs=        9.344, thres=        6.000, elev= 0.2
+19:25:30.0  *** WARNING: G22 ecliType=1
+19:26:00.0  *** WARNING: G22 ecliType=1
+19:26:30.0  *** WARNING: G22 ecliType=1
+19:27:00.0  *** WARNING: G22 ecliType=1
+19:27:30.0  *** WARNING: G22 ecliType=1
+19:28:00.0  *** WARNING: G22 ecliType=1
+19:28:30.0  *** WARNING: G22 ecliType=1
+19:28:30.0  C05 GF CS gf_new=       11.917, gf_old=       11.726, diff_abs=        0.191, thres=        0.150, elev=19.4
+19:29:00.0  *** WARNING: G22 ecliType=1
+19:34:30.0  C05 GF CS gf_new=       11.711, gf_old=       11.901, diff_abs=       -0.190, thres=        0.150, elev=19.4
+19:35:30.0  C05 GF CS gf_new=       11.903, gf_old=       11.706, diff_abs=        0.197, thres=        0.150, elev=19.4
+19:57:30.0  C05 GF CS gf_new=       11.695, gf_old=       11.884, diff_abs=       -0.190, thres=        0.150, elev=19.4
+20:35:00.0  R08 GF CS gf_new=       -1.391, gf_old=       -1.145, diff_abs=       -0.246, thres=        0.156, elev=14.4
+21:00:30.0  *** WARNING: outlier (1) rejected 2017/09/01 21:00:30.00 sat=G21 L1 res=   0.7286 el=11.1
+21:01:00.0  *** WARNING: outlier (1) rejected 2017/09/01 21:01:00.00 sat=G21 L1 res=   0.7246 el=11.0
+21:21:00.0  C05 GF CS gf_new=       11.855, gf_old=       11.659, diff_abs=        0.196, thres=        0.150, elev=19.6
+21:37:30.0  C05 GF CS gf_new=       11.647, gf_old=       11.842, diff_abs=       -0.195, thres=        0.150, elev=19.7
+21:50:30.0  C05 GF CS gf_new=       11.785, gf_old=       11.596, diff_abs=        0.189, thres=        0.150, elev=19.7
+21:57:30.0  C05 GF CS gf_new=       11.584, gf_old=       11.772, diff_abs=       -0.189, thres=        0.150, elev=19.8
+22:18:00.0  R23 GF CS gf_new=        3.535, gf_old=        3.310, diff_abs=        0.226, thres=        0.150, elev=18.1
+22:26:30.0  C05 GF CS gf_new=       11.952, gf_old=       11.751, diff_abs=        0.201, thres=        0.150, elev=19.9
+22:27:00.0  *** WARNING: outlier (1) rejected 2017/09/01 22:27:00.00 sat=R10 L1 res=   0.0864 el=10.0
+22:42:00.0  C05 GF CS gf_new=       12.274, gf_old=       12.072, diff_abs=        0.202, thres=        0.150, elev=20.0
+22:42:30.0  C05 GF CS gf_new=       12.085, gf_old=       12.274, diff_abs=       -0.189, thres=        0.150, elev=20.0
+22:59:00.0  C05 GF CS gf_new=       12.413, gf_old=       12.216, diff_abs=        0.197, thres=        0.150, elev=20.1
+23:02:00.0  *** WARNING: outlier (1) rejected 2017/09/01 23:02:00.00 sat=G23 P2 res=  11.3662 el=15.4
+23:02:30.0  *** WARNING: outlier (1) rejected 2017/09/01 23:02:30.00 sat=G23 P2 res=  11.8794 el=15.2
+23:13:00.0  C05 GF CS gf_new=       12.543, gf_old=       12.727, diff_abs=       -0.183, thres=        0.150, elev=20.1
+23:13:30.0  C05 GF CS gf_new=       12.730, gf_old=       12.543, diff_abs=        0.186, thres=        0.150, elev=20.1
+23:15:00.0  C05 GF CS gf_new=       12.555, gf_old=       12.743, diff_abs=       -0.188, thres=        0.150, elev=20.1
+23:16:30.0  C05 GF CS gf_new=       12.747, gf_old=       12.562, diff_abs=        0.185, thres=        0.150, elev=20.2
+23:24:30.0  C05 GF CS gf_new=       12.811, gf_old=       12.614, diff_abs=        0.198, thres=        0.150, elev=20.2
+23:28:30.0  C05 GF CS gf_new=       13.039, gf_old=       12.835, diff_abs=        0.204, thres=        0.150, elev=20.2
+23:31:00.0  C05 MW CS mw_new=       59.351, mw_old=       68.412, diff_abs=       -9.061, thres=        5.000, elev= 0.4
+23:31:00.0  C05 GF CS gf_new=       11.125, gf_old=       13.039, diff_abs=       -1.914, thres=        0.150, elev=20.2
+23:31:30.0  C05 MW CS mw_new=       59.876, mw_old=       68.088, diff_abs=       -8.212, thres=        5.000, elev= 0.4
+23:32:00.0  C05 MW CS mw_new=       57.907, mw_old=       67.805, diff_abs=       -9.898, thres=        5.000, elev= 0.4
+23:32:00.0  C05 GF CS gf_new=       10.750, gf_old=       11.128, diff_abs=       -0.378, thres=        0.150, elev=20.2
+23:32:30.0  C05 MW CS mw_new=       57.477, mw_old=       67.475, diff_abs=       -9.998, thres=        5.000, elev= 0.4
+23:33:00.0  C05 MW CS mw_new=       56.773, mw_old=       67.153, diff_abs=      -10.380, thres=        5.000, elev= 0.4
+23:33:00.0  C05 GF CS gf_new=       10.552, gf_old=       10.745, diff_abs=       -0.193, thres=        0.150, elev=20.2
+23:33:30.0  C05 MW CS mw_new=       55.537, mw_old=       66.828, diff_abs=      -11.292, thres=        5.000, elev= 0.4
+23:33:30.0  C05 GF CS gf_new=       10.363, gf_old=       10.552, diff_abs=       -0.189, thres=        0.150, elev=20.2
+23:34:00.0  C05 MW CS mw_new=       56.407, mw_old=       66.486, diff_abs=      -10.079, thres=        5.000, elev= 0.4
+23:34:00.0  C05 GF CS gf_new=       10.563, gf_old=       10.363, diff_abs=        0.200, thres=        0.150, elev=20.2
+23:34:30.0  C05 MW CS mw_new=       55.382, mw_old=       66.190, diff_abs=      -10.807, thres=        5.000, elev= 0.4
+23:34:30.0  C05 GF CS gf_new=       10.370, gf_old=       10.563, diff_abs=       -0.194, thres=        0.150, elev=20.3
+23:35:00.0  C05 MW CS mw_new=       55.621, mw_old=       65.881, diff_abs=      -10.259, thres=        5.000, elev= 0.4
+23:35:30.0  C05 MW CS mw_new=       55.369, mw_old=       65.596, diff_abs=      -10.226, thres=        5.000, elev= 0.4
+23:36:00.0  C05 MW CS mw_new=       55.701, mw_old=       65.319, diff_abs=       -9.618, thres=        5.000, elev= 0.4
+23:36:30.0  C05 MW CS mw_new=       54.709, mw_old=       65.066, diff_abs=      -10.358, thres=        5.000, elev= 0.4
+23:36:30.0  C05 GF CS gf_new=       10.192, gf_old=       10.384, diff_abs=       -0.192, thres=        0.150, elev=20.3
+23:37:00.0  C05 MW CS mw_new=       54.624, mw_old=       64.801, diff_abs=      -10.177, thres=        5.000, elev= 0.4
+23:37:30.0  C05 MW CS mw_new=       54.378, mw_old=       64.546, diff_abs=      -10.168, thres=        5.000, elev= 0.4
+23:38:00.0  C05 MW CS mw_new=       55.059, mw_old=       64.298, diff_abs=       -9.240, thres=        5.000, elev= 0.4
+23:38:30.0  C05 MW CS mw_new=       55.040, mw_old=       64.078, diff_abs=       -9.038, thres=        5.000, elev= 0.4
+23:39:00.0  C05 MW CS mw_new=       54.894, mw_old=       63.868, diff_abs=       -8.974, thres=        5.000, elev= 0.4
+23:39:30.0  C05 MW CS mw_new=       54.930, mw_old=       63.664, diff_abs=       -8.734, thres=        5.000, elev= 0.4
+23:40:00.0  C05 MW CS mw_new=       54.990, mw_old=       63.470, diff_abs=       -8.480, thres=        5.000, elev= 0.4
+23:40:30.0  C05 MW CS mw_new=       54.833, mw_old=       63.286, diff_abs=       -8.453, thres=        5.000, elev= 0.4
+23:41:00.0  C05 MW CS mw_new=       54.996, mw_old=       63.106, diff_abs=       -8.110, thres=        5.000, elev= 0.4
+23:41:30.0  C05 MW CS mw_new=       54.733, mw_old=       62.937, diff_abs=       -8.204, thres=        5.000, elev= 0.4
+23:42:00.0  C05 MW CS mw_new=       54.631, mw_old=       62.770, diff_abs=       -8.138, thres=        5.000, elev= 0.4
+23:42:30.0  C05 MW CS mw_new=       54.710, mw_old=       62.607, diff_abs=       -7.897, thres=        5.000, elev= 0.4
+23:43:00.0  C05 MW CS mw_new=       54.834, mw_old=       62.452, diff_abs=       -7.618, thres=        5.000, elev= 0.4
+23:43:30.0  C05 MW CS mw_new=       54.634, mw_old=       62.305, diff_abs=       -7.672, thres=        5.000, elev= 0.4
+23:44:00.0  C05 MW CS mw_new=       55.840, mw_old=       62.161, diff_abs=       -6.320, thres=        5.000, elev= 0.4
+23:44:00.0  C05 GF CS gf_new=       10.407, gf_old=       10.212, diff_abs=        0.195, thres=        0.150, elev=20.3
+23:44:30.0  *** WARNING: G16 ecliType=2
+23:44:30.0  C05 MW CS mw_new=       55.231, mw_old=       62.044, diff_abs=       -6.813, thres=        5.000, elev= 0.4
+23:45:00.0  *** WARNING: G16 ecliType=2
+23:45:00.0  C05 MW CS mw_new=       55.975, mw_old=       61.920, diff_abs=       -5.945, thres=        5.000, elev= 0.4
+23:45:30.0  *** WARNING: G16 ecliType=2
+23:45:30.0  C05 MW CS mw_new=       55.581, mw_old=       61.814, diff_abs=       -6.233, thres=        5.000, elev= 0.4
+23:46:00.0  *** WARNING: G16 ecliType=2
+23:46:00.0  C05 MW CS mw_new=       55.944, mw_old=       61.704, diff_abs=       -5.760, thres=        5.000, elev= 0.4
+23:46:30.0  *** WARNING: G16 ecliType=2
+23:46:30.0  C05 MW CS mw_new=       55.662, mw_old=       61.605, diff_abs=       -5.943, thres=        5.000, elev= 0.4
+23:47:00.0  *** WARNING: G16 ecliType=2
+23:47:00.0  C05 MW CS mw_new=       55.276, mw_old=       61.504, diff_abs=       -6.228, thres=        5.000, elev= 0.4
+23:47:30.0  *** WARNING: G16 ecliType=2
+23:47:30.0  C05 MW CS mw_new=       54.319, mw_old=       61.400, diff_abs=       -7.081, thres=        5.000, elev= 0.4
+23:47:30.0  C05 GF CS gf_new=       10.236, gf_old=       10.412, diff_abs=       -0.175, thres=        0.150, elev=20.3
+23:48:00.0  *** WARNING: G16 ecliType=2
+23:48:00.0  C05 MW CS mw_new=       53.739, mw_old=       61.284, diff_abs=       -7.545, thres=        5.000, elev= 0.4
+23:48:00.0  C05 GF CS gf_new=       10.048, gf_old=       10.236, diff_abs=       -0.188, thres=        0.150, elev=20.3
+23:48:30.0  *** WARNING: G16 ecliType=2
+23:48:30.0  C05 MW CS mw_new=       53.143, mw_old=       61.163, diff_abs=       -8.019, thres=        5.000, elev= 0.4
+23:49:00.0  *** WARNING: G16 ecliType=2
+23:49:00.0  C05 MW CS mw_new=       54.049, mw_old=       61.035, diff_abs=       -6.987, thres=        5.000, elev= 0.4
+23:49:30.0  *** WARNING: G16 ecliType=2
+23:49:30.0  C05 MW CS mw_new=       54.035, mw_old=       60.926, diff_abs=       -6.891, thres=        5.000, elev= 0.4
+23:50:00.0  *** WARNING: G16 ecliType=2
+23:50:00.0  C05 MW CS mw_new=       53.781, mw_old=       60.820, diff_abs=       -7.040, thres=        5.000, elev= 0.4
+23:50:30.0  *** WARNING: G16 ecliType=2
+23:50:30.0  C05 MW CS mw_new=       53.535, mw_old=       60.713, diff_abs=       -7.179, thres=        5.000, elev= 0.4
+23:51:00.0  *** WARNING: G16 ecliType=2
+23:51:00.0  C05 MW CS mw_new=       55.154, mw_old=       60.606, diff_abs=       -5.453, thres=        5.000, elev= 0.4
+23:51:00.0  C05 GF CS gf_new=       10.239, gf_old=       10.040, diff_abs=        0.199, thres=        0.150, elev=20.3
+23:51:30.0  *** WARNING: G16 ecliType=2
+23:51:30.0  C05 MW CS mw_new=       53.297, mw_old=       60.526, diff_abs=       -7.229, thres=        5.000, elev= 0.4
+23:51:30.0  C05 GF CS gf_new=       10.039, gf_old=       10.239, diff_abs=       -0.200, thres=        0.150, elev=20.3
+23:52:00.0  *** WARNING: G16 ecliType=2
+23:52:00.0  C05 MW CS mw_new=       53.716, mw_old=       60.421, diff_abs=       -6.705, thres=        5.000, elev= 0.4
+23:52:30.0  *** WARNING: G16 ecliType=2
+23:52:30.0  C05 MW CS mw_new=       53.890, mw_old=       60.326, diff_abs=       -6.436, thres=        5.000, elev= 0.4
+23:53:00.0  *** WARNING: G16 ecliType=2
+23:53:00.0  C05 MW CS mw_new=       53.590, mw_old=       60.235, diff_abs=       -6.645, thres=        5.000, elev= 0.4
+23:53:30.0  *** WARNING: G16 ecliType=2
+23:53:30.0  C05 MW CS mw_new=       54.586, mw_old=       60.143, diff_abs=       -5.557, thres=        5.000, elev= 0.4
+23:53:30.0  C05 GF CS gf_new=       10.250, gf_old=       10.052, diff_abs=        0.199, thres=        0.150, elev=20.4
+23:54:00.0  *** WARNING: G16 ecliType=2
+23:54:00.0  C05 MW CS mw_new=       54.781, mw_old=       60.067, diff_abs=       -5.285, thres=        5.000, elev= 0.4
+23:54:00.0  *** WARNING: outlier (1) rejected 2017/09/01 23:54:00.00 sat=C10 L1 res=  -0.0461 el=76.5
+23:54:30.0  *** WARNING: G16 ecliType=2
+23:54:30.0  C05 GF CS gf_new=       10.435, gf_old=       10.241, diff_abs=        0.195, thres=        0.150, elev=20.4
+23:54:30.0  *** WARNING: outlier (1) rejected 2017/09/01 23:54:30.00 sat=C10 L1 res=  -0.0491 el=76.6
+23:55:00.0  *** WARNING: outlier (1) rejected 2017/09/01 23:55:00.00 sat=C10 L1 res=  -0.0521 el=76.6
+ * The program runs for 54.170 seconds

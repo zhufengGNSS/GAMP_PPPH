@@ -1,0 +1,102 @@
+#!/bin/csh
+# plot PDOP and satellite number by GMT
+if ($#argv < 2) then
+more << EOF
+
+ Usage $0 yyyy doy ndays
+   
+ Example: $0 2015 001
+          $0 2015 001 10
+
+EOF
+   exit
+endif
+
+@ yyyy = $1
+set yy = `echo $yyyy | awk '{printf("%2.2d",$1-int($1/100)*100)}'`
+@ doy = $2
+@ count = 1
+if ($#argv >= 3) then
+   @ count = $3
+endif
+
+set wrkdir = `pwd`
+
+set sow = (0 86400 172800 259200 345600 432000 518400 604800)
+
+while ($count)
+   set cdoy = `echo $doy | awk '{printf("%3.3d\n",$1)}'`
+   
+   set outdir = $wrkdir/$yyyy$cdoy/result
+   set pltdir = $wrkdir/plot/$yyyy$cdoy/pdop
+   if (! -d $pltdir) /bin/mkdir -p $pltdir
+
+   @ i = 0
+   @ j = 1
+   foreach file (`ls $outdir/*.pdop`)
+      @ i ++
+      if ($i == 1) then
+         set tmp = `head -1 $file`
+         @ ts = `echo $tmp[8] | awk '{printf("%d\n",int($1))}'`
+         set tmp = `tail -1 $file`
+         @ te = `echo $tmp[8] | awk '{printf("%d\n",int($1))}'`
+         while ($te >= $sow[$j])
+            @ j ++
+         end
+         @ jj = $j - 1
+         @ ts = $sow[$jj]
+         @ te = $sow[$j]
+      endif
+      awk '{print $8,$10,$11,$12,$13,$14,$15}' $file >! tmp.pdop
+      
+      #set tmp = ".{$yy}o.pdop"
+      #set file0 = `echo $file | sed -e "s/.16o.pdop/_pdop/g"`
+      set len = `echo | awk '{print length("'${file}'")}'`
+      @ tmp1 = $len - 16
+      @ tmp2 = $len - 9
+      set tmp = `echo $file | cut -c$tmp1-$tmp2`
+      set outps = $pltdir/$tmp"_pdop.ps"
+      
+      @ sec = $ts
+      if (-e tmp.hhmm) /bin/rm -f tmp.hhmm
+      /bin/touch tmp.hhmm
+      @ ih = 0
+      while ($ih < 25)
+         set hh = `echo $ih | awk '{printf("%2.2d\n",$1)}'`
+         set hhmm = $hh":00"
+         echo $sec  $hhmm >> tmp.hhmm
+         @ ih = $ih + 2
+         @ sec = $sec + 7200
+      end
+      @ sec = `echo $te $ts | awk '{printf("%d\n",int(($1+$2)/2))}'`
+
+      gmtset ANNOT_FONT_SIZE_PRIMARY 14p LABEL_FONT_SIZE 20p LABEL_OFFSET 0.15c
+      gmtset GRID_PEN_PRIMARY 0.5p,black,. TICK_LENGTH -0.12c
+
+      gmtset FRAME_PEN 1.25p,0/0/255 TICK_PEN .5p,0/0/255
+      psbasemap -R$ts/$te/0/20 -JX6.5i/4.0i -Ba7200f1800/a4f2g4:"Num of Sat":W -Y4.0i -P -K >! $outps
+      awk '{print $1,$2}' tmp.pdop | psxy -R -J -K -O -W0.5p,0/0/255,solid >> $outps
+      awk '{print $1,$2}' tmp.pdop | psxy -R -J -K -O -Sx0.1c -W0.5p,0/0/255 >> $outps
+
+      gmtset FRAME_PEN 1.25p,46/139/87 TICK_PEN .5p,46/139/87
+      psbasemap -R$ts/$te/0/10 -JX6.5i/4.0i -Ba7200f1800/a2f1g2:"PDOP":E -K -O >> $outps
+      awk '{print $1,$7}' tmp.pdop | psxy -R -J -K -O -W0.5p,46/139/87,solid >> $outps
+      awk '{print $1,$7}' tmp.pdop | psxy -R -J -K -O -S+0.1c -W0.5p,46/139/87 >> $outps
+
+      gmtset FRAME_PEN 1.25p,0/0/0 TICK_PEN .5p,0/0/0
+      psbasemap -R$ts/$te/0/20 -JX6.5i/4.0i -Ba7200f1800/a4f2g4sn -K -O >> $outps
+
+      awk '{print $1, 0.15, 14, 0, 0, "CM", $2}' tmp.hhmm | pstext -R -J -N -Y-0.2i -K -O >> $outps 
+      echo "$sec 0.15 20 0 0 CM GPS time [hh\072mm]" | pstext -R -J -N -Y-0.25i -O >> $outps
+
+      /bin/rm -f tmp*
+      ps2raster $outps -P -A -Te
+      ps2raster $outps -P -A -Tj
+      ps2raster $outps -P -A -Tg
+      ps2raster $outps -P -A -Tf
+   end
+   
+   @ count --
+   @ doy ++
+end
+

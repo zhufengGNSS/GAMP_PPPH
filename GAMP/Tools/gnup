@@ -1,0 +1,272 @@
+#!/usr/bin/perl
+
+#  $Id: gnup,v 3.7 2003/06/13 17:48:58 kjm Exp $
+
+#  Script to run gnuplot from unix command line.
+
+#  L. Romans,  September 1994
+
+
+$SIG{'INT'} = "exeunt";
+$SIG{'QUIT'} = "exeunt";
+
+$wait = -1;
+$tmpdir = "/tmp/gnup$$";
+$mode = "p";
+%str = ("p", "", "l", " with lines", "e", " with errorbars",
+        "d", " with dots", "lp", "with linespoints");
+
+while (@ARGV) {
+  $arg = shift;
+
+  if ($arg =~ /^-h/i) { print "
+Script to run gnuplot from unix command line.  Unless a \"wait\" (in seconds)
+is specified, the plot is displayed until a carriage return is typed.
+
+Usage:  gnup  [ -[gnup_spec] ] [file(s)]  [-x xmin:xmax]  [-y ymin:ymax]
+              [-c command]  [-t title]  [-xl xlabel]  [-yl ylabel]
+              [-term term]  [-w wait]  [-(o|oo) output]  [-help]
+
+              gnup_spec = [s][mode_spec][using_spec]
+                      s = interpret \"file\" as unix command
+              mode_spec = p, l, lp, d or e
+             using_spec = col_x:col_y
+";
+if ($arg =~ /^-h$/i) {
+print "
+Examples:  cat data | gnup
+                      gnup data
+                      gnup -2:5 data1  -4,5,6,7,8 data2  -e2:5:6 data3
+                      gnup -s \"cat data | filter\"
+\nType  \"gnup -help\"  for more help.\n\n"; exit }
+else { print "
+\"gnup file(s)\" or \"gnup -p file(s)\" plots data points from the file(s).
+\"gnup -l file(s)\" plots with lines.
+\"gnup -lp file(s)\" plots with lines and points.
+\"gnup -d file(s)\" plots with dots.
+\"gnup -e file(s)\" plots with errorbars.
+
+Given no arguments, or a \"gnup_spec\" (\"-p\", \"-l\", etc.) without any
+filenames afterwards, gnup will read from standard input.
+Note that in this case, the entire standard input goes into a temporary file,
+which is deleted afterwards.
+
+A specification for the columns of data to be used can be appended to a
+gnup_spec.  This takes the form M:N specifying the columns to be used for
+the x and y values.  For plotting with errorbars, the forms M:N:P and
+M:N:P:Q also specify the size of (symmetrical) errorbars, and ylow:yhigh
+for asymmetrical errorbars, respectively.  Several such specifications,
+delimited with commas (but no space), can be given for the same data.
+
+Prepending a letter \"s\" to a gnup_spec indicates that instead of a filename,
+gnup expects the text of a unix command, whose standard output will be used
+as data for the plot.  For example, the pipe to stdin:
+    cat data | filter | grep ZZ | awk \'\{print \$3, \$4\}\' | gnup
+can be rephrased:
+    gnup  -s \"cat data | filter | grep ZZ | awk \'\{print \$3, \$4\}\'\"
+These options also cause tmp files to be created, and deleted afterwards.
+
+In general, all these temporary filenames will appear in the plot.
+This can be avoided by first putting all the data into files and running
+gnup without pipes.  Alternatively, filenames can be suppressed in postscript
+output with the -oo option (described below).
+
+These forms of data input can be mixed.  Specifications are \"sticky,\"
+i.e. applying until a new gnup_spec is given.  Here are a few examples:
+
+  cat data | gnup
+             gnup data
+             gnup -1:5 data1  -e1:3:4,1:5:6:7 data2
+             gnup -s \"cat data | filter\"
+  cat data | gnup data1 - -e3:4 data2
+             gnup -se \"cat data1 | filt1\"  \"cat data2 | filt2\"  -e data3
+
+The \"-t\" option specifies a title for the plot.
+
+The \"-term\" option sets the terminal type.
+
+The \"-c\" option can be used to add a general command to the gnuplot script
+(e.g., -c \'set label \"hi mom\" at 5,5\').  Multiple -c arguments can be given.
+
+The \"-o\" option resets the output, either to a file ( -o file.ps ) or to
+a device ( -o \"| lp\" ).  Unless specified otherwise, setting the output
+will set the terminal type to \"postscript color.\"
+
+The \"-oo\" option is like -o, except that the automatic labels (including
+names of temporary files) are suppressed from the postscript file.  Labels
+and titles can be applied \"by hand\" with the -c and -t options.
+
+The \"-x\" and \"-y\" options set the horizontal and vertical ranges.
+One can provide a minimum, a maximum or both, for example:
+    gnup  data  -x -180:180  -y :10
+
+The \"-xl\" and \"-yl\" options can be used to place labels on the axes.
+
+The \"-f\" option causes gnup to perform some simple filtering on the data
+arriving from standard input and scripts, addressing some issues which can
+confound gnuplot:
+  1) replacing the characters \'d\' and \'D\' (used in Fortran to denote
+     exponents for double-precision data) with \'e\'
+  2) replacing lines containing no numerals with a simple newline
+This option does not apply to data files; however, the \"-ff\" option is
+provided to cause gnup to perform the filtering to a general data stream;
+e.g. one can produce filtered files with:
+    cat file | gnup -ff > file_filtered
+\n";
+    exit;
+  } }
+
+  elsif ($arg =~ /^-xl/) { $xl = shift }
+  elsif ($arg =~ /^-yl/) { $yl = shift }
+  elsif ($arg =~ /^-x/) { $xr = shift }
+  elsif ($arg =~ /^-y/) { $yr = shift }
+  elsif ($arg =~ /^-term/) { $term = shift }
+  elsif ($arg =~ /^-t/) { $title = shift }
+  elsif ($arg =~ /^-w/) { $wait = shift }
+  elsif ($arg =~ /^-c/) { $comm .= (shift) . "\n" }
+  elsif ($arg =~ /^-nk/) { $comm .= "set nokey\n" }
+  elsif ($arg =~ /^-notty/) { $notty = 1 }
+  elsif ($arg =~ /^-map/) {
+    $comm .= ("set nozeroaxis\n");
+    $comm .= ("set xrange [-180:180]\nset yrange [-90:90]\n");
+    $comm .= ("set tics out\nset xtics -180,30,180\nset ytics -90,30,90\n");
+    if ($arg =~ /^-mapp/) { $comm .= ("set size 1.0,.7\n") }
+  }
+  elsif ($arg =~ /^-ff/) {
+    while (<STDIN>) {
+      if (/\d/) { s/[dD]/e/g; print }
+      else { print "\n" }
+    }
+    exit;
+  }
+  elsif ($arg =~ /^-f/) {
+    $filty = "| $0 -ff";
+  }
+  elsif ($arg =~ /^-of/) {
+    while (<STDIN>) {
+      if (/\"/) {
+        $_ = <STDIN>;
+        if (/M/) { <STDIN> }
+      } else { print }
+    }
+    exit;
+  }
+  elsif ($arg =~ /^-o/) {
+    $wait = 0;
+    $out = shift;
+    if ($out !~ /^\s*\|/ && $out !~ m#/#) {
+      chop($wdir = `pwd`);
+      $out =  "$wdir/" . $out;
+    }
+    if (!$term) { $term = "postscript color" }
+    if ($arg =~/^-oo/) {
+      if (!($out =~ /^\s*\|/)) { $out = "> ".$out }
+      $out = "| $0 -of ".$out;
+    }
+  }
+  elsif ($arg =~ /^-mf/) {
+    while (<STDIN>) {
+      if (!/\d/) { $xold = 0; print "\n" }
+      else {
+        @line = split(' ', $_);
+        $xdiff = $xold - $line[0];
+        if ($xdiff > 180 || $xdiff < -180) { print "\n", $_ }
+        else { print }
+        $xold = $line[0];
+      }
+    }
+    exit;
+  }
+  elsif ($arg =~ /^-(s?)(|p|l|e|d|lp)([\d:]*)$/) {
+    ($type, $mode, $spec) = ($1, $2, $3);
+    if (!$mode) { $mode = "p" }
+    if ($ff) {
+      $file[$nf] = 0; $fspec[$nf] = $spec; $fmode[$nf++] = $mode;
+    }
+    $ff = 1;
+  }
+  else {
+    $file[$nf] = $arg;
+    $ftype[$nf] = $type;
+    $fspec[$nf] = $spec;
+    $fmode[$nf++] = $mode;
+    if (!$type) { $filf = 1 }
+    $ff = 0;
+  }
+}			# while (@ARGV) 
+
+if ($ff || (!$nf)) {
+  $file[$nf] = 0; $fspec[$nf] = $spec; $fmode[$nf++] = $mode;
+}
+
+mkdir($tmpdir, 0777) || die "Can\'t mkdir $tmpdir: $!\n";
+if ($filf) { 
+  $dir = "$tmpdir/" ;
+} else { 
+  chdir ($tmpdir) || die "Can\'t cd to $tmpdir: $!\n";
+  if ($wdir) { `ln -s $wdir wdir`; }
+}
+
+$script = $dir . "gnup";
+open(GSCR, "> $script");
+select(GSCR);
+
+if ($comm) { print $comm }
+if ($title) { print "set title \"$title\"\n" }
+if ($term) { print "set term $term\n" }
+if ($out) { print "set output \"$out\"\n" }
+if ($xr) { print "set xrange [$xr]\n" }
+if ($yr) { print "set yrange [$yr]\n" }
+if ($xl) { print "set xlabel \"$xl\"\n" }
+if ($yl) { print "set ylabel \"$yl\"\n" }
+
+print "plot ";
+for ($i = 0; $i < $nf; $i++) {
+  if ($ftype[$i]) {
+    $scr = $dir . "script" . (++$n_s);
+    `$file[$i] $filty > $scr`;
+    &to_script($scr, $fspec[$i], $fmode[$i]);
+  }
+  elsif ($file[$i]) { &to_script($file[$i], $fspec[$i], $fmode[$i]) }
+  else {
+    $stdin = $dir . "stdin";
+    &to_script($stdin, $fspec[$i], $fmode[$i]);
+    open(GDAT, "> $stdin");
+    $ffg = 1;
+    while (<STDIN>) {
+      if ($filty) {
+        if (/\d/) { s/[dD]/e/g }
+        else { $_ = "\n" }
+      }
+      $ffg = 0;
+      print GDAT;
+    }
+    close(GDAT);
+  }
+  if ($i < $nf-1) { print ", " }
+}
+
+print "\npause $wait\n";
+close(GSCR);
+
+if ($ffg) { die "gnup: Sorry, no input data.\n" }
+elsif ($notty) { `gnuplot $script` }
+else { `gnuplot $script < /dev/tty` }
+
+&exeunt;
+
+sub exeunt { if (!$filf) { chdir("/tmp") } `rm -rf $tmpdir`; exit; }
+
+sub to_script {
+  local($f, $s, $m) = @_;
+  if ($s) {
+    @spex = split(',;', $s);
+    $ii = 0;
+    for (@spex) {
+      if ($ii++) { print ", " }
+      print "\"$f\" using $_$str{$m}";
+    }
+  }
+  else { print "\"$f\"$str{$m}" }
+}
+

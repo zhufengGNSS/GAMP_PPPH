@@ -1,0 +1,97 @@
+#!/bin/csh
+##
+## Purpose: uncompress files with extension ".Z", ".gz"
+##
+## Modified by Feng Zhou on 18/11/2015 @ GFZ
+##
+## Email: zhouforme@163.com
+##
+## Section 1.1, GPS/Galileo technologies, GFZ German Research Centre for Geosciences
+#
+##===============================BEGIN PROGRAM=====================================##
+if ($#argv < 1) then
+more << EOF
+
+ sh_uncompress is a C-shell script to uncompress files with extension ".Z", ".gz".
+
+  Usage : sh_uncompress CRINEX_files [compressed CRINEX/RINEX]
+
+           Wildcard can be used.
+           Recovered RINEX files are created into current directory.
+
+  compressed files        --> CRINEX       -->      RINEX
+       ????????.??m.Z                      -->   ????????.??m
+       ????????.??n.Z                      -->   ????????.??n
+       ????????.??o.Z                      -->   ????????.??o
+       ????????.??d.Z     --> ????????.??d -->   ????????.??o
+       ????????.??m.gz                     -->   ????????.??m
+       ????????.??n.gz                     -->   ????????.??n
+       ????????.??o.gz                     -->   ????????.??o
+       ????????.??d.gz    --> ????????.??d -->   ????????.??o
+                              ????????.??d -->   ????????.??o
+EOF
+
+   exit
+endif
+
+#--------------------------------------------------------------------
+set PROGRAM = crx2rnx
+
+unset noclobber
+
+foreach file ($argv[*])
+   set file2 = $file
+   if( $file:e == 'Z' || $file:e == 'gz') set file2 = $file2:r
+
+   set body = $file2:r
+   set extension = $file2:e
+   set yy = `echo $extension | cut -c1-2`
+   set file_out = $body.$yy'o'
+#
+   if ($file =~ *.??d.Z) then
+      if ( -e $file_out != 1 ) then
+         uncompress -c  $file | $PROGRAM - >! $file_out
+         if ( $status != 0 ) then
+            echo " *** WARNING($0): cannot uncompress file: $file"
+            /bin/rm -f $file_out
+            goto NEXT
+         endif
+      endif
+   else if($file =~ *.??d.gz) then
+      if ( -e $file_out != 1 ) then
+         gunzip -c $file | $PROGRAM - >! $file_out
+         if ( $status != 0 ) then
+            echo " *** WARNING($0): cannot uncompress file: $file"
+            /bin/rm -f $file_out
+            goto NEXT
+         endif
+      endif
+   else if($file =~ *.??d) then
+      if (-e $file_out != 1) then
+         cat  $file | $PROGRAM - >! $file_out
+         if ($status != 0) then
+            echo " *** WARNING($0): cannot convert d-file to o-file: $file"
+            /bin/rm -f $file_out
+            goto NEXT
+         endif
+      endif
+   else if ($file =~ *.???.Z) then
+      uncompress -f $file
+      if ($status != 0) then
+         echo " *** WARNING($0): cannot uncompress file: $file"
+         /bin/rm -f $file
+         goto NEXT
+      endif   
+   else if ($file =~ *.???.gz || $file =~ *.?????.gz) then
+      gunzip -f $file
+      if ($status != 0) then
+         echo " *** WARNING($0): cannot uncompress file: $file"
+         /bin/rm -f $file
+         goto NEXT
+      endif
+   endif
+
+NEXT:
+end
+#
+##================================END PROGRAM======================================##

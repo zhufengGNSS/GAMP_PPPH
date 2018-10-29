@@ -1,0 +1,45 @@
+#!/bin/csh
+##
+## Purpose: get daily DCB files from IGN
+##
+## Originally written by Feng Zhou on 15/11/2016 @ GFZ
+##
+## Email: zhouforme@163.com
+##
+## Section 1.1, Geodesy, GFZ German Research Centre for Geosciences
+#
+##===============================BEGIN PROGRAM=====================================##
+if ($#argv < 2) then
+   echo Usage : $0 yyyy doy ndays
+   exit
+endif
+
+@ yyyy = $1
+@ doy = $2
+set yy = `echo $yyyy | awk '{printf("%s",substr($1,3,4))}'`
+@ count = 1
+if ($#argv == 3) then
+   @ count = $3
+endif
+
+set dcbdir = /Users/zhoufeng/Documents/GNSS_download/dcb
+if (! -d $dcbdir) mkdir -p $dcbdir
+cd $dcbdir
+
+echo " "
+echo " Downloading MGEX DCB files from ftp://igs.ign.fr/pub/igs/products/mgex/dcb ..."
+echo " "
+
+while ($count)
+   set cdoy = `echo $doy | awk '{printf("%3.3d\n",$1)}'`
+   echo " Year:" $yyyy " DOY:" $cdoy
+
+   wget -qr -nH --cut-dirs=6 ftp://igs.ign.fr/pub/igs/products/mgex/dcb/${yyyy}/CAS0MGXRAP_${yyyy}${cdoy}0000_01D_01D_DCB.BSX.gz
+   
+   sh_uncompress CAS0MGXRAP_${yyyy}${cdoy}0000_01D_01D_DCB.BSX.gz
+   
+   @ count --
+   @ doy ++
+end
+#
+##================================END PROGRAM======================================##
